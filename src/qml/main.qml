@@ -10,10 +10,8 @@ ApplicationWindow {
     title: qsTr("Settings")
     id: rootWindow
 
-    property color backgroundColor: Meui.Theme.backgroundColor
-
     background: Rectangle {
-        color: backgroundColor
+        color: Meui.Theme.backgroundColor
 
         Behavior on color {
             ColorAnimation {

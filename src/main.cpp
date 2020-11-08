@@ -21,6 +21,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
+#include "fontsmodel.h"
 #include "appearance.h"
 
 int main(int argc, char *argv[])
@@ -35,6 +36,9 @@ int main(int argc, char *argv[])
 #else
    engine.rootContext()->setContextProperty(QStringLiteral("debug"), false);
 #endif
+
+    const char *uri = "org.cyber.Settings";
+    qmlRegisterType<FontsModel>(uri, 1, 0, "FontsModel");
 
     engine.rootContext()->setContextProperty("Appearance", new Appearance);
 

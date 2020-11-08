@@ -1,20 +1,25 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
+import org.cyber.Settings 1.0
 import MeuiKit 1.0 as Meui
 
 ItemPage {
     headerTitle: qsTr("Appearance")
 
+    FontsModel {
+        id: fontsModel
+    }
+
     Flickable {
         id: flickable
         anchors.fill: parent
-        anchors.margins: 10
         flickableDirection: Flickable.VerticalFlick
         clip: true
 
         ColumnLayout {
             anchors.fill: parent
+            anchors.margins: 10
 
             Label {
                 text: qsTr("Theme")
@@ -71,13 +76,13 @@ ItemPage {
                 currentIndex: {
                     var index = 0
 
-                    if (Appearance.dockIconSize <= 32)
+                    if (Appearance.dockIconSize <= 48)
                         index = 0
-                    else if (Appearance.dockIconSize <= 48)
-                        index = 1
                     else if (Appearance.dockIconSize <= 64)
-                        index = 2
+                        index = 1
                     else if (Appearance.dockIconSize <= 88)
+                        index = 2
+                    else if (Appearance.dockIconSize <= 128)
                         index = 3
 
                     return index
@@ -88,16 +93,16 @@ ItemPage {
 
                     switch (currentIndex) {
                     case 0:
-                        iconSize = 32
-                        break;
-                    case 1:
                         iconSize = 48
                         break;
-                    case 2:
+                    case 1:
                         iconSize = 64
                         break;
+                    case 2:
+                        iconSize = 88
+                        break;
                     case 3:
-                        iconSize = 88;
+                        iconSize = 128
                         break;
                     }
 
@@ -113,9 +118,11 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            // General font
-            RowLayout {
-                spacing: 10
+            GridLayout {
+                rows: 3
+                columns: 2
+
+                columnSpacing: Meui.Units.largeSpacing * 2
 
                 Label {
                     text: qsTr("General Font")
@@ -126,11 +133,47 @@ ItemPage {
 
                 ComboBox {
                     id: generalFontBox
-                    model: Qt.fontFamilies()
+                    model: fontsModel.generalFonts
+                    currentIndex: fontsModel.generalFontIndex
+                    Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
+                    onActivated: Appearance.setGenericFontFamily(currentText)
+                }
+
+                Label {
+                    text: qsTr("Fixed Font")
+                    color: Meui.Theme.disabledTextColor
+                    topPadding: Meui.Units.largeSpacing
+                    bottomPadding: Meui.Units.smallSpacing
+                }
+
+                ComboBox {
+                    id: fixedFont
+                    model: fontsModel.fixedFonts
+                    currentIndex: fontsModel.fixedFontIndex
+                    Layout.alignment: Qt.AlignRight
+                    Layout.fillWidth: true
+                    onActivated: Appearance.setFixedFontFamily(currentText)
+                }
+
+                Label {
+                    text: qsTr("Size")
+                    color: Meui.Theme.disabledTextColor
+                    topPadding: Meui.Units.largeSpacing
+                    bottomPadding: Meui.Units.smallSpacing
+                }
+
+                Slider {
+                    snapMode: Slider.SnapAlways
+                    Layout.alignment: Qt.AlignRight
+                    Layout.fillWidth: true
+                    from: 11
+                    to: 20
+                    stepSize: 1
+                    value: Appearance.fontPointSize
+                    onValueChanged: Appearance.setFontPointSize(value)
                 }
             }
-
 
             Item {
                 Layout.fillHeight: true

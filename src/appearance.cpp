@@ -12,6 +12,7 @@ Appearance::Appearance(QObject *parent)
     , m_dockConfigWacher(new QFileSystemWatcher(this))
     , m_dockIconSize(0)
     , m_dockDirection(0)
+    , m_fontPointSize(11)
 {
     m_dockIconSize = m_dockSettings->value("IconSize").toInt();
     m_dockDirection = m_dockSettings->value("Direction").toInt();
@@ -25,6 +26,15 @@ Appearance::Appearance(QObject *parent)
         emit dockIconSizeChanged();
         emit dockDirectionChanged();
     });
+
+    // Init
+    QDBusInterface iface("org.cyber.settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        m_fontPointSize = iface.property("systemFontPointSize").toInt();
+    }
 }
 
 void Appearance::switchDarkMode(bool darkMode)
@@ -64,4 +74,50 @@ void Appearance::setDockDirection(int dockDirection)
 
     m_dockDirection = dockDirection;
     m_dockSettings->setValue("Direction", m_dockDirection);
+}
+
+void Appearance::setGenericFontFamily(const QString &name)
+{
+    if (name.isEmpty())
+        return;
+
+    QDBusInterface iface("org.cyber.settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        iface.call("setSystemFont", name);
+    }
+}
+
+void Appearance::setFixedFontFamily(const QString &name)
+{
+    if (name.isEmpty())
+        return;
+
+    QDBusInterface iface("org.cyber.settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        iface.call("setSystemFixedFont", name);
+    }
+}
+
+int Appearance::fontPointSize() const
+{
+    return m_fontPointSize;
+}
+
+void Appearance::setFontPointSize(int fontPointSize)
+{
+    m_fontPointSize = fontPointSize;
+
+    QDBusInterface iface("org.cyber.settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        iface.call("setSystemFontPointSize", m_fontPointSize * 1.0);
+    }
 }
