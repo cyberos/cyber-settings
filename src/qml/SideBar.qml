@@ -18,6 +18,10 @@ Item {
         }
 
         ListElement {
+            title: qsTr("Display")
+        }
+
+        ListElement {
             title: qsTr("Appearance")
         }
 

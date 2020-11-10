@@ -69,9 +69,25 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            ComboBox {
-                model: [ qsTr("Small"), qsTr("Medium"), qsTr("Large"), qsTr("Huge") ]
+            TabBar {
+                id: dockSizeTabbar
                 Layout.fillWidth: true
+
+                TabButton {
+                    text: qsTr("Small")
+                }
+
+                TabButton {
+                    text: qsTr("Medium")
+                }
+
+                TabButton {
+                    text: qsTr("Large")
+                }
+
+                TabButton {
+                    text: qsTr("Huge")
+                }
 
                 currentIndex: {
                     var index = 0
@@ -108,6 +124,7 @@ ItemPage {
 
                     Appearance.setDockIconSize(iconSize)
                 }
+
             }
 
             // Font
@@ -178,7 +195,6 @@ ItemPage {
             Item {
                 Layout.fillHeight: true
             }
-
         }
     }
 }

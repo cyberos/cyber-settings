@@ -26,6 +26,11 @@ ApplicationWindow {
     }
 
     Component {
+        id: displayPage
+        DisplayPage {}
+    }
+
+    Component {
         id: appearancePage
         AppearancePage {}
     }
@@ -73,9 +78,12 @@ ApplicationWindow {
             stackView.push(generalPage)
             break;
         case 1:
-            stackView.push(appearancePage)
+            stackView.push(displayPage)
             break;
         case 2:
+            stackView.push(appearancePage)
+            break;
+        case 3:
             stackView.push(aboutPage)
             break;
         }
