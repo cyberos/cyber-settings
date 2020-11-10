@@ -124,7 +124,6 @@ ItemPage {
 
                     Appearance.setDockIconSize(iconSize)
                 }
-
             }
 
             // Font
@@ -174,21 +173,66 @@ ItemPage {
                 }
 
                 Label {
-                    text: qsTr("Size")
+                    text: qsTr("Font Size")
                     color: Meui.Theme.disabledTextColor
                     topPadding: Meui.Units.largeSpacing
                     bottomPadding: Meui.Units.smallSpacing
                 }
 
-                Slider {
-                    snapMode: Slider.SnapAlways
-                    Layout.alignment: Qt.AlignRight
+                TabBar {
                     Layout.fillWidth: true
-                    from: 11
-                    to: 20
-                    stepSize: 1
-                    value: Appearance.fontPointSize
-                    onValueChanged: Appearance.setFontPointSize(value)
+
+                    TabButton {
+                        text: qsTr("Small")
+                    }
+
+                    TabButton {
+                        text: qsTr("Medium")
+                    }
+
+                    TabButton {
+                        text: qsTr("Large")
+                    }
+
+                    TabButton {
+                        text: qsTr("Huge")
+                    }
+
+                    currentIndex: {
+                        var index = 0
+
+                        if (Appearance.fontPointSize <= 11)
+                            index = 0
+                        else if (Appearance.fontPointSize <= 13)
+                            index = 1
+                        else if (Appearance.fontPointSize <= 15)
+                            index = 2
+                        else if (Appearance.fontPointSize <= 18)
+                            index = 3
+
+                        return index
+                    }
+
+                    onCurrentIndexChanged: {
+                        var fontSize = 0
+
+                        switch (currentIndex) {
+                        case 0:
+                            fontSize = 11
+                            break;
+                        case 1:
+                            fontSize = 13
+                            break;
+                        case 2:
+                            fontSize = 15
+                            break;
+                        case 3:
+                            fontSize = 18
+                            break;
+                        }
+
+                        Appearance.setFontPointSize(fontSize)
+                    }
                 }
             }
 
