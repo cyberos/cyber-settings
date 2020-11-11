@@ -23,6 +23,7 @@
 
 #include "fontsmodel.h"
 #include "appearance.h"
+#include "brightness.h"
 
 int main(int argc, char *argv[])
 {
@@ -39,8 +40,10 @@ int main(int argc, char *argv[])
 
     const char *uri = "org.cyber.Settings";
     qmlRegisterType<FontsModel>(uri, 1, 0, "FontsModel");
+    qmlRegisterType<Brightness>(uri, 1, 0, "Brightness");
 
     engine.rootContext()->setContextProperty("Appearance", new Appearance);
+    // engine.rootContext()->setContextProperty("Brightness", new Brightness);
 
     engine.addImportPath(QStringLiteral("qrc:/"));
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));

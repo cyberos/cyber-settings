@@ -7,5 +7,9 @@
         <file>qml/AppearancePage.qml</file>
         <file>qml/AboutPage.qml</file>
         <file>qml/DisplayPage.qml</file>
+        <file>images/dark/display-brightness-low-symbolic.svg</file>
+        <file>images/dark/display-brightness-symbolic.svg</file>
+        <file>images/light/display-brightness-low-symbolic.svg</file>
+        <file>images/light/display-brightness-symbolic.svg</file>
     </qresource>
 </RCC>

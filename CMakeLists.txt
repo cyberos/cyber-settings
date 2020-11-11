@@ -17,6 +17,7 @@ find_package(MeuiKit REQUIRED)
 set(SRCS
     src/main.cpp
     src/appearance.cpp
+    src/brightness.cpp
     src/fontsmodel.cpp
 )
 
