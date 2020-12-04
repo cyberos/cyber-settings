@@ -10,8 +10,11 @@ ApplicationWindow {
     title: qsTr("Settings")
     id: rootWindow
 
+    property int edgeMargins: 20
+    property int topMargin: 20
+
     background: Rectangle {
-        color: Meui.Theme.backgroundColor
+        color: Meui.Theme.viewBackgroundColor
 
         Behavior on color {
             ColorAnimation {
@@ -33,6 +36,11 @@ ApplicationWindow {
     Component {
         id: appearancePage
         AppearancePage {}
+    }
+
+    Component {
+        id: batteryPage
+        BatteryPage {}
     }
 
     Component {
@@ -58,10 +66,12 @@ ApplicationWindow {
             initialItem: generalPage
             clip: true
 
+            pushEnter: Transition {}
+            pushExit: Transition {}
+
             Rectangle {
                 anchors.fill: parent
-                color: Meui.Theme.darkMode ? Qt.darker(Meui.Theme.backgroundColor, 1.5) :
-                                             Qt.darker(Meui.Theme.backgroundColor, 1.05)
+                color: Meui.Theme.backgroundColor
 
                 Behavior on color {
                     ColorAnimation {
@@ -84,6 +94,9 @@ ApplicationWindow {
             stackView.push(appearancePage)
             break;
         case 3:
+            stackView.push(batteryPage)
+            break;
+        case 4:
             stackView.push(aboutPage)
             break;
         }

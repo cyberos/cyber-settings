@@ -11,15 +11,13 @@ ItemPage {
         id: fontsModel
     }
 
-    Flickable {
-        id: flickable
+    Scrollable {
         anchors.fill: parent
-        flickableDirection: Flickable.VerticalFlick
-        clip: true
+        contentHeight: layout.implicitHeight
 
         ColumnLayout {
+            id: layout
             anchors.fill: parent
-            anchors.margins: 10
 
             Label {
                 text: qsTr("Theme")

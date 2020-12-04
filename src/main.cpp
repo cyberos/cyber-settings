@@ -21,6 +21,8 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
+#include <QDBusConnection>
+
 #include "fontsmodel.h"
 #include "appearance.h"
 #include "brightness.h"
@@ -29,6 +31,10 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
+
+    if (!QDBusConnection::sessionBus().registerService("org.cyber.Settings")) {
+        return -1;
+    }
 
     QQmlApplicationEngine engine;
 

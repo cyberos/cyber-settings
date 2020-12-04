@@ -11,5 +11,7 @@
         <file>images/dark/display-brightness-symbolic.svg</file>
         <file>images/light/display-brightness-low-symbolic.svg</file>
         <file>images/light/display-brightness-symbolic.svg</file>
+        <file>qml/Scrollable.qml</file>
+        <file>qml/BatteryPage.qml</file>
     </qresource>
 </RCC>

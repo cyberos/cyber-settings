@@ -3,7 +3,7 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 
 Page {
-    id: control
+    id: page
 
     property string headerTitle
 
@@ -13,10 +13,30 @@ Page {
 
     header: Label {
         id: headerLabel
-        text: control.headerTitle
+        text: page.headerTitle
         font.pointSize: 18
         font.bold: true
-        leftPadding: 10
-        rightPadding: 10
+        topPadding: topMargin
+        leftPadding: rootWindow.edgeMargins
+        rightPadding: rootWindow.edgeMargins
     }
+
+//    default property alias contents: contents.data
+
+//    Flickable {
+//        id: flickable
+//        clip: true
+//        anchors.fill: parent
+//        ScrollBar.vertical: ScrollBar {}
+//        flickableDirection: Flickable.VerticalFlick
+
+//        contentWidth: page.width
+//        contentHeight: contents.height
+
+//        Item {
+//            id: contents
+//            width: flickable.width
+//            height: childrenRect.height
+//        }
+//    }
 }

@@ -11,21 +11,19 @@ ItemPage {
         id: brightness
     }
 
-    Flickable {
-        id: flickable
+    Scrollable {
         anchors.fill: parent
-        flickableDirection: Flickable.VerticalFlick
-        clip: true
+        contentHeight: layout.implicitWidth
 
         ColumnLayout {
+            id: layout
             anchors.fill: parent
-            anchors.margins: 10
 
             Label {
                 text: qsTr("Brightness")
                 color: Meui.Theme.disabledTextColor
-                topPadding: Meui.Units.largeSpacing
-                bottomPadding: Meui.Units.largeSpacing
+                // topPadding: Meui.Units.largeSpacing
+                // bottomPadding: Meui.Units.largeSpacing
             }
 
             Label {
@@ -40,7 +38,7 @@ ItemPage {
                     width: brightnessSlider.height
                     height: width
                     sourceSize.width: width
-                    sourceSize.height: heihgt
+                    sourceSize.height: height
                     source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark" : "light") + "/display-brightness-low-symbolic.svg"
                 }
 
@@ -58,7 +56,7 @@ ItemPage {
                     width: brightnessSlider.height
                     height: width
                     sourceSize.width: width
-                    sourceSize.height: heihgt
+                    sourceSize.height: height
                     source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark" : "light") + "/display-brightness-symbolic.svg"
                 }
             }

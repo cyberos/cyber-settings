@@ -26,6 +26,10 @@ Item {
         }
 
         ListElement {
+            title: qsTr("Battery")
+        }
+
+        ListElement {
             title: qsTr("About")
         }
     }
@@ -34,7 +38,7 @@ Item {
         anchors {
             fill: parent
             leftMargin: 10
-            topMargin: 0
+            topMargin: topMargin
             rightMargin: 10
             bottomMargin: 10
         }
@@ -57,7 +61,8 @@ Item {
             Layout.fillWidth: true
             clip: true
             model: listModel
-            snapMode: ListView.SnapOneItem
+
+            ScrollBar.vertical: ScrollBar {}
 
             delegate: Item {
                 id: item
