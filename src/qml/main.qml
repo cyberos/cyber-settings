@@ -10,9 +10,6 @@ ApplicationWindow {
     title: qsTr("Settings")
     id: rootWindow
 
-    property int edgeMargins: 20
-    property int topMargin: 20
-
     background: Rectangle {
         color: Meui.Theme.viewBackgroundColor
 

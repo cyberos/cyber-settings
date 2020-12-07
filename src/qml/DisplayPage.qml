@@ -11,6 +11,14 @@ ItemPage {
         id: brightness
     }
 
+    Timer {
+        id: brightnessTimer
+        interval: 100
+        onTriggered: {
+            brightness.setValue(brightnessSlider.value)
+        }
+    }
+
     Scrollable {
         anchors.fill: parent
         contentHeight: layout.implicitWidth
@@ -22,13 +30,7 @@ ItemPage {
             Label {
                 text: qsTr("Brightness")
                 color: Meui.Theme.disabledTextColor
-                // topPadding: Meui.Units.largeSpacing
-                // bottomPadding: Meui.Units.largeSpacing
-            }
-
-            Label {
-                id: brightnessLabel
-                text: brightnessSlider.value + "%"
+                bottomPadding: 10
             }
 
             RowLayout {
@@ -49,7 +51,7 @@ ItemPage {
                     from: 0
                     to: 100
                     stepSize: 1
-                    onValueChanged: brightness.setValue(value)
+                    onMoved: brightnessTimer.start()
                 }
 
                 Image {

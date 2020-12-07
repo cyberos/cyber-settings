@@ -37,10 +37,10 @@ Item {
     ColumnLayout {
         anchors {
             fill: parent
-            leftMargin: 10
-            topMargin: topMargin
-            rightMargin: 10
-            bottomMargin: 10
+            leftMargin: Meui.Units.largeSpacing
+            topMargin: Meui.Units.largeSpacing
+            rightMargin: Meui.Units.largeSpacing
+            bottomMargin: Meui.Units.largeSpacing
         }
 
         Label {
@@ -62,21 +62,19 @@ Item {
             clip: true
             model: listModel
 
+            spacing: Meui.Units.largeSpacing
+
             ScrollBar.vertical: ScrollBar {}
 
             delegate: Item {
                 id: item
                 implicitWidth: listView.width
-                implicitHeight: 48 + itemRadiusV
+                implicitHeight: 48
 
                 property bool isCurrent: listView.currentIndex === index
 
                 Rectangle {
-                    anchors {
-                        fill: parent
-                        topMargin: itemRadiusV
-                        bottomMargin: itemRadiusV
-                    }
+                    anchors.fill: parent
 
                     MouseArea {
                         id: mouseArea
@@ -86,8 +84,19 @@ Item {
                         onClicked: listView.currentIndex = index
                     }
 
-                    radius: itemRadiusV
-                    color: isCurrent ? Meui.Theme.highlightColor : mouseArea.containsMouse ? Qt.rgba(0, 0, 0, 0.08) : "transparent"
+                    radius: Meui.Theme.bigRadius
+                    color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
+                                                 Meui.Theme.highlightColor.g,
+                                                 Meui.Theme.highlightColor.b,
+                                                 0.1) : mouseArea.containsMouse ? Qt.rgba(Meui.Theme.textColor.r,
+                                                                                                       Meui.Theme.textColor.g,
+                                                                                                       Meui.Theme.textColor.b,
+                                                                                                       0.1) : "transparent"
+                    border.color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
+                                                        Meui.Theme.highlightColor.g,
+                                                        Meui.Theme.highlightColor.b, 0.5) : "transparent"
+                    border.width: isCurrent ? 1 : 0
+                    smooth: true
                 }
 
                 RowLayout {
@@ -97,7 +106,7 @@ Item {
                     Label {
                         id: itemTitle
                         text: model.title
-                        color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
+                        color: isCurrent ? Meui.Theme.highlightColor : Meui.Theme.textColor
                     }
                 }
             }

@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
+import MeuiKit 1.0 as Meui
 
 Page {
     id: page
@@ -16,27 +17,8 @@ Page {
         text: page.headerTitle
         font.pointSize: 18
         font.bold: true
-        topPadding: topMargin
-        leftPadding: rootWindow.edgeMargins
-        rightPadding: rootWindow.edgeMargins
+        topPadding: Meui.Units.largeSpacing
+        leftPadding: Meui.Units.largeSpacing
+        rightPadding: Meui.Units.largeSpacing
     }
-
-//    default property alias contents: contents.data
-
-//    Flickable {
-//        id: flickable
-//        clip: true
-//        anchors.fill: parent
-//        ScrollBar.vertical: ScrollBar {}
-//        flickableDirection: Flickable.VerticalFlick
-
-//        contentWidth: page.width
-//        contentHeight: contents.height
-
-//        Item {
-//            id: contents
-//            width: flickable.width
-//            height: childrenRect.height
-//        }
-//    }
 }
