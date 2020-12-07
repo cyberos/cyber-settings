@@ -8,8 +8,8 @@ Flickable {
     clip: true
 
     topMargin: Meui.Units.largeSpacing
-    leftMargin: Meui.Units.largeSpacing
-    rightMargin: Meui.Units.largeSpacing
+    leftMargin: Meui.Units.largeSpacing * 2
+    rightMargin: Meui.Units.largeSpacing * 2
 
     contentWidth: width - (leftMargin + rightMargin)
 

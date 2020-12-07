@@ -30,12 +30,14 @@ ItemPage {
                 checked: !Meui.Theme.darkMode
                 text: qsTr("Light")
                 onClicked: Appearance.switchDarkMode(false)
+                Layout.fillWidth: true
             }
 
             RadioButton {
                 checked: Meui.Theme.darkMode
                 text: qsTr("Dark")
                 onClicked: Appearance.switchDarkMode(true)
+                Layout.fillWidth: true
             }
 
             // Dock
@@ -51,12 +53,14 @@ ItemPage {
                     checked: Appearance.dockDirection === 0
                     text: qsTr("Left")
                     onClicked: Appearance.setDockDirection(0)
+                    Layout.fillWidth: true
                 }
 
                 RadioButton {
                     checked: Appearance.dockDirection === 1
                     text: qsTr("Bottom")
                     onClicked: Appearance.setDockDirection(1)
+                    Layout.fillWidth: true
                 }
             }
 

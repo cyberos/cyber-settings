@@ -18,7 +18,7 @@ Page {
         font.pointSize: 18
         font.bold: true
         topPadding: Meui.Units.largeSpacing
-        leftPadding: Meui.Units.largeSpacing
-        rightPadding: Meui.Units.largeSpacing
+        leftPadding: Meui.Units.largeSpacing * 2
+        rightPadding: Meui.Units.largeSpacing * 2
     }
 }
