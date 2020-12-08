@@ -13,5 +13,7 @@
         <file>images/light/display-brightness-symbolic.svg</file>
         <file>qml/Scrollable.qml</file>
         <file>qml/BatteryPage.qml</file>
+        <file>qml/BatteryItem.qml</file>
+        <file>images/sensors-voltage-symbolic.svg</file>
     </qresource>
 </RCC>

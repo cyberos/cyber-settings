@@ -11,6 +11,10 @@ ItemPage {
         id: fontsModel
     }
 
+    Appearance {
+        id: appearance
+    }
+
     Scrollable {
         anchors.fill: parent
         contentHeight: layout.implicitHeight
@@ -29,14 +33,14 @@ ItemPage {
             RadioButton {
                 checked: !Meui.Theme.darkMode
                 text: qsTr("Light")
-                onClicked: Appearance.switchDarkMode(false)
+                onClicked: appearance.switchDarkMode(false)
                 Layout.fillWidth: true
             }
 
             RadioButton {
                 checked: Meui.Theme.darkMode
                 text: qsTr("Dark")
-                onClicked: Appearance.switchDarkMode(true)
+                onClicked: appearance.switchDarkMode(true)
                 Layout.fillWidth: true
             }
 
@@ -50,16 +54,16 @@ ItemPage {
 
             ColumnLayout {
                 RadioButton {
-                    checked: Appearance.dockDirection === 0
+                    checked: appearance.dockDirection === 0
                     text: qsTr("Left")
-                    onClicked: Appearance.setDockDirection(0)
+                    onClicked: appearance.setDockDirection(0)
                     Layout.fillWidth: true
                 }
 
                 RadioButton {
-                    checked: Appearance.dockDirection === 1
+                    checked: appearance.dockDirection === 1
                     text: qsTr("Bottom")
-                    onClicked: Appearance.setDockDirection(1)
+                    onClicked: appearance.setDockDirection(1)
                     Layout.fillWidth: true
                 }
             }
@@ -94,13 +98,13 @@ ItemPage {
                 currentIndex: {
                     var index = 0
 
-                    if (Appearance.dockIconSize <= 48)
+                    if (appearance.dockIconSize <= 48)
                         index = 0
-                    else if (Appearance.dockIconSize <= 64)
+                    else if (appearance.dockIconSize <= 64)
                         index = 1
-                    else if (Appearance.dockIconSize <= 88)
+                    else if (appearance.dockIconSize <= 88)
                         index = 2
-                    else if (Appearance.dockIconSize <= 128)
+                    else if (appearance.dockIconSize <= 128)
                         index = 3
 
                     return index
@@ -124,7 +128,7 @@ ItemPage {
                         break;
                     }
 
-                    Appearance.setDockIconSize(iconSize)
+                    appearance.setDockIconSize(iconSize)
                 }
             }
 
@@ -155,7 +159,7 @@ ItemPage {
                     currentIndex: fontsModel.generalFontIndex
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
-                    onActivated: Appearance.setGenericFontFamily(currentText)
+                    onActivated: appearance.setGenericFontFamily(currentText)
                 }
 
                 Label {
@@ -171,7 +175,7 @@ ItemPage {
                     currentIndex: fontsModel.fixedFontIndex
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
-                    onActivated: Appearance.setFixedFontFamily(currentText)
+                    onActivated: appearance.setFixedFontFamily(currentText)
                 }
 
                 Label {
@@ -203,13 +207,13 @@ ItemPage {
                     currentIndex: {
                         var index = 0
 
-                        if (Appearance.fontPointSize <= 11)
+                        if (appearance.fontPointSize <= 11)
                             index = 0
-                        else if (Appearance.fontPointSize <= 13)
+                        else if (appearance.fontPointSize <= 13)
                             index = 1
-                        else if (Appearance.fontPointSize <= 15)
+                        else if (appearance.fontPointSize <= 15)
                             index = 2
-                        else if (Appearance.fontPointSize <= 18)
+                        else if (appearance.fontPointSize <= 18)
                             index = 3
 
                         return index
@@ -233,7 +237,7 @@ ItemPage {
                             break;
                         }
 
-                        Appearance.setFontPointSize(fontSize)
+                        appearance.setFontPointSize(fontSize)
                     }
                 }
             }

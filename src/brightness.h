@@ -26,7 +26,7 @@
 class Brightness : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int  value READ value NOTIFY valueChanged)
+    Q_PROPERTY(int value READ value NOTIFY valueChanged)
 
 public:
     explicit Brightness(QObject *parent = nullptr);
