@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
+import MeuiKit 1.0 as Meui
 import org.cyber.Settings 1.0
 
 ItemPage {
@@ -30,7 +31,9 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
+            spacing: Meui.Units.largeSpacing
 
+            // Battery Info
             BatteryItem {
                 id: batteryBackground
                 Layout.fillWidth: true
@@ -71,6 +74,21 @@ ItemPage {
                         Layout.fillHeight: true
                     }
                 }
+            }
+
+            Item {
+                height: Meui.Units.smallSpacing
+            }
+
+            StandardItem {
+                key: qsTr("Last Charged to")
+                value: battery.lastChargedPercent + "%"
+                visible: battery.lastChargedPercent !== 0
+            }
+
+            StandardItem {
+                key: qsTr("Maximum Capacity")
+                value: battery.capacity + "%"
             }
         }
     }

@@ -15,5 +15,6 @@
         <file>qml/BatteryPage.qml</file>
         <file>qml/BatteryItem.qml</file>
         <file>images/sensors-voltage-symbolic.svg</file>
+        <file>qml/StandardItem.qml</file>
     </qresource>
 </RCC>

@@ -22,6 +22,7 @@ Battery::Battery(QObject *parent)
     if (m_available) {
         QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "chargeStateChanged", this, SLOT(chargeStateChanged(int)));
         QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "chargePercentChanged", this, SLOT(chargePercentChanged(int)));
+        QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "lastChargedPercentChanged", this, SLOT(lastChargedPercentChanged()));
         QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "capacityChanged", this, SLOT(capacityChanged(int)));
         QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "remainingTimeChanged", this, SLOT(remainingTimeChanged(qlonglong)));
 
@@ -59,6 +60,11 @@ int Battery::chargeState() const
 int Battery::chargePercent() const
 {
     return m_interface.property("chargePercent").toInt();
+}
+
+int Battery::lastChargedPercent() const
+{
+    return m_interface.property("lastChargedPercent").toInt();
 }
 
 int Battery::capacity() const
