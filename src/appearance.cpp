@@ -47,7 +47,7 @@ Appearance::Appearance(QObject *parent)
     });
 
     // Init
-    QDBusInterface iface("org.cyber.settings",
+    QDBusInterface iface("org.cyber.Settings",
                          "/Theme",
                          "org.cyber.Theme",
                          QDBusConnection::sessionBus(), this);
@@ -58,7 +58,7 @@ Appearance::Appearance(QObject *parent)
 
 void Appearance::switchDarkMode(bool darkMode)
 {
-    QDBusInterface iface("org.cyber.settings",
+    QDBusInterface iface("org.cyber.Settings",
                          "/Theme",
                          "org.cyber.Theme",
                          QDBusConnection::sessionBus(), this);
@@ -100,7 +100,7 @@ void Appearance::setGenericFontFamily(const QString &name)
     if (name.isEmpty())
         return;
 
-    QDBusInterface iface("org.cyber.settings",
+    QDBusInterface iface("org.cyber.Settings",
                          "/Theme",
                          "org.cyber.Theme",
                          QDBusConnection::sessionBus(), this);
@@ -114,7 +114,7 @@ void Appearance::setFixedFontFamily(const QString &name)
     if (name.isEmpty())
         return;
 
-    QDBusInterface iface("org.cyber.settings",
+    QDBusInterface iface("org.cyber.Settings",
                          "/Theme",
                          "org.cyber.Theme",
                          QDBusConnection::sessionBus(), this);
@@ -132,7 +132,7 @@ void Appearance::setFontPointSize(int fontPointSize)
 {
     m_fontPointSize = fontPointSize;
 
-    QDBusInterface iface("org.cyber.settings",
+    QDBusInterface iface("org.cyber.Settings",
                          "/Theme",
                          "org.cyber.Theme",
                          QDBusConnection::sessionBus(), this);

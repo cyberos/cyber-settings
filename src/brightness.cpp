@@ -23,7 +23,7 @@
 Brightness::Brightness(QObject *parent)
     : QObject(parent)
     , m_dbusConnection(QDBusConnection::sessionBus())
-    , m_iface("org.cyber.settings",
+    , m_iface("org.cyber.Settings",
               "/Brightness",
               "org.cyber.Brightness", m_dbusConnection)
     , m_value(0)

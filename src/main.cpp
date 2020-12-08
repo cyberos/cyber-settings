@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     app.setOrganizationName("cyberos");
 
-    if (!QDBusConnection::sessionBus().registerService("org.cyber.Settings")) {
+    if (!QDBusConnection::sessionBus().registerService("org.cyber.SettingsUI")) {
         return -1;
     }
 
