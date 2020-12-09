@@ -45,84 +45,47 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            GridLayout {
-                rows: 3
-                columns: 2
+            StandardItem {
+                key: qsTr("Operating System")
+                value: about.osName
+            }
 
-                columnSpacing: Meui.Units.largeSpacing * 2
-                rowSpacing: Meui.Units.smallSpacing / 2
+            StandardItem {
+                key: qsTr("Version")
+                value: about.osVersion
+            }
 
-                Label {
-                    text: qsTr("Operating System")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: about.osName
-                }
+            StandardItem {
+                key: qsTr("Username")
+                value: about.userName
+            }
 
-                Label {
-                    text: qsTr("Version")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: about.osVersion
-                }
-
-                Label {
-                    text: qsTr("Username")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: about.userName
-                }
-
-                Label {
-                    text: qsTr("Hostname")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: about.hostname
-                }
+            StandardItem {
+                key: qsTr("Hostname")
+                value: about.hostname
             }
 
             // Cyber Info
             Label {
-                text: qsTr("Cyber Info")
+                text: qsTr("Other Info")
                 color: Meui.Theme.disabledTextColor
                 topPadding: Meui.Units.largeSpacing * 2
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            GridLayout {
-                rows: 2
-                columns: 2
+            StandardItem {
+                key: qsTr("Cyber Settings Build")
+                value: about.settingsVersion
+            }
 
-                columnSpacing: Meui.Units.largeSpacing * 2
-                rowSpacing: Meui.Units.smallSpacing / 2
+            StandardItem {
+                key: qsTr("Developers")
+                value: about.developers
+            }
 
-                Label {
-                    text: qsTr("Cyber Settings Build")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: about.settingsVersion
-                }
-
-                Label {
-                    text: qsTr("Cyber Developers")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: qsTr("Flex Zhong (ChungZH)\nFelix Yan (felixonmars)\nReven Martin (rekols)")
-                }
-
-                Label {
-                    text: qsTr("Cyber Contributors")
-                    color: Meui.Theme.disabledTextColor
-                }
-                Label {
-                    text: qsTr("omame (omaemae) - Settings/About page.")
-                }
+            StandardItem {
+                key: qsTr("Contributors")
+                value: about.contributors
             }
         }
     }

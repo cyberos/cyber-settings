@@ -34,3 +34,17 @@ QString About::settingsVersion()
 {
     return QObject::tr(SETTINGS_VERSION);
 }
+
+QString About::contributors()
+{
+    return QString("omame (omaemae) - Settings/About page.");
+}
+
+QString About::developers()
+{
+    return QString("Flex Zhong (ChungZH)\n"
+                   "Felix Yan (felixonmars)\n"
+                   "omame (omaemae)\n"
+                   "probonopd\n"
+                   "Reven Martin (rekols)");
+}

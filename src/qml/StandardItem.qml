@@ -23,12 +23,12 @@ Item {
     RowLayout {
         id: mainLayout
         anchors.fill: parent
-        anchors.leftMargin: Meui.Units.largeSpacing
-        anchors.rightMargin: Meui.Units.largeSpacing
+        anchors.leftMargin: Meui.Units.smallSpacing
+        anchors.rightMargin: Meui.Units.smallSpacing
 
         Label {
             id: keyLabel
-            color: Meui.Theme.disabledTextColor
+            color: Meui.Theme.textColor
         }
 
         Item {
@@ -37,7 +37,7 @@ Item {
 
         Label {
             id: valueLabel
-            color: Meui.Theme.textColor
+            color: Meui.Theme.disabledTextColor
         }
     }
 }
