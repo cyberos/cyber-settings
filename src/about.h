@@ -13,6 +13,7 @@ class About : public QObject
     Q_PROPERTY(QString osName READ osName NOTIFY stub)
     Q_PROPERTY(QString osVersion READ osVersion NOTIFY stub)
     Q_PROPERTY(QString hostname READ hostname NOTIFY stub)
+    Q_PROPERTY(QString userName READ userName NOTIFY stub)
     Q_PROPERTY(QString settingsVersion READ settingsVersion NOTIFY stub)
     QML_ELEMENT
 
@@ -22,6 +23,7 @@ public:
     QString osName();
     QString osVersion();
     QString hostname();
+    QString userName();
     QString settingsVersion();
 
 // Only here so that QML doesn't whine about non-NOTIFYable properties.

@@ -66,6 +66,14 @@ ItemPage {
                 }
 
                 Label {
+                    text: qsTr("Username")
+                    color: Meui.Theme.disabledTextColor
+                }
+                Label {
+                    text: about.userName
+                }
+
+                Label {
                     text: qsTr("Hostname")
                     color: Meui.Theme.disabledTextColor
                 }
