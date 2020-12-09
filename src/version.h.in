@@ -1,0 +1,6 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+#define SETTINGS_VERSION "@GIT_BRANCH@-@GIT_COMMIT_HASH@"
+
+#endif
