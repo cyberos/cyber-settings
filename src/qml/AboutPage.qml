@@ -17,16 +17,15 @@ ItemPage {
 
         ColumnLayout {
             id: layout
-            //anchors.horizontalCenter: parent.horizontalCenter
             anchors.fill: parent
 
             Image {
-                anchors.horizontalCenter: parent.horizontalCenter
-
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 source: "qrc:/images/cyber-logo.svg"
             }
+
             Label {
-                anchors.horizontalCenter: parent.horizontalCenter
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 text: qsTr("Cyber")
                 font.pointSize: 24
                 font.bold: true
