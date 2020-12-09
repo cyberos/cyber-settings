@@ -21,6 +21,9 @@ ItemPage {
 
             Image {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                width: 128
+                height: width
+                sourceSize: Qt.size(width, height)
                 source: "qrc:/images/cyber-logo.svg"
             }
 
