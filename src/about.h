@@ -16,17 +16,17 @@ class About : public QObject
     Q_PROPERTY(QString settingsVersion READ settingsVersion NOTIFY stub)
     QML_ELEMENT
 
-    public:
-        explicit About(QObject *parent = nullptr);
+public:
+    explicit About(QObject *parent = nullptr);
 
-        QString osName();
-        QString osVersion();
-        QString hostname();
-        QString settingsVersion();
-    
-    // Only here so that QML doesn't whine about non-NOTIFYable properties.
-    signals:
-        void stub();
+    QString osName();
+    QString osVersion();
+    QString hostname();
+    QString settingsVersion();
+
+// Only here so that QML doesn't whine about non-NOTIFYable properties.
+signals:
+    void stub();
 };
 
 #endif // ABOUT_H

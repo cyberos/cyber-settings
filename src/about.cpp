@@ -1,22 +1,26 @@
 #include "about.h"
 
-About::About(QObject *parent) :
-    QObject(parent)
+About::About(QObject *parent)
+    : QObject(parent)
 {
 }
 
-QString About::osName() {
+QString About::osName()
+{
     return QSysInfo::prettyProductName();
 }
 
-QString About::osVersion() {
+QString About::osVersion()
+{
     return QSysInfo::productVersion();
 }
 
-QString About::hostname() {
+QString About::hostname()
+{
     return QSysInfo::machineHostName();
 }
 
-QString About::settingsVersion() {
+QString About::settingsVersion()
+{
     return QObject::tr(SETTINGS_VERSION);
 }
