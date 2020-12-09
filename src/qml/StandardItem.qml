@@ -28,6 +28,7 @@ Item {
 
         Label {
             id: keyLabel
+            color: Meui.Theme.disabledTextColor
         }
 
         Item {
@@ -36,6 +37,7 @@ Item {
 
         Label {
             id: valueLabel
+            color: Meui.Theme.textColor
         }
     }
 }

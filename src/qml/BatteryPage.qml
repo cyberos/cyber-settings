@@ -81,8 +81,8 @@ ItemPage {
             }
 
             StandardItem {
-                key: qsTr("Last Charged to")
-                value: battery.lastChargedPercent + "%"
+                key: qsTr("Last Charged to") + " " + battery.lastChargedPercent + "%"
+                value: battery.lastChargedTime
                 visible: battery.lastChargedPercent !== 0
             }
 

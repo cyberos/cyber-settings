@@ -77,6 +77,11 @@ QString Battery::statusString() const
     return m_interface.property("statusString").toString();
 }
 
+QString Battery::lastChargedTime() const
+{
+    return m_interface.property("lastChargedTime").toString();
+}
+
 void Battery::onPropertiesChanged(const QString &ifaceName, const QVariantMap &changedProps, const QStringList &invalidatedProps)
 {
     Q_UNUSED(ifaceName);

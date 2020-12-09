@@ -11,6 +11,7 @@ class Battery : public QObject
     Q_PROPERTY(int chargeState READ chargeState NOTIFY chargeStateChanged)
     Q_PROPERTY(int chargePercent READ chargePercent NOTIFY chargePercentChanged)
     Q_PROPERTY(int lastChargedPercent READ lastChargedPercent NOTIFY lastChargedPercentChanged)
+    Q_PROPERTY(QString lastChargedTime READ lastChargedTime NOTIFY lastChargedPercentChanged)
     Q_PROPERTY(int capacity READ capacity NOTIFY capacityChanged)
     Q_PROPERTY(QString statusString READ statusString NOTIFY remainingTimeChanged)
     Q_PROPERTY(bool onBattery READ onBattery NOTIFY onBatteryChanged)
@@ -26,6 +27,7 @@ public:
     int lastChargedPercent() const;
     int capacity() const;
     QString statusString() const;
+    QString lastChargedTime() const;
 
 signals:
     void validChanged();
