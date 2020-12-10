@@ -14,12 +14,13 @@ class Background : public QObject
 public:
     explicit Background(QObject *parent = nullptr);
 
+    QList<QVariant> backgrounds();
     QString currentBackgroundPath();
     Q_INVOKABLE void setBackground(QString newBackgroundPath);
 
 signals:
     void backgroundChanged();
     void stub();
-}
+};
 
 #endif
