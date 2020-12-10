@@ -21,6 +21,7 @@ set(SRCS
     src/brightness.cpp
     src/fontsmodel.cpp
     src/about.cpp
+    src/background.cpp
 )
 
 set(RESOURCES
