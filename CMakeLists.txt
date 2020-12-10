@@ -27,19 +27,17 @@ set(RESOURCES
     src/resources.qrc
 )
 
-# Get the current working branch
 execute_process(
-  COMMAND git rev-parse --abbrev-ref HEAD
+  COMMAND git rev-list --count HEAD 
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE GIT_BRANCH
+  OUTPUT_VARIABLE COMMIT_COUNT
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-# Get the latest abbreviated commit hash of the working branch
 execute_process(
-  COMMAND git log -1 --format=%h
+  COMMAND git rev-parse --short HEAD
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE GIT_COMMIT_HASH
+  OUTPUT_VARIABLE COMMIT_HASH
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
