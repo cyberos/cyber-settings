@@ -5,10 +5,13 @@ Background::Background(QObject *parent)
 {
 }
 
-// stub
 QList<QVariant> Background::backgrounds() {
     QList<QVariant> list;
-    list.append(QVariant(QString("/usr/share/backgrounds/gnome/SeaSunset.jpg")));
+    QDirIterator it("/usr/share/backgrounds", QStringList() << "*.jpg" << "*.png", QDir::Files, QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        QString bg = it.next();
+        list.append(QVariant(bg));
+    }
     return list;
 }
 
@@ -30,6 +33,7 @@ void Background::setBackground(QString path) {
                          QDBusConnection::sessionBus(), this);
     if (iface.isValid()) {
         iface.call("setWallpaper", path);
+        emit backgroundChanged();
     }
     return;
 }

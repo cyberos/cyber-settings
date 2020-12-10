@@ -6,6 +6,8 @@
 #include <QVariant>
 #include <QDBusInterface>
 #include <QDBusConnection>
+#include <QDirIterator>
+#include <QDir>
 
 class Background : public QObject
 {
