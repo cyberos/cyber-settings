@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QList>
 #include <QVariant>
+#include <QDBusInterface>
+#include <QDBusConnection>
 
 class Background : public QObject
 {
