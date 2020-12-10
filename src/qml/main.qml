@@ -10,6 +10,9 @@ ApplicationWindow {
     title: qsTr("Settings")
     id: rootWindow
 
+    minimumWidth: 900
+    minimumHeight: 600
+
     background: Rectangle {
         color: Meui.Theme.viewBackgroundColor
 
@@ -18,11 +21,6 @@ ApplicationWindow {
                 duration: 250
             }
         }
-    }
-
-    Component {
-        id: generalPage
-        GeneralPage {}
     }
 
     Component {
@@ -60,7 +58,7 @@ ApplicationWindow {
             id: stackView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            initialItem: generalPage
+            initialItem: displayPage
             clip: true
 
             pushEnter: Transition {}
@@ -82,18 +80,15 @@ ApplicationWindow {
     function switchPage(index) {
         switch (index) {
         case 0:
-            stackView.push(generalPage)
-            break;
-        case 1:
             stackView.push(displayPage)
             break;
-        case 2:
+        case 1:
             stackView.push(appearancePage)
             break;
-        case 3:
+        case 2:
             stackView.push(batteryPage)
             break;
-        case 4:
+        case 3:
             stackView.push(aboutPage)
             break;
         }

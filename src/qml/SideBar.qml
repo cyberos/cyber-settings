@@ -14,10 +14,6 @@ Item {
         id: listModel
 
         ListElement {
-            title: qsTr("General")
-        }
-
-        ListElement {
             title: qsTr("Display")
         }
 
@@ -52,7 +48,7 @@ Item {
         }
 
         Item {
-            height: 5
+            height: Meui.Units.smallSpacing
         }
 
         ListView {

@@ -3,7 +3,6 @@
         <file>qml/main.qml</file>
         <file>qml/SideBar.qml</file>
         <file>qml/ItemPage.qml</file>
-        <file>qml/GeneralPage.qml</file>
         <file>qml/AppearancePage.qml</file>
         <file>qml/AboutPage.qml</file>
         <file>qml/DisplayPage.qml</file>
