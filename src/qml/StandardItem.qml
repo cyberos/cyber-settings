@@ -16,16 +16,17 @@ Item {
     Rectangle {
         id: background
         anchors.fill: parent
-        color: Meui.Theme.viewBackgroundColor
+        //color: Meui.Theme.viewBackgroundColor
+        color: "transparent"
         radius: Meui.Theme.smallRadius
     }
 
     RowLayout {
         id: mainLayout
         anchors.fill: parent
-        anchors.leftMargin: Meui.Units.smallSpacing
-        anchors.rightMargin: Meui.Units.smallSpacing
-
+        //anchors.leftMargin: Meui.Units.smallSpacing
+        //anchors.rightMargin: Meui.Units.smallSpacing
+        
         Label {
             id: keyLabel
             color: Meui.Theme.textColor

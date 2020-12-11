@@ -14,7 +14,7 @@ ApplicationWindow {
     minimumHeight: 600
 
     background: Rectangle {
-        color: Meui.Theme.viewBackgroundColor
+        color: Meui.Theme.backgroundColor
 
         Behavior on color {
             ColorAnimation {
@@ -51,11 +51,18 @@ ApplicationWindow {
     RowLayout {
         anchors.fill: parent
 
-        SideBar {
+        Rectangle {
             Layout.fillHeight: true
+            width: 260
+            color: Meui.Theme.viewBackgroundColor
+            radius: 6
 
-            onCurrentIndexChanged: {
-                switchPage(currentIndex)
+            SideBar {
+                anchors.fill: parent
+
+                onCurrentIndexChanged: {
+                    switchPage(currentIndex)
+                }
             }
         }
 
