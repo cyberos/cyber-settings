@@ -83,18 +83,20 @@ Item {
                     }
 
                     radius: Meui.Theme.bigRadius
-                    color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
-                                                 Meui.Theme.highlightColor.g,
-                                                 Meui.Theme.highlightColor.b,
-                                                 1) : mouseArea.containsMouse ? Qt.rgba(Meui.Theme.textColor.r,
-                                                                                                       Meui.Theme.textColor.g,
-                                                                                                       Meui.Theme.textColor.b,
-                                                                                                       0.1) : "transparent"
-                    border.color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
-                                                        Meui.Theme.highlightColor.g,
-                                                        Meui.Theme.highlightColor.b, 1) : "transparent"
-                    border.width: isCurrent ? 1 : 0
+                    color: isCurrent ?
+                        Meui.Theme.highlightColor
+                        : mouseArea.containsMouse ?
+                            Qt.rgba(Meui.Theme.textColor.r,
+                                    Meui.Theme.textColor.g,
+                                    Meui.Theme.textColor.b,
+                                    0.1)
+                            : "transparent"
                     smooth: true
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 125
+                        }
+                    }
                 }
 
                 RowLayout {
@@ -107,6 +109,11 @@ Item {
                         // TODO: add a `Meui.Theme.selectedTextColor` field with white as default
                         color: isCurrent ? "white" : Meui.Theme.textColor
                         font.bold: isCurrent
+                        Behavior on color {
+                            ColorAnimation {
+                                duration: 125
+                            }
+                        }
                     }
                 }
             }

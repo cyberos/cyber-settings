@@ -20,7 +20,9 @@ Item {
         width: control.width * (control.value / 100)
 
         Behavior on width {
-            NumberAnimation { duration: 250 }
+            SmoothedAnimation {
+                velocity: 1000
+            }
         }
     }
 
