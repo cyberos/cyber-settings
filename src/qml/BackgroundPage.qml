@@ -31,7 +31,8 @@ ItemPage {
         Image {
             id: currentBackgroundImage
             source: "file://" + background.currentBackgroundPath
-            fillMode: Image.PreserveAspectFit
+            fillMode: Image.PreserveAspectCrop
+            clip: true
             anchors.left: root.left
             anchors.right: root.right
             anchors.top: curBgLabel.bottom

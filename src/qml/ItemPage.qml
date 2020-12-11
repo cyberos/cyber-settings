@@ -17,7 +17,7 @@ Page {
         text: page.headerTitle
         font.pointSize: 18
         font.bold: true
-        topPadding: Meui.Units.largeSpacing
+        topPadding: Meui.Units.largeSpacing + 10
         leftPadding: Meui.Units.largeSpacing * 2
         rightPadding: Meui.Units.largeSpacing * 2
     }

@@ -37,17 +37,15 @@ Item {
     ColumnLayout {
         anchors {
             fill: parent
-            leftMargin: Meui.Units.largeSpacing
-            topMargin: Meui.Units.largeSpacing
-            rightMargin: Meui.Units.largeSpacing
-            bottomMargin: Meui.Units.largeSpacing
+            margins: Meui.Units.largeSpacing
         }
 
         Label {
             text: qsTr("Settings")
             font.bold: true
             font.pointSize: 18
-            leftPadding: 10
+            topPadding: 10
+            leftPadding: 16
             Layout.alignment: Qt.AlignTop
         }
 
@@ -88,25 +86,27 @@ Item {
                     color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
                                                  Meui.Theme.highlightColor.g,
                                                  Meui.Theme.highlightColor.b,
-                                                 0.1) : mouseArea.containsMouse ? Qt.rgba(Meui.Theme.textColor.r,
+                                                 1) : mouseArea.containsMouse ? Qt.rgba(Meui.Theme.textColor.r,
                                                                                                        Meui.Theme.textColor.g,
                                                                                                        Meui.Theme.textColor.b,
                                                                                                        0.1) : "transparent"
                     border.color: isCurrent ? Qt.rgba(Meui.Theme.highlightColor.r,
                                                         Meui.Theme.highlightColor.g,
-                                                        Meui.Theme.highlightColor.b, 0.5) : "transparent"
+                                                        Meui.Theme.highlightColor.b, 1) : "transparent"
                     border.width: isCurrent ? 1 : 0
                     smooth: true
                 }
 
                 RowLayout {
                     anchors.fill: parent
-                    anchors.leftMargin: 10
+                    anchors.leftMargin: 16
 
                     Label {
                         id: itemTitle
                         text: model.title
-                        color: isCurrent ? Meui.Theme.highlightColor : Meui.Theme.textColor
+                        // TODO: add a `Meui.Theme.selectedTextColor` field with white as default
+                        color: isCurrent ? "white" : Meui.Theme.textColor
+                        font.bold: isCurrent
                     }
                 }
             }
