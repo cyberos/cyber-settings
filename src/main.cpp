@@ -28,6 +28,7 @@
 #include "battery.h"
 #include "brightness.h"
 #include "about.h"
+#include "background.h"
 
 int main(int argc, char *argv[])
 {
@@ -53,6 +54,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<Brightness>(uri, 1, 0, "Brightness");
     qmlRegisterType<Battery>(uri, 1, 0, "Battery");
     qmlRegisterType<About>(uri, 1, 0, "About");
+    qmlRegisterType<Background>(uri, 1, 0, "Background");
 
     engine.addImportPath(QStringLiteral("qrc:/"));
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));

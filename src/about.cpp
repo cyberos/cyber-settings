@@ -37,7 +37,7 @@ QString About::settingsVersion()
 
 QString About::contributors()
 {
-    return QString("omame (omaemae) - Settings/About page.");
+    return QString("omame (omaemae) - Multiple improvements");
 }
 
 QString About::developers()

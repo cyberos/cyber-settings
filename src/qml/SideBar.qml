@@ -22,6 +22,10 @@ Item {
         }
 
         ListElement {
+            title: qsTr("Background")
+        }
+
+        ListElement {
             title: qsTr("Battery")
         }
 
