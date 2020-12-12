@@ -42,6 +42,7 @@ ItemPage {
                 anchors.topMargin: Meui.Units.smallSpacing
                 anchors.bottomMargin: Meui.Units.smallSpacing
                 radius: Meui.Theme.smallRadius
+                color: "transparent"
 
                 border.color: Meui.Theme.highlightColor
                 border.width: image.status == Image.Ready & isSelected ? 2 : 0

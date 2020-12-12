@@ -54,7 +54,7 @@ Appearance::Appearance(QObject *parent)
     if (m_interface.isValid()) {
         m_fontPointSize = m_interface.property("systemFontPointSize").toInt();
 
-        connect(&m_interface, SIGNAL(darkModeDimsWallpaerChanged()), this, SLOT(dimsWallpaperChanged()));
+        connect(&m_interface, SIGNAL(darkModeDimsWallpaerChanged()), this, SIGNAL(dimsWallpaperChanged()));
     }
 }
 

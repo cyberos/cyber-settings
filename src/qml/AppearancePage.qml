@@ -108,10 +108,7 @@ ItemPage {
                     checked: appearance.dimsWallpaper
                     height: dimsTipsLabel.height
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-
-                    onCheckedChanged: {
-                        appearance.setDimsWallpaper(checked)
-                    }
+                    onCheckedChanged: appearance.setDimsWallpaper(checked)
                 }
             }
 
