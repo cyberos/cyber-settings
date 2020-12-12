@@ -30,7 +30,7 @@ ItemPage {
             Label {
                 text: qsTr("Brightness")
                 color: Meui.Theme.disabledTextColor
-                bottomPadding: 10
+                bottomPadding: Meui.Units.largeSpacing
             }
 
             RowLayout {

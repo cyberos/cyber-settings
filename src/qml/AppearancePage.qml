@@ -26,22 +26,71 @@ ItemPage {
             Label {
                 text: qsTr("Theme")
                 color: Meui.Theme.disabledTextColor
-                topPadding: Meui.Units.largeSpacing
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            RadioButton {
-                checked: !Meui.Theme.darkMode
-                text: qsTr("Light")
-                onClicked: appearance.switchDarkMode(false)
-                Layout.fillWidth: true
-            }
+            Row {
+                spacing: Meui.Units.largeSpacing * 2
 
-            RadioButton {
-                checked: Meui.Theme.darkMode
-                text: qsTr("Dark")
-                onClicked: appearance.switchDarkMode(true)
-                Layout.fillWidth: true
+                ColumnLayout {
+                    Image {
+                        id: lightModeImg
+                        width: 128
+                        height: width
+                        sourceSize: Qt.size(width, height)
+                        source: "qrc:/images/light_mode.svg"
+
+                        Rectangle {
+                            anchors.fill: parent
+                            color: "transparent"
+                            border.width: 2
+                            border.color: Meui.Theme.highlightColor
+                            radius: Meui.Theme.bigRadius
+                            visible: !Meui.Theme.darkMode
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            acceptedButtons: Qt.LeftButton
+                            onClicked: appearance.switchDarkMode(false)
+                        }
+                    }
+
+                    Label {
+                        text: qsTr("Light")
+                        Layout.alignment: Qt.AlignHCenter
+                    }
+                }
+
+                ColumnLayout {
+                    Image {
+                        id: darkMode
+                        width: 128
+                        height: width
+                        sourceSize: Qt.size(width, height)
+                        source: "qrc:/images/dark_mode.svg"
+
+                        Rectangle {
+                            anchors.fill: parent
+                            color: "transparent"
+                            border.width: 2
+                            border.color: Meui.Theme.highlightColor
+                            radius: Meui.Theme.bigRadius
+                            visible: Meui.Theme.darkMode
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            acceptedButtons: Qt.LeftButton
+                            onClicked: appearance.switchDarkMode(true)
+                        }
+                    }
+
+                    Label {
+                        text: qsTr("Dark")
+                        Layout.alignment: Qt.AlignHCenter
+                    }
+                }
             }
 
             // Dock
