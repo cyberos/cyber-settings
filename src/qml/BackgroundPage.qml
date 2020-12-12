@@ -38,6 +38,7 @@ ItemPage {
             anchors.top: curBgLabel.bottom
             anchors.topMargin: Meui.Units.largeSpacing
             height: root.height - 200
+            asynchronous: true
             mipmap: true
         }
 
@@ -69,6 +70,7 @@ ItemPage {
                 height: listView.height
                 source: "file://" + modelData
                 opacity: 1.0
+                asynchronous: true
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 125

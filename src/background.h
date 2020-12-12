@@ -13,12 +13,12 @@ class Background : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString currentBackgroundPath READ currentBackgroundPath WRITE setBackground NOTIFY backgroundChanged)
-    Q_PROPERTY(QList<QVariant> backgrounds READ backgrounds NOTIFY stub)
+    Q_PROPERTY(QVariantList backgrounds READ backgrounds NOTIFY stub)
 
 public:
     explicit Background(QObject *parent = nullptr);
 
-    QList<QVariant> backgrounds();
+    QVariantList backgrounds();
     QString currentBackgroundPath();
     Q_INVOKABLE void setBackground(QString newBackgroundPath);
 

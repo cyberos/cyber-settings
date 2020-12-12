@@ -10,7 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(QT Core Gui Quick QuickControls2 DBus)
+set(QT Core Gui Quick QuickControls2 DBus Concurrent)
 find_package(Qt5 REQUIRED ${QT})
 find_package(MeuiKit REQUIRED)
 
@@ -55,6 +55,7 @@ target_link_libraries(${PROJECT_NAME}
         Qt5::Quick
         Qt5::QuickControls2
         Qt5::DBus
+        Qt5::Concurrent
         MeuiKit
 )
 
