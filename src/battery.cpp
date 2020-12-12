@@ -52,6 +52,11 @@ bool Battery::onBattery() const
     return m_onBattery;
 }
 
+void Battery::refresh()
+{
+    m_interface.call("refresh");
+}
+
 int Battery::chargeState() const
 {
     return m_interface.property("chargeState").toInt();

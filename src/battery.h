@@ -22,6 +22,8 @@ public:
     bool available() const;
     bool onBattery() const;
 
+    Q_INVOKABLE void refresh();
+
     int chargeState() const;
     int chargePercent() const;
     int lastChargedPercent() const;
