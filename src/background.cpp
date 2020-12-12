@@ -15,7 +15,13 @@ static QVariantList getBackgroundPaths()
 Background::Background(QObject *parent)
     : QObject(parent)
 {
-
+    QDBusInterface iface("org.cyber.Settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        m_currentPath = iface.property("wallpaper").toString();
+    }
 }
 
 QVariantList Background::backgrounds()
@@ -27,24 +33,21 @@ QVariantList Background::backgrounds()
 
 QString Background::currentBackgroundPath()
 {
-    QDBusInterface iface("org.cyber.Settings",
-                         "/Theme",
-                         "org.cyber.Theme",
-                         QDBusConnection::sessionBus(), this);
-    if (iface.isValid()) {
-        return iface.property("wallpaper").toString();
-    }
-    return QString();
+    return m_currentPath;
 }
 
 void Background::setBackground(QString path)
 {
-    QDBusInterface iface("org.cyber.Settings",
-                         "/Theme",
-                         "org.cyber.Theme",
-                         QDBusConnection::sessionBus(), this);
-    if (iface.isValid()) {
-        iface.call("setWallpaper", path);
-        emit backgroundChanged();
+    if (m_currentPath != path) {
+        m_currentPath = path;
+
+        QDBusInterface iface("org.cyber.Settings",
+                             "/Theme",
+                             "org.cyber.Theme",
+                             QDBusConnection::sessionBus(), this);
+        if (iface.isValid()) {
+            iface.call("setWallpaper", path);
+            emit backgroundChanged();
+        }
     }
 }

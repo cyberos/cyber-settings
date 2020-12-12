@@ -25,6 +25,9 @@ public:
 signals:
     void backgroundChanged();
     void stub();
+
+private:
+    QString m_currentPath;
 };
 
 #endif
