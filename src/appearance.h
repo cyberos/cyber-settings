@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QSettings>
 #include <QFileSystemWatcher>
+#include <QDBusInterface>
 
 class Appearance : public QObject
 {
@@ -30,11 +31,15 @@ class Appearance : public QObject
     Q_PROPERTY(int dockIconSize READ dockIconSize WRITE setDockIconSize NOTIFY dockIconSizeChanged)
     Q_PROPERTY(int dockDirection READ dockDirection WRITE setDockDirection NOTIFY dockDirectionChanged)
     Q_PROPERTY(int fontPointSize READ fontPointSize WRITE setFontPointSize NOTIFY fontPointSizeChanged)
+    Q_PROPERTY(bool dimsWallpaper READ dimsWallpaper WRITE setDimsWallpaper NOTIFY dimsWallpaperChanged)
 
 public:
     explicit Appearance(QObject *parent = nullptr);
 
     Q_INVOKABLE void switchDarkMode(bool darkMode);
+
+    bool dimsWallpaper() const;
+    Q_INVOKABLE void setDimsWallpaper(bool value);
 
     int dockIconSize() const;
     Q_INVOKABLE void setDockIconSize(int dockIconSize);
@@ -52,8 +57,10 @@ signals:
     void dockIconSizeChanged();
     void dockDirectionChanged();
     void fontPointSizeChanged();
+    void dimsWallpaperChanged();
 
 private:
+    QDBusInterface m_interface;
     QSettings *m_dockSettings;
     QFileSystemWatcher *m_dockConfigWacher;
 

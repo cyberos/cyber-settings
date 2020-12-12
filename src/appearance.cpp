@@ -27,6 +27,10 @@
 
 Appearance::Appearance(QObject *parent)
     : QObject(parent)
+    , m_interface("org.cyber.Settings",
+                  "/Theme",
+                  "org.cyber.Theme",
+                  QDBusConnection::sessionBus())
     , m_dockSettings(new QSettings(QSettings::UserScope, "cyberos", "dock"))
     , m_dockConfigWacher(new QFileSystemWatcher(this))
     , m_dockIconSize(0)
@@ -47,24 +51,28 @@ Appearance::Appearance(QObject *parent)
     });
 
     // Init
-    QDBusInterface iface("org.cyber.Settings",
-                         "/Theme",
-                         "org.cyber.Theme",
-                         QDBusConnection::sessionBus(), this);
-    if (iface.isValid()) {
-        m_fontPointSize = iface.property("systemFontPointSize").toInt();
+    if (m_interface.isValid()) {
+        m_fontPointSize = m_interface.property("systemFontPointSize").toInt();
+
+        connect(&m_interface, SIGNAL(darkModeDimsWallpaerChanged()), this, SLOT(dimsWallpaperChanged()));
     }
 }
 
 void Appearance::switchDarkMode(bool darkMode)
 {
-    QDBusInterface iface("org.cyber.Settings",
-                         "/Theme",
-                         "org.cyber.Theme",
-                         QDBusConnection::sessionBus(), this);
-    if (iface.isValid()) {
-        iface.call("setDarkMode", darkMode);
+    if (m_interface.isValid()) {
+        m_interface.call("setDarkMode", darkMode);
     }
+}
+
+bool Appearance::dimsWallpaper() const
+{
+    return m_interface.property("darkModeDimsWallpaer").toBool();
+}
+
+void Appearance::setDimsWallpaper(bool value)
+{
+    m_interface.call("setDarkModeDimsWallpaer", value);
 }
 
 int Appearance::dockIconSize() const

@@ -29,6 +29,7 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
+            // Light Mode and Dark Mode
             Row {
                 spacing: Meui.Units.largeSpacing * 2
 
@@ -89,6 +90,27 @@ ItemPage {
                     Label {
                         text: qsTr("Dark")
                         Layout.alignment: Qt.AlignHCenter
+                    }
+                }
+            }
+
+            RowLayout {
+                spacing: Meui.Units.largeSpacing * 2
+
+                Label {
+                    id: dimsTipsLabel
+                    text: qsTr("Dark Appearance Dims Wallpaper")
+                    Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+                }
+
+
+                Switch {
+                    checked: appearance.dimsWallpaper
+                    height: dimsTipsLabel.height
+                    Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+
+                    onCheckedChanged: {
+                        appearance.setDimsWallpaper(checked)
                     }
                 }
             }
