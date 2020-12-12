@@ -11,27 +11,38 @@ Item {
     property int radius: height * 0.15
 
     Rectangle {
-        id: valueRect
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        color: Qt.rgba(57 / 255, 187 / 255, 94 / 255, 1)
-        radius: control.radius
-        width: control.width * (control.value / 100)
-
-        Behavior on width {
-            SmoothedAnimation {
-                velocity: 1000
-            }
-        }
-    }
-
-    Rectangle {
         id: bgRect
         anchors.fill: parent
-        z: -1
-        color: Qt.rgba(57 / 255, 187 / 255, 94 / 255, 1)
-        opacity: 0.5
+        color: Qt.rgba(57 / 255, 187 / 255, 94 / 255, 0.5)
         radius: control.radius
+
+        layer.enabled: true
+        layer.effect: OpacityMask {
+            maskSource: Item {
+                width: bgRect.width
+                height: bgRect.height
+
+                Rectangle {
+                    anchors.fill: parent
+                    radius: control.radius
+                }
+            }
+        }
+
+        Rectangle {
+            id: valueRect
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            width: control.width * (control.value / 100)
+            color: Qt.rgba(57 / 255, 187 / 255, 94 / 255, 1)
+            opacity: 1
+
+            Behavior on width {
+                SmoothedAnimation {
+                    velocity: 1000
+                }
+            }
+        }
     }
 }
