@@ -41,8 +41,8 @@ ItemPage {
                 anchors.rightMargin: Meui.Units.largeSpacing
                 anchors.topMargin: Meui.Units.smallSpacing
                 anchors.bottomMargin: Meui.Units.smallSpacing
-                radius: Meui.Theme.smallRadius
                 color: "transparent"
+                radius: 4
 
                 border.color: Meui.Theme.highlightColor
                 border.width: image.status == Image.Ready & isSelected ? 2 : 0
@@ -50,7 +50,7 @@ ItemPage {
                 Image {
                     id: image
                     anchors.fill: parent
-                    anchors.margins: Meui.Theme.smallRadius
+                    anchors.margins: Meui.Units.smallSpacing
                     source: "file://" + modelData
                     sourceSize: Qt.size(width, height)
                     fillMode: Image.PreserveAspectCrop
