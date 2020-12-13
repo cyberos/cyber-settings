@@ -21,5 +21,6 @@
         <file>images/light_mode.svg</file>
         <file>images/dock_bottom.svg</file>
         <file>images/dock_left.svg</file>
+        <file>qml/IconCheckBox.qml</file>
     </qresource>
 </RCC>

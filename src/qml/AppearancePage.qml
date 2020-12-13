@@ -30,67 +30,21 @@ ItemPage {
             }
 
             // Light Mode and Dark Mode
-            Row {
+            RowLayout {
                 spacing: Meui.Units.largeSpacing * 2
 
-                ColumnLayout {
-                    Image {
-                        id: lightModeImg
-                        width: 128
-                        height: width
-                        sourceSize: Qt.size(width, height)
-                        source: "qrc:/images/light_mode.svg"
-
-                        Rectangle {
-                            anchors.fill: parent
-                            color: "transparent"
-                            border.width: 2
-                            border.color: Meui.Theme.highlightColor
-                            radius: Meui.Theme.bigRadius
-                            visible: !Meui.Theme.darkMode
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            acceptedButtons: Qt.LeftButton
-                            onClicked: appearance.switchDarkMode(false)
-                        }
-                    }
-
-                    Label {
-                        text: qsTr("Light")
-                        Layout.alignment: Qt.AlignHCenter
-                    }
+                IconCheckBox {
+                    source: "qrc:/images/light_mode.svg"
+                    text: qsTr("Light")
+                    checked: !Meui.Theme.darkMode
+                    onClicked: appearance.switchDarkMode(false)
                 }
 
-                ColumnLayout {
-                    Image {
-                        id: darkMode
-                        width: 128
-                        height: width
-                        sourceSize: Qt.size(width, height)
-                        source: "qrc:/images/dark_mode.svg"
-
-                        Rectangle {
-                            anchors.fill: parent
-                            color: "transparent"
-                            border.width: 2
-                            border.color: Meui.Theme.highlightColor
-                            radius: Meui.Theme.bigRadius
-                            visible: Meui.Theme.darkMode
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            acceptedButtons: Qt.LeftButton
-                            onClicked: appearance.switchDarkMode(true)
-                        }
-                    }
-
-                    Label {
-                        text: qsTr("Dark")
-                        Layout.alignment: Qt.AlignHCenter
-                    }
+                IconCheckBox {
+                    source: "qrc:/images/dark_mode.svg"
+                    text: qsTr("Dark")
+                    checked: Meui.Theme.darkMode
+                    onClicked: appearance.switchDarkMode(true)
                 }
             }
 
@@ -123,19 +77,21 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            ColumnLayout {
-                RadioButton {
-                    checked: appearance.dockDirection === 0
+            RowLayout {
+                spacing: Meui.Units.largeSpacing * 2
+
+                IconCheckBox {
+                    source: "qrc:/images/dock_left.svg"
                     text: qsTr("Left")
+                    checked: appearance.dockDirection === 0
                     onClicked: appearance.setDockDirection(0)
-                    Layout.fillWidth: true
                 }
 
-                RadioButton {
-                    checked: appearance.dockDirection === 1
+                IconCheckBox {
+                    source: "qrc:/images/dock_bottom.svg"
                     text: qsTr("Bottom")
+                    checked: appearance.dockDirection === 1
                     onClicked: appearance.setDockDirection(1)
-                    Layout.fillWidth: true
                 }
             }
 
