@@ -94,15 +94,18 @@ ItemPage {
                 }
             }
 
+            Item {
+                height: Meui.Units.largeSpacing
+            }
+
             RowLayout {
-                spacing: Meui.Units.largeSpacing * 2
+                spacing: Meui.Units.largeSpacing
 
                 Label {
                     id: dimsTipsLabel
                     text: qsTr("Dark Appearance Dims Wallpaper")
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                 }
-
 
                 Switch {
                     checked: appearance.dimsWallpaper
