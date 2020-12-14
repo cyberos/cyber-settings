@@ -15,6 +15,44 @@ ItemPage {
         id: appearance
     }
 
+    Connections {
+        target: fontsModel
+
+        function onGeneralFontAdded(family) {
+            generalFontComboBox.model.append({text: family})
+        }
+
+        function onFixedFontAdded(family) {
+            fixedFontComboBox.model.append({text: family})
+        }
+
+        function onLoadFinished() {
+            var generalFontIndex = 0
+            var fixedFontIndex = 0
+
+            for (var i = 0; i < generalFontComboBox.model.count; ++i) {
+                if (generalFontComboBox.model.get(i).text === fontsModel.systemGeneralFont) {
+                    generalFontIndex = i
+                    break;
+                }
+            }
+
+            for (i = 0; i < fixedFontComboBox.model.count; ++i) {
+                if (fixedFontComboBox.model.get(i).text === fontsModel.systemFixedFont) {
+                    fixedFontIndex = i
+                    break;
+                }
+            }
+
+            generalFontComboBox.currentIndex = generalFontIndex
+            generalFontComboBox.enabled = true
+            fixedFontComboBox.currentIndex = fixedFontIndex
+            fixedFontComboBox.enabled = true
+
+            console.log("fonts load finished")
+        }
+    }
+
     Scrollable {
         anchors.fill: parent
         contentHeight: layout.implicitHeight
@@ -193,9 +231,9 @@ ItemPage {
                 }
 
                 ComboBox {
-                    id: generalFontBox
-                    model: fontsModel.generalFonts
-                    currentIndex: fontsModel.generalFontIndex
+                    id: generalFontComboBox
+                    model: ListModel {}
+                    enabled: false
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
                     onActivated: appearance.setGenericFontFamily(currentText)
@@ -209,9 +247,9 @@ ItemPage {
                 }
 
                 ComboBox {
-                    id: fixedFont
-                    model: fontsModel.fixedFonts
-                    currentIndex: fontsModel.fixedFontIndex
+                    id: fixedFontComboBox
+                    model: ListModel {}
+                    enabled: false
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
                     onActivated: appearance.setFixedFontFamily(currentText)

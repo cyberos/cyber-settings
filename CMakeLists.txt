@@ -13,6 +13,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(QT Core Gui Quick QuickControls2 DBus Concurrent)
 find_package(Qt5 REQUIRED ${QT})
 find_package(MeuiKit REQUIRED)
+find_package(Freetype REQUIRED)
+find_package(PkgConfig REQUIRED)
+
+pkg_search_module(FontConfig REQUIRED fontconfig IMPORTED_TARGET)
 
 set(SRCS
     src/main.cpp
@@ -57,6 +61,9 @@ target_link_libraries(${PROJECT_NAME}
         Qt5::DBus
         Qt5::Concurrent
         MeuiKit
+
+        PkgConfig::FontConfig
+        ${FREETYPE_LIBRARIES}
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION /usr/bin)

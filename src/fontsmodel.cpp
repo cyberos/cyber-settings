@@ -21,61 +21,75 @@
 #include <QFontDatabase>
 #include <QFontInfo>
 #include <QTimer>
+#include <QDir>
+#include <QDirIterator>
+
+// Freetype and Fontconfig
+#include <freetype/freetype.h>
+#include <fontconfig/fontconfig.h>
+#include <ft2build.h>
 
 FontsModel::FontsModel(QObject *parent)
-    : QObject(parent)
-    , m_generalFontIndex(0)
-    , m_fixedFontIndex(0)
+    : QThread(parent)
 {
-    QTimer::singleShot(500, this, &FontsModel::initFonts);
+    QThread::start();
 }
 
-QStringList FontsModel::generalFonts() const
+void FontsModel::run()
 {
-    return m_generalFonts;
-}
+    QString dirPath = "/usr/share/fonts";
+    QDir dir(dirPath);
 
-void FontsModel::setGeneralFonts(const QStringList &generalFonts)
-{
-    m_generalFonts = generalFonts;
-}
-
-QStringList FontsModel::fixedFonts() const
-{
-    return m_fixedFonts;
-}
-
-void FontsModel::setFixedFonts(const QStringList &fixedFonts)
-{
-    m_fixedFonts = fixedFonts;
-}
-
-int FontsModel::generalFontIndex() const
-{
-    return m_generalFontIndex;
-}
-
-int FontsModel::fixedFontIndex() const
-{
-    return m_fixedFontIndex;
-}
-
-void FontsModel::initFonts()
-{
-    QFontDatabase fontDatabase;
-    for (const QString &family : fontDatabase.families()) {
-        QFont font(family);
-        QFontInfo info(font);
-        if (info.fixedPitch())
-            m_fixedFonts << family;
-        else
-            m_generalFonts << family;
+    if (!dir.exists()) {
+        return;
     }
 
-    QFont generilFont = fontDatabase.systemFont(QFontDatabase::GeneralFont);
-    QFont fixedFont = fontDatabase.systemFont(QFontDatabase::FixedFont);
-    m_generalFontIndex = m_generalFonts.indexOf(generilFont.family());
-    m_fixedFontIndex = m_fixedFonts.indexOf(fixedFont.family());
+    QStringList nameFilters;
+    nameFilters << QLatin1String("*.ttf")
+                << QLatin1String("*.ttc")
+                << QLatin1String("*.pfa")
+                << QLatin1String("*.pfb")
+                << QLatin1String("*.otf");
 
-    emit fontsChanged();
+    QDirIterator it(dirPath, nameFilters, QDir::Files, QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        QString filePath = it.next();
+
+        // Init
+        FT_Library library = nullptr;
+        FT_Init_FreeType(&library);
+
+        FT_Face face = nullptr;
+        FT_Error error = FT_New_Face(library, filePath.toUtf8().constData(), 0, &face);
+
+        // Error
+        if (error != 0) {
+            FT_Done_Face(face);
+            FT_Done_FreeType(library);
+            continue;
+        }
+
+        QString family = QString::fromLatin1(face->family_name);
+        bool fixedPitch = (face->face_flags & FT_FACE_FLAG_FIXED_WIDTH);
+
+        if (!fixedPitch)
+            emit generalFontAdded(family);
+        else
+            emit fixedFontAdded(family);
+
+        FT_Done_Face(face);
+        FT_Done_FreeType(library);
+    }
+
+    emit loadFinished();
+}
+
+QString FontsModel::systemGeneralFont() const
+{
+    return QFontDatabase::systemFont(QFontDatabase::GeneralFont).family();
+}
+
+QString FontsModel::systemFixedFont() const
+{
+    return QFontDatabase::systemFont(QFontDatabase::FixedFont).family();
 }
