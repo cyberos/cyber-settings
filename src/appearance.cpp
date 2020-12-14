@@ -148,3 +148,14 @@ void Appearance::setFontPointSize(int fontPointSize)
         iface.call("setSystemFontPointSize", m_fontPointSize * 1.0);
     }
 }
+
+void Appearance::setAccentColor(int accentColor)
+{
+    QDBusInterface iface("org.cyber.Settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        iface.call("setAccentColor", accentColor);
+    }
+}
