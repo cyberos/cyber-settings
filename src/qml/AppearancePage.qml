@@ -115,6 +115,7 @@ ItemPage {
                 width: parent.width
                 cellWidth: height
                 cellHeight: height
+                interactive: false
                 model: ListModel {
                     ListElement { accentColor: "#2273E6" }
                     ListElement { accentColor: "#E82E3E" }
