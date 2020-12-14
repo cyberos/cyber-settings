@@ -30,7 +30,7 @@ ItemPage {
             }
 
             for (i in fontsModel.fixedFonts) {
-                if (fontsModel.fixedFonts === fontsModel.generalFonts[i]) {
+                if (fontsModel.systemFixedFont === fontsModel.fixedFonts[i]) {
                     fixedFontComboBox.currentIndex = i
                     break;
                 }
