@@ -22,7 +22,7 @@ Item {
         }
 
         ListElement {
-            title: qsTr("Background")
+            title: qsTr("Wallpaper")
         }
 
         ListElement {
@@ -106,8 +106,7 @@ Item {
                     Label {
                         id: itemTitle
                         text: model.title
-                        // TODO: add a `Meui.Theme.selectedTextColor` field with white as default
-                        color: isCurrent ? "white" : Meui.Theme.textColor
+                        color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
                         font.bold: isCurrent
                         Behavior on color {
                             ColorAnimation {

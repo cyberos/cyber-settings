@@ -95,7 +95,7 @@ ItemPage {
 
                 Label {
                     id: dimsTipsLabel
-                    text: qsTr("Dim the background in dark theme")
+                    text: qsTr("Dim the wallpaper in dark theme")
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                 }
 

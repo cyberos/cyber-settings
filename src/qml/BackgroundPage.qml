@@ -6,7 +6,7 @@ import org.cyber.Settings 1.0
 import MeuiKit 1.0 as Meui
 
 ItemPage {
-    headerTitle: qsTr("Background")
+    headerTitle: qsTr("Wallpaper")
 
     Background {
         id: background
@@ -42,7 +42,7 @@ ItemPage {
                 anchors.topMargin: Meui.Units.smallSpacing
                 anchors.bottomMargin: Meui.Units.smallSpacing
                 color: "transparent"
-                radius: 4
+                radius: Meui.Theme.bigRadius + Meui.Units.smallSpacing / 2
 
                 border.color: Meui.Theme.highlightColor
                 border.width: image.status == Image.Ready & isSelected ? 2 : 0
@@ -63,6 +63,19 @@ ItemPage {
                         NumberAnimation {
                             duration: 125
                             easing.type: Easing.InOutQuad
+                        }
+                    }
+
+                    layer.enabled: true
+                    layer.effect: OpacityMask {
+                        maskSource: Item {
+                            width: image.width
+                            height: image.height
+
+                            Rectangle {
+                                anchors.fill: parent
+                                radius: Meui.Theme.bigRadius
+                            }
                         }
                     }
                 }
