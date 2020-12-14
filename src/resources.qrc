@@ -22,5 +22,6 @@
         <file>images/dock_bottom.svg</file>
         <file>images/dock_left.svg</file>
         <file>qml/IconCheckBox.qml</file>
+        <file>qml/HorizontalDivider.qml</file>
     </qresource>
 </RCC>

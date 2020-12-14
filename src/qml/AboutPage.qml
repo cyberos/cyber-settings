@@ -65,6 +65,12 @@ ItemPage {
                 value: about.hostname
             }
 
+            Item {
+                height: Meui.Units.smallSpacing
+            }
+
+            HorizontalDivider {}
+
             // Cyber Info
             Label {
                 text: qsTr("Other Info")

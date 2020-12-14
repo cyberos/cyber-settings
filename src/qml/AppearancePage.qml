@@ -69,6 +69,12 @@ ItemPage {
                 }
             }
 
+            Item {
+                height: Meui.Units.smallSpacing
+            }
+
+            HorizontalDivider {}
+
             // Dock
             Label {
                 text: qsTr("Dock Direction")
@@ -158,6 +164,12 @@ ItemPage {
                     appearance.setDockIconSize(iconSize)
                 }
             }
+
+            Item {
+                height: Meui.Units.smallSpacing
+            }
+
+            HorizontalDivider {}
 
             // Font
             Label {
