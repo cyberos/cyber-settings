@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,8 +58,7 @@
        width="16.933334"
        height="16.933332"
        x="-5.0862633e-07"
-       y="4.4504802e-07"
-       ry="2.1166666" />
+       y="4.4504802e-07" />
     <circle
        style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.240117"
        id="path857"
