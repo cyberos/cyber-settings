@@ -44,6 +44,9 @@ void FontsModel::run()
         return;
     }
 
+    m_generalFonts.clear();
+    m_fixedFonts.clear();
+
     QStringList nameFilters;
     nameFilters << QLatin1String("*.ttf")
                 << QLatin1String("*.ttc")
@@ -72,16 +75,29 @@ void FontsModel::run()
         QString family = QString::fromLatin1(face->family_name);
         bool fixedPitch = (face->face_flags & FT_FACE_FLAG_FIXED_WIDTH);
 
-        if (!fixedPitch)
-            emit generalFontAdded(family);
-        else
-            emit fixedFontAdded(family);
+        if (fixedPitch) {
+            if (!m_fixedFonts.contains(family))
+                m_fixedFonts.append(family);
+        } else {
+            if (!m_generalFonts.contains(family))
+                m_generalFonts.append(family);
+        }
 
         FT_Done_Face(face);
         FT_Done_FreeType(library);
     }
 
     emit loadFinished();
+}
+
+QStringList FontsModel::generalFonts() const
+{
+    return m_generalFonts;
+}
+
+QStringList FontsModel::fixedFonts() const
+{
+    return m_fixedFonts;
 }
 
 QString FontsModel::systemGeneralFont() const

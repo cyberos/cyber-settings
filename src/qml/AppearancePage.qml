@@ -18,35 +18,25 @@ ItemPage {
     Connections {
         target: fontsModel
 
-        function onGeneralFontAdded(family) {
-            generalFontComboBox.model.append({text: family})
-        }
-
-        function onFixedFontAdded(family) {
-            fixedFontComboBox.model.append({text: family})
-        }
-
         function onLoadFinished() {
-            var generalFontIndex = 0
-            var fixedFontIndex = 0
+            generalFontComboBox.model = fontsModel.generalFonts
+            fixedFontComboBox.model = fontsModel.fixedFonts
 
-            for (var i = 0; i < generalFontComboBox.model.count; ++i) {
-                if (generalFontComboBox.model.get(i).text === fontsModel.systemGeneralFont) {
-                    generalFontIndex = i
+            for (var i in fontsModel.generalFonts) {
+                if (fontsModel.systemGeneralFont === fontsModel.generalFonts[i]) {
+                    generalFontComboBox.currentIndex = i
                     break;
                 }
             }
 
-            for (i = 0; i < fixedFontComboBox.model.count; ++i) {
-                if (fixedFontComboBox.model.get(i).text === fontsModel.systemFixedFont) {
-                    fixedFontIndex = i
+            for (i in fontsModel.fixedFonts) {
+                if (fontsModel.fixedFonts === fontsModel.generalFonts[i]) {
+                    fixedFontComboBox.currentIndex = i
                     break;
                 }
             }
 
-            generalFontComboBox.currentIndex = generalFontIndex
             generalFontComboBox.enabled = true
-            fixedFontComboBox.currentIndex = fixedFontIndex
             fixedFontComboBox.enabled = true
 
             console.log("fonts load finished")

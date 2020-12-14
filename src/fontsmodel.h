@@ -25,6 +25,8 @@
 class FontsModel : public QThread
 {
     Q_OBJECT
+    Q_PROPERTY(QStringList generalFonts READ generalFonts NOTIFY loadFinished)
+    Q_PROPERTY(QStringList fixedFonts READ fixedFonts NOTIFY loadFinished)
     Q_PROPERTY(QString systemGeneralFont READ systemGeneralFont NOTIFY loadFinished)
     Q_PROPERTY(QString systemFixedFont READ systemFixedFont NOTIFY loadFinished)
 
@@ -33,13 +35,18 @@ public:
 
     void run() override;
 
+    QStringList generalFonts() const;
+    QStringList fixedFonts() const;
+
     QString systemGeneralFont() const;
     QString systemFixedFont() const;
 
 signals:
-    void generalFontAdded(QString);
-    void fixedFontAdded(QString);
     void loadFinished();
+
+private:
+    QStringList m_generalFonts;
+    QStringList m_fixedFonts;
 };
 
 #endif // FONTSMODEL_H
