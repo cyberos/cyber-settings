@@ -53,6 +53,8 @@ public:
     int fontPointSize() const;
     Q_INVOKABLE void setFontPointSize(int fontPointSize);
 
+    Q_INVOKABLE void setAccentColor(int accentColor);
+
 signals:
     void dockIconSizeChanged();
     void dockDirectionChanged();

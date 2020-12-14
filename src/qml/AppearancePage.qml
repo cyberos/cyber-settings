@@ -95,7 +95,7 @@ ItemPage {
 
                 Label {
                     id: dimsTipsLabel
-                    text: qsTr("Dark Appearance Dims Wallpaper")
+                    text: qsTr("Dim the background in dark theme")
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                 }
 
@@ -205,6 +205,54 @@ ItemPage {
 
             Item {
                 height: Meui.Units.smallSpacing
+            }
+
+            HorizontalDivider {}
+
+            Label {
+                text: qsTr("Accent color")
+                color: Meui.Theme.disabledTextColor
+                topPadding: Meui.Units.largeSpacing
+                bottomPadding: Meui.Units.smallSpacing
+            }
+
+            GridView {
+                height: 32 + Meui.Units.largeSpacing * 2
+                width: parent.width
+                cellWidth: height
+                cellHeight: height
+                model: ListModel {
+                    ListElement { accentColor: "#2273E6" }
+                    ListElement { accentColor: "#E82E3E" }
+                    ListElement { accentColor: "#35BF56" }
+                    ListElement { accentColor: "#5542C3" }
+                    ListElement { accentColor: "#CA64AC" }
+                }
+                delegate: Rectangle {
+                    property bool isSelected: Qt.colorEqual(Meui.Theme.highlightColor, accentColor)
+                    width: 32 + Meui.Units.largeSpacing
+                    height: width
+                    color: "transparent"
+                    radius: width / 2
+                    border.color: Meui.Theme.textColor
+                    border.width: isSelected ? 2 : 0
+
+                    Rectangle {
+                        color: accentColor
+                        width: 32
+                        height: width
+                        anchors.centerIn: parent
+                        radius: width / 2
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: function() {
+                                appearance.setAccentColor(index)
+                                console.log(`Set accent color to ${index}.`)
+                            }
+                        }
+                    }
+                }
             }
 
             HorizontalDivider {}
