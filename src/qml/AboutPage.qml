@@ -51,8 +51,8 @@ ItemPage {
             }
 
             StandardItem {
-                key: qsTr("Version")
-                value: about.osVersion
+                key: qsTr("Kernel Version")
+                value: about.kernelVersion
             }
 
             StandardItem {
@@ -87,11 +87,6 @@ ItemPage {
             StandardItem {
                 key: qsTr("Developers")
                 value: about.developers
-            }
-
-            StandardItem {
-                key: qsTr("Contributors")
-                value: about.contributors
             }
         }
     }

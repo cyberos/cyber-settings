@@ -10,9 +10,9 @@ QString About::osName()
     return QSysInfo::prettyProductName();
 }
 
-QString About::osVersion()
+QString About::kernelVersion()
 {
-    return QSysInfo::productVersion();
+    return QSysInfo::kernelVersion();
 }
 
 QString About::hostname()
@@ -33,11 +33,6 @@ QString About::userName()
 QString About::settingsVersion()
 {
     return QObject::tr(SETTINGS_VERSION);
-}
-
-QString About::contributors()
-{
-    return QString("omame (omaemae) - Multiple improvements");
 }
 
 QString About::developers()
