@@ -9,6 +9,8 @@ Item {
 
     property int itemRadiusV: 8
 
+    property alias view: listView
+    property alias model: listModel
     property alias currentIndex: listView.currentIndex
 
     ListModel {
@@ -16,31 +18,37 @@ Item {
 
         ListElement {
             title: qsTr("Display")
+            name: "display"
             iconSource: "qrc:/images/sidebar/display.svg"
         }
 
         ListElement {
             title: qsTr("Appearance")
+            name: "appearance"
             iconSource: "qrc:/images/sidebar/appearance.svg"
         }
 
         ListElement {
             title: qsTr("Dock")
+            name: "dock"
             iconSource: "qrc:/images/sidebar/dock.svg"
         }
 
         ListElement {
             title: qsTr("Wallpaper")
+            name: "wallpaper"
             iconSource: "qrc:/images/sidebar/wallpaper.svg"
         }
 
         ListElement {
             title: qsTr("Battery")
+            name: "battery"
             iconSource: "qrc:/images/sidebar/battery.svg"
         }
 
         ListElement {
             title: qsTr("About")
+            name: "about"
             iconSource: "qrc:/images/sidebar/about.svg"
         }
     }

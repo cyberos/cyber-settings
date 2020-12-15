@@ -63,10 +63,11 @@ ApplicationWindow {
             radius: 6
 
             SideBar {
+                id: sideBar
                 anchors.fill: parent
 
                 onCurrentIndexChanged: {
-                    switchPage(currentIndex)
+                    switchPageFromIndex(currentIndex)
                 }
             }
         }
@@ -94,7 +95,7 @@ ApplicationWindow {
         }
     }
 
-    function switchPage(index) {
+    function switchPageFromIndex(index) {
         switch (index) {
         case 0:
             stackView.push(displayPage)
@@ -114,6 +115,16 @@ ApplicationWindow {
         case 5:
             stackView.push(aboutPage)
             break;
+        }
+    }
+
+    function switchPageFromName(pageName) {
+        for (var i = 0; i < sideBar.model.count; ++i) {
+            if (pageName === sideBar.model.get(i).name) {
+                switchPageFromIndex(i)
+                sideBar.view.currentIndex = i
+                rootWindow.show()
+            }
         }
     }
 }

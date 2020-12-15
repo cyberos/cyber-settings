@@ -17,47 +17,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
-
-#include <QDBusConnection>
-
-#include "fontsmodel.h"
-#include "appearance.h"
-#include "battery.h"
-#include "brightness.h"
-#include "about.h"
-#include "background.h"
+#include "application.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QGuiApplication app(argc, argv);
-    app.setOrganizationName("cyberos");
-
-    if (!QDBusConnection::sessionBus().registerService("org.cyber.SettingsUI")) {
-        return -1;
-    }
-
-    QQmlApplicationEngine engine;
-
-#ifdef QT_DEBUG
-    engine.rootContext()->setContextProperty(QStringLiteral("debug"), true);
-#else
-   engine.rootContext()->setContextProperty(QStringLiteral("debug"), false);
-#endif
-
-    const char *uri = "org.cyber.Settings";
-    qmlRegisterType<Appearance>(uri, 1, 0, "Appearance");
-    qmlRegisterType<FontsModel>(uri, 1, 0, "FontsModel");
-    qmlRegisterType<Brightness>(uri, 1, 0, "Brightness");
-    qmlRegisterType<Battery>(uri, 1, 0, "Battery");
-    qmlRegisterType<About>(uri, 1, 0, "About");
-    qmlRegisterType<Background>(uri, 1, 0, "Background");
-
-    engine.addImportPath(QStringLiteral("qrc:/"));
-    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
-
-    return app.exec();
+    Application app(argc, argv);
+    return 0;
 }

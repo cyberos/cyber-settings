@@ -19,6 +19,7 @@ find_package(PkgConfig REQUIRED)
 pkg_search_module(FontConfig REQUIRED fontconfig IMPORTED_TARGET)
 
 set(SRCS
+    src/application.cpp
     src/main.cpp
     src/appearance.cpp
     src/battery.cpp
@@ -31,6 +32,11 @@ set(SRCS
 set(RESOURCES
     src/resources.qrc
 )
+
+qt5_add_dbus_adaptor(DBUS_SOURCES
+                     src/org.cyber.SettingsUI.xml
+                     src/application.h Application)
+set_source_files_properties(${DBUS_SOURCES} PROPERTIES SKIP_AUTOGEN ON)
 
 execute_process(
   COMMAND git rev-list --count HEAD 
@@ -53,7 +59,7 @@ configure_file(
 
 include_directories(${CMAKE_BINARY_DIR}/generated)
 
-add_executable(${PROJECT_NAME} ${SRCS} ${RESOURCES})
+add_executable(${PROJECT_NAME} ${DBUS_SOURCES} ${SRCS} ${RESOURCES})
 target_link_libraries(${PROJECT_NAME}
         Qt5::Core
         Qt5::Quick
