@@ -21,7 +21,7 @@ ItemPage {
 
             // Dock
             Label {
-                text: qsTr("Dock Direction")
+                text: qsTr("Position on screen")
                 color: Meui.Theme.disabledTextColor
                 bottomPadding: Meui.Units.smallSpacing
             }
@@ -51,7 +51,7 @@ ItemPage {
             HorizontalDivider {}
 
             Label {
-                text: qsTr("Dock Icon Size")
+                text: qsTr("Size")
                 color: Meui.Theme.disabledTextColor
                 topPadding: Meui.Units.largeSpacing
                 bottomPadding: Meui.Units.smallSpacing
