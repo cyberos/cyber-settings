@@ -116,6 +116,7 @@ ItemPage {
                     ListElement { accentColor: "#35BF56" }
                     ListElement { accentColor: "#5542C3" }
                     ListElement { accentColor: "#CA64AC" }
+                    ListElement { accentColor: "#F5B800" }
                 }
                 delegate: Rectangle {
                     property bool isSelected: Qt.colorEqual(Meui.Theme.highlightColor, accentColor)
