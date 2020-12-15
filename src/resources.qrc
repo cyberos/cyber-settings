@@ -30,5 +30,7 @@
         <file>images/sidebar/wallpaper.svg</file>
         <file>images/sidebar/dock.svg</file>
         <file>images/sidebar/appearance.svg</file>
+        <file>qml/LanguagePage.qml</file>
+        <file>images/sidebar/language.svg</file>
     </qresource>
 </RCC>

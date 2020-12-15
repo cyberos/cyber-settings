@@ -41,6 +41,12 @@ Item {
         }
 
         ListElement {
+            title: qsTr("Language")
+            name: "language"
+            iconSource: "qrc:/images/sidebar/language.svg"
+        }
+
+        ListElement {
             title: qsTr("Battery")
             name: "battery"
             iconSource: "qrc:/images/sidebar/battery.svg"

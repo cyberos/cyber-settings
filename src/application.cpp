@@ -8,6 +8,7 @@
 #include "brightness.h"
 #include "about.h"
 #include "background.h"
+#include "language.h"
 
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
@@ -42,6 +43,7 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<Battery>(uri, 1, 0, "Battery");
     qmlRegisterType<About>(uri, 1, 0, "About");
     qmlRegisterType<Background>(uri, 1, 0, "Background");
+    qmlRegisterType<Language>(uri, 1, 0, "Language");
 
     m_engine.addImportPath(QStringLiteral("qrc:/"));
     m_engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));

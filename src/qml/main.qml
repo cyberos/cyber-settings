@@ -44,6 +44,11 @@ ApplicationWindow {
     }
 
     Component {
+        id: languagePage
+        LanguagePage {}
+    }
+
+    Component {
         id: batteryPage
         BatteryPage {}
     }
@@ -110,9 +115,12 @@ ApplicationWindow {
             stackView.push(backgroundPage)
             break;
         case 4:
-            stackView.push(batteryPage)
+            stackView.push(languagePage)
             break;
         case 5:
+            stackView.push(batteryPage)
+            break;
+        case 6:
             stackView.push(aboutPage)
             break;
         }

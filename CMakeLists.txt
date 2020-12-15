@@ -17,6 +17,9 @@ find_package(Freetype REQUIRED)
 find_package(PkgConfig REQUIRED)
 
 pkg_search_module(FontConfig REQUIRED fontconfig IMPORTED_TARGET)
+pkg_search_module(ICU REQUIRED icu-i18n)
+
+include_directories(${ICU_INCLUDE_DIRS})
 
 set(SRCS
     src/application.cpp
@@ -25,6 +28,7 @@ set(SRCS
     src/battery.cpp
     src/brightness.cpp
     src/fontsmodel.cpp
+    src/language.cpp
     src/about.cpp
     src/background.cpp
 )
@@ -70,6 +74,7 @@ target_link_libraries(${PROJECT_NAME}
 
         PkgConfig::FontConfig
         ${FREETYPE_LIBRARIES}
+        ${ICU_LDFLAGS}
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION /usr/bin)
