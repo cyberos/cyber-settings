@@ -1,5 +1,5 @@
-import QtQuick 2.9
-import QtQuick.Controls 2.5
+import QtQuick 2.4
+import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import MeuiKit 1.0 as Meui
 
@@ -31,6 +31,11 @@ ApplicationWindow {
     Component {
         id: appearancePage
         AppearancePage {}
+    }
+
+    Component {
+        id: dockPage
+        DockPage {}
     }
 
     Component {
@@ -98,12 +103,15 @@ ApplicationWindow {
             stackView.push(appearancePage)
             break;
         case 2:
-            stackView.push(backgroundPage)
+            stackView.push(dockPage)
             break;
         case 3:
-            stackView.push(batteryPage)
+            stackView.push(backgroundPage)
             break;
         case 4:
+            stackView.push(batteryPage)
+            break;
+        case 5:
             stackView.push(aboutPage)
             break;
         }

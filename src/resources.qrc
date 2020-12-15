@@ -23,5 +23,6 @@
         <file>images/dock_left.svg</file>
         <file>qml/IconCheckBox.qml</file>
         <file>qml/HorizontalDivider.qml</file>
+        <file>qml/DockPage.qml</file>
     </qresource>
 </RCC>

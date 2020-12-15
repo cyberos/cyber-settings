@@ -65,8 +65,7 @@ void FontsModel::run()
         FT_Face face = nullptr;
         FT_Error error = FT_New_Face(library, filePath.toUtf8().constData(), 0, &face);
 
-        // Error
-        if (error != 0) {
+        if (error != FT_Err_Ok) {
             FT_Done_Face(face);
             FT_Done_FreeType(library);
             continue;
