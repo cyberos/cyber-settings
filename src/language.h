@@ -2,6 +2,7 @@
 #define LOCALE_H
 
 #include <QObject>
+#include <QDBusInterface>
 
 class Language : public QObject
 {
@@ -21,6 +22,7 @@ signals:
     void currentLanguageChanged();
 
 private:
+    QDBusInterface m_interface;
     QStringList m_languageNames;
     QStringList m_languageCodes;
     int m_currentLanguage;

@@ -42,51 +42,24 @@ ItemPage {
                 acceptedButtons: Qt.LeftButton
 
                 onClicked: {
-                    listView.currentIndex = index
+                    language.setCurrentLanguage(index)
                 }
 
                 Rectangle {
                     anchors.fill: parent
-                    color: isSelected ? Meui.Theme.highlightColor : item.containsMouse ? Meui.Theme.disabledTextColor : "transparent"
-                    opacity: 0.1
+                    color: isSelected ? Meui.Theme.highlightColor : item.containsMouse ? Meui.Theme.disabledTextColor : "transparent"                    
+                    opacity: isSelected ? 1 : 0.1
                     radius: Meui.Theme.smallRadius
                 }
 
                 Label {
                     anchors.fill: parent
+                    anchors.leftMargin: Meui.Units.smallSpacing
+                    anchors.rightMargin: Meui.Units.smallSpacing
+                    color: isSelected ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
                     text: modelData
                 }
             }
-
-            onCurrentIndexChanged: {
-                language.setCurrentLanguage(currentIndex)
-            }
-        }
-
-        Item {
-            height: Meui.Units.largeSpacing
-        }
-
-        RowLayout {
-            spacing: 0
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            Button {
-                text: qsTr("Change")
-            }
-
-            Item {
-                width: Meui.Units.largeSpacing * 2
-            }
-        }
-
-        Item {
-            height: Meui.Units.largeSpacing
         }
     }
-
-
 }

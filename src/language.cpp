@@ -12,8 +12,14 @@ static const QStringList supportList = {"en_US", "en_NZ", "en_CA", "en_AU", "en_
 
 Language::Language(QObject *parent)
     : QObject(parent)
+    , m_interface("org.cyber.Settings",
+                  "/Language",
+                  "org.cyber.Language",
+                  QDBusConnection::sessionBus())
     , m_currentLanguage(-1)
 {
+    QString systemLanguage = m_interface.property("languageCode").toString();
+
     for (const QString &code : supportList) {
         std::string string;
         icu::Locale locale = qPrintable(code);
@@ -31,7 +37,7 @@ Language::Language(QObject *parent)
     }
 
     // Update current language
-    m_currentLanguage = m_languageCodes.indexOf(QLocale::system().name());
+    m_currentLanguage = m_languageCodes.indexOf(systemLanguage);
 
     emit loadLanguageFinished();
     emit currentLanguageChanged();
@@ -44,7 +50,9 @@ int Language::currentLanguage() const
 
 void Language::setCurrentLanguage(int index)
 {
-    if (index > 0 && index < m_languageCodes.length()) {
+    if (index >= 0 && index < m_languageCodes.length()) {
+        m_interface.call("setLanguage", m_languageCodes[index]);
+        qDebug() << "set language: " << m_languageCodes[index];
         m_currentLanguage = index;
         emit currentLanguageChanged();
     }
