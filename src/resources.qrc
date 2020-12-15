@@ -24,5 +24,11 @@
         <file>qml/IconCheckBox.qml</file>
         <file>qml/HorizontalDivider.qml</file>
         <file>qml/DockPage.qml</file>
+        <file>images/sidebar/about.svg</file>
+        <file>images/sidebar/battery.svg</file>
+        <file>images/sidebar/display.svg</file>
+        <file>images/sidebar/wallpaper.svg</file>
+        <file>images/sidebar/dock.svg</file>
+        <file>images/sidebar/appearance.svg</file>
     </qresource>
 </RCC>

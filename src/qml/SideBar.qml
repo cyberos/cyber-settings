@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
+import QtGraphicalEffects 1.0
 import MeuiKit 1.0 as Meui
 
 Item {
@@ -15,26 +16,32 @@ Item {
 
         ListElement {
             title: qsTr("Display")
+            iconSource: "qrc:/images/sidebar/display.svg"
         }
 
         ListElement {
             title: qsTr("Appearance")
+            iconSource: "qrc:/images/sidebar/appearance.svg"
         }
 
         ListElement {
             title: qsTr("Dock")
+            iconSource: "qrc:/images/sidebar/dock.svg"
         }
 
         ListElement {
             title: qsTr("Wallpaper")
+            iconSource: "qrc:/images/sidebar/wallpaper.svg"
         }
 
         ListElement {
             title: qsTr("Battery")
+            iconSource: "qrc:/images/sidebar/battery.svg"
         }
 
         ListElement {
             title: qsTr("About")
+            iconSource: "qrc:/images/sidebar/about.svg"
         }
     }
 
@@ -105,18 +112,41 @@ Item {
 
                 RowLayout {
                     anchors.fill: parent
-                    anchors.leftMargin: 16
+                    anchors.leftMargin: Meui.Units.largeSpacing * 2
+                    spacing: Meui.Units.largeSpacing
+
+                    Image {
+                        id: icon
+                        width: 16
+                        height: width
+                        source: model.iconSource
+                        sourceSize: Qt.size(width, height)
+
+                        ColorOverlay {
+                            id: colorOverlay
+                            anchors.fill: icon
+                            source: icon
+                            color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
+                            opacity: 1
+                            visible: true
+                        }
+                    }
 
                     Label {
                         id: itemTitle
                         text: model.title
                         color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
                         font.bold: isCurrent
+
                         Behavior on color {
                             ColorAnimation {
                                 duration: 125
                             }
                         }
+                    }
+
+                    Item {
+                        Layout.fillWidth: true
                     }
                 }
             }
