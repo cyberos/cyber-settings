@@ -14,9 +14,9 @@ ItemPage {
 
     GridView {
         anchors.fill: parent
-        anchors.topMargin: Meui.Units.largeSpacing
-        anchors.leftMargin: Meui.Units.largeSpacing
-        anchors.rightMargin: Meui.Units.largeSpacing
+        topMargin: Meui.Units.smallSpacing
+        leftMargin: Meui.Units.largeSpacing
+        rightMargin: Meui.Units.largeSpacing
 
         cellWidth: 200
         cellHeight: 180
@@ -25,6 +25,8 @@ ItemPage {
         model: background.backgrounds
 
         currentIndex: -1
+
+        ScrollBar.vertical: ScrollBar {}
 
         delegate: Item {
             id: item
