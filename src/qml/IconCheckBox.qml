@@ -51,6 +51,7 @@ Item {
 
         Label {
             id: label
+            color: control.checked ? Meui.Theme.highlightColor : Meui.Theme.textColor
             Layout.alignment: Qt.AlignHCenter
         }
     }
