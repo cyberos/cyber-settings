@@ -106,7 +106,7 @@ ItemPage {
 
             GridView {
                 height: 32 + Meui.Units.largeSpacing * 2
-                width: parent.width
+                Layout.fillWidth: true
                 cellWidth: height
                 cellHeight: height
                 interactive: false
@@ -172,7 +172,6 @@ ItemPage {
                     id: generalFontComboBox
                     model: fontsModel.generalFonts
                     enabled: true
-                    Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
                     onActivated: appearance.setGenericFontFamily(currentText)
                 }
@@ -188,7 +187,6 @@ ItemPage {
                     id: fixedFontComboBox
                     model: fontsModel.fixedFonts
                     enabled: true
-                    Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
                     onActivated: appearance.setFixedFontFamily(currentText)
                 }
