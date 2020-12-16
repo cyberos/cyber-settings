@@ -13,6 +13,7 @@ ItemPage {
 
     ColumnLayout {
         anchors.fill: parent
+        anchors.topMargin: Meui.Units.smallSpacing
 
         ListView {
             id: listView
