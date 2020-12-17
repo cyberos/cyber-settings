@@ -17,7 +17,7 @@ Battery::Battery(QObject *parent)
     , m_available(false)
     , m_onBattery(false)
 {
-    m_available = m_interface.isValid();
+    m_available = m_interface.isValid() && !m_interface.lastError().isValid();
 
     if (m_available) {
         QDBusConnection::sessionBus().connect(s_sServer, s_sPath, s_sInterface, "chargeStateChanged", this, SLOT(chargeStateChanged(int)));
