@@ -34,5 +34,7 @@
         <file>images/sidebar/network.svg</file>
         <file>qml/NetworkPage.qml</file>
         <file>images/sidebar/language.svg</file>
+        <file>images/locked.svg</file>
+        <file>images/checked.svg</file>
     </qresource>
 </RCC>
