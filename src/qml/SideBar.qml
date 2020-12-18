@@ -19,42 +19,56 @@ Item {
         ListElement {
             title: qsTr("Display")
             name: "display"
+            page: "qrc:/qml/DisplayPage.qml"
             iconSource: "qrc:/images/sidebar/display.svg"
+        }
+
+        ListElement {
+            title: qsTr("Network")
+            name: "network"
+            page: "qrc:/qml/NetworkPage.qml"
+            iconSource: "qrc:/images/sidebar/network.svg"
         }
 
         ListElement {
             title: qsTr("Appearance")
             name: "appearance"
+            page: "qrc:/qml/AppearancePage.qml"
             iconSource: "qrc:/images/sidebar/appearance.svg"
         }
 
         ListElement {
             title: qsTr("Dock")
             name: "dock"
+            page: "qrc:/qml/DockPage.qml"
             iconSource: "qrc:/images/sidebar/dock.svg"
         }
 
         ListElement {
             title: qsTr("Wallpaper")
             name: "wallpaper"
+            page: "qrc:/qml/BackgroundPage.qml"
             iconSource: "qrc:/images/sidebar/wallpaper.svg"
         }
 
         ListElement {
             title: qsTr("Language")
             name: "language"
+            page: "qrc:/qml/LanguagePage.qml"
             iconSource: "qrc:/images/sidebar/language.svg"
         }
 
         ListElement {
             title: qsTr("Battery")
             name: "battery"
+            page: "qrc:/qml/BatteryPage.qml"
             iconSource: "qrc:/images/sidebar/battery.svg"
         }
 
         ListElement {
             title: qsTr("About")
             name: "about"
+            page: "qrc:/qml/AboutPage.qml"
             iconSource: "qrc:/images/sidebar/about.svg"
         }
     }

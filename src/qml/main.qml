@@ -23,41 +23,6 @@ ApplicationWindow {
         }
     }
 
-    Component {
-        id: displayPage
-        DisplayPage {}
-    }
-
-    Component {
-        id: appearancePage
-        AppearancePage {}
-    }
-
-    Component {
-        id: dockPage
-        DockPage {}
-    }
-
-    Component {
-        id: backgroundPage
-        BackgroundPage {}
-    }
-
-    Component {
-        id: languagePage
-        LanguagePage {}
-    }
-
-    Component {
-        id: batteryPage
-        BatteryPage {}
-    }
-
-    Component {
-        id: aboutPage
-        AboutPage {}
-    }
-
     RowLayout {
         anchors.fill: parent
 
@@ -81,7 +46,7 @@ ApplicationWindow {
             id: stackView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            initialItem: displayPage
+            initialItem: Qt.resolvedUrl(sideBar.model.get(i).page)
             clip: true
 
             pushEnter: Transition {}
@@ -101,29 +66,7 @@ ApplicationWindow {
     }
 
     function switchPageFromIndex(index) {
-        switch (index) {
-        case 0:
-            stackView.push(displayPage)
-            break;
-        case 1:
-            stackView.push(appearancePage)
-            break;
-        case 2:
-            stackView.push(dockPage)
-            break;
-        case 3:
-            stackView.push(backgroundPage)
-            break;
-        case 4:
-            stackView.push(languagePage)
-            break;
-        case 5:
-            stackView.push(batteryPage)
-            break;
-        case 6:
-            stackView.push(aboutPage)
-            break;
-        }
+        stackView.push(Qt.resolvedUrl(sideBar.model.get(index).page))
     }
 
     function switchPageFromName(pageName) {

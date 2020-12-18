@@ -2,7 +2,7 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import MeuiKit 1.0 as Meui
-import org.cyber.Settings 1.0
+import Cyber.Settings 1.0
 
 ItemPage {
     headerTitle: qsTr("About")
@@ -63,10 +63,6 @@ ItemPage {
             StandardItem {
                 key: qsTr("Hostname")
                 value: about.hostname
-            }
-
-            Item {
-                height: Meui.Units.smallSpacing
             }
 
             HorizontalDivider {}

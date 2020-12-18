@@ -10,11 +10,14 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(QT Core Gui Quick QuickControls2 DBus Concurrent)
+set(QT Core Gui Quick QuickControls2 DBus Xml Concurrent)
 find_package(Qt5 REQUIRED ${QT})
 find_package(MeuiKit REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(PkgConfig REQUIRED)
+
+find_package(KF5NetworkManagerQt REQUIRED)
+find_package(KF5ModemManagerQt REQUIRED)
 
 pkg_search_module(FontConfig REQUIRED fontconfig IMPORTED_TARGET)
 pkg_search_module(ICU REQUIRED icu-i18n)
@@ -31,6 +34,27 @@ set(SRCS
     src/language.cpp
     src/about.cpp
     src/background.cpp
+
+    src/networkmanager/appletproxymodel.cpp
+    src/networkmanager/appletproxymodel.h
+    src/networkmanager/connectionicon.cpp
+    src/networkmanager/connectionicon.h
+    src/networkmanager/connectionsettings.cpp
+    src/networkmanager/connectionsettings.h
+    src/networkmanager/networking.cpp
+    src/networkmanager/networking.h
+    src/networkmanager/networkitemslist.cpp
+    src/networkmanager/networkitemslist.h
+    src/networkmanager/networkmodel.cpp
+    src/networkmanager/networkmodel.h
+    src/networkmanager/networkmodelitem.cpp
+    src/networkmanager/networkmodelitem.h
+    src/networkmanager/networksettings.cpp
+    src/networkmanager/networksettings.h
+    src/networkmanager/technologyproxymodel.cpp
+    src/networkmanager/technologyproxymodel.h
+    src/networkmanager/uiutils.cpp
+    src/networkmanager/uiutils.h
 )
 
 set(RESOURCES
@@ -69,8 +93,12 @@ target_link_libraries(${PROJECT_NAME}
         Qt5::Quick
         Qt5::QuickControls2
         Qt5::DBus
+        Qt5::Xml
         Qt5::Concurrent
         MeuiKit
+
+        KF5::NetworkManagerQt
+        KF5::ModemManagerQt
 
         PkgConfig::FontConfig
         ${FREETYPE_LIBRARIES}

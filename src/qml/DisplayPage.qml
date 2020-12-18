@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
-import org.cyber.Settings 1.0
+import Cyber.Settings 1.0
 import MeuiKit 1.0 as Meui
 
 ItemPage {
@@ -21,7 +21,7 @@ ItemPage {
 
     Scrollable {
         anchors.fill: parent
-        contentHeight: layout.implicitWidth
+        contentHeight: layout.implicitHeight
 
         ColumnLayout {
             id: layout
