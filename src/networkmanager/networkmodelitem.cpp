@@ -234,22 +234,37 @@ QString NetworkModelItem::icon() const
             }
             break;
         case NetworkManager::ConnectionSettings::Wireless:
-            if (m_signal == 0 ) {
+//            if (m_signal == 0 ) {
+//                if (m_mode == NetworkManager::WirelessSetting::Adhoc || m_mode == NetworkManager::WirelessSetting::Ap) {
+//                    return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
+//                }
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-0") : QStringLiteral("network-wireless-0-locked");
+//            } else if (m_signal < 20) {
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-20") : QStringLiteral("network-wireless-20-locked");
+//            } else if (m_signal < 40) {
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-40") : QStringLiteral("network-wireless-40-locked");
+//            } else if (m_signal < 60) {
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-60") : QStringLiteral("network-wireless-60-locked");
+//            } else if (m_signal < 80) {
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-80") : QStringLiteral("network-wireless-80-locked");
+//            } else {
+//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
+//            }
+
+            if (m_signal == 0) {
                 if (m_mode == NetworkManager::WirelessSetting::Adhoc || m_mode == NetworkManager::WirelessSetting::Ap) {
                     return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
                 }
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-0") : QStringLiteral("network-wireless-0-locked");
-            } else if (m_signal < 20) {
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-20") : QStringLiteral("network-wireless-20-locked");
-            } else if (m_signal < 40) {
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-40") : QStringLiteral("network-wireless-40-locked");
-            } else if (m_signal < 60) {
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-60") : QStringLiteral("network-wireless-60-locked");
-            } else if (m_signal < 80) {
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-80") : QStringLiteral("network-wireless-80-locked");
+            } else if (m_signal <= 25) {
+                return QStringLiteral("network-wireless-connected-25");
+            } else if (m_signal <= 50) {
+                return QStringLiteral("network-wireless-connected-50");
+            } else if (m_signal <= 75) {
+                return QStringLiteral("network-wireless-connected-75");
             } else {
-                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
+                return QStringLiteral("network-wireless-connected-100");
             }
+
             break;
         default:
             break;

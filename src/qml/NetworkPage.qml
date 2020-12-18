@@ -143,6 +143,10 @@ ItemPage {
                                 height: width
                                 sourceSize: Qt.size(width, height)
                                 source: "image://icontheme/" + model.connectionIcon
+
+                                onSourceChanged: {
+                                    console.log(model.connectionIcon)
+                                }
                             }
 
                             Label {

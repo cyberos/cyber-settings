@@ -46,7 +46,7 @@ ApplicationWindow {
             id: stackView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            initialItem: Qt.resolvedUrl(sideBar.model.get(i).page)
+            initialItem: Qt.resolvedUrl(sideBar.model.get(0).page)
             clip: true
 
             pushEnter: Transition {}
