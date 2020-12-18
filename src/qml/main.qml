@@ -65,7 +65,7 @@ ApplicationWindow {
             Layout.fillHeight: true
             width: 260
             color: Meui.Theme.viewBackgroundColor
-            radius: 6
+            radius: 4
 
             SideBar {
                 id: sideBar
