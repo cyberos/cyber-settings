@@ -56,6 +56,7 @@ ItemPage {
 
                     Layout.fillWidth: true
                     implicitHeight: wiredView.count * control.itemHeight
+                    clip: true
 
                     model: NM.TechnologyProxyModel {
                         type: NM.TechnologyProxyModel.WiredType
@@ -77,7 +78,7 @@ ItemPage {
                                 width: 16
                                 height: width
                                 sourceSize: Qt.size(width, height)
-                                source: "image://icontheme/" + model.connectionIcon
+                                source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark/" : "light/") + "network-wired.svg"
                             }
 
                             Label {
@@ -123,6 +124,8 @@ ItemPage {
                     Layout.fillWidth: true
 
                     implicitHeight: count * control.itemHeight
+                    interactive: false
+                    clip: true
 
                     model: NM.TechnologyProxyModel {
                         type: NM.TechnologyProxyModel.WirelessType
@@ -145,21 +148,17 @@ ItemPage {
                             acceptedButtons: Qt.LeftButton
 
                             onClicked: {
-                                if (model.connectionState === NM.NetworkModelItem.Deactivated) {
-                                    if (!model.uuid && model.type === NM.NetworkModelItem.Wireless &&
-                                                    (model.securityType === NM.NetworkModelItem.StaticWep ||
-                                                     model.securityType === NM.NetworkModelItem.WpaPsk ||
-                                                     model.securityType === NM.NetworkModelItem.Wpa2Psk)) {
-                                        // OPEN
-
-                                        console.log("!!!!")
-                                    } else if (model.uuid) {
-                                        networking.activateConnection(model.connectionPath, model.devicePath, model.specificPath);
+                                if (uuid || !predictableWirelessPassword) {
+                                    if (connectionState === NM.NetworkModelItem.Deactivated) {
+                                        if (!predictableWirelessPassword && !uuid) {
+                                            networking.addAndActivateConnection(model.connectionPath, model.specificPath);
+                                        } else {
+                                            networking.activateConnection(model.connectionPath, model.devicePath, model.specificPath);
+                                        }
                                     } else {
-                                        networking.addAndActivateConnection(model.devicePath, model.specificPath);
+                                        networking.deactivateConnection(model.connectionPath, model.devicePath);
                                     }
-                                } else {
-                                    networking.deactivateConnection(model.connectionPath, model.devicePath);
+                                } else if (predictableWirelessPassword) {
                                 }
                             }
                         }
@@ -172,11 +171,7 @@ ItemPage {
                                 width: 16
                                 height: width
                                 sourceSize: Qt.size(width, height)
-                                source: "image://icontheme/" + model.connectionIcon
-
-                                onSourceChanged: {
-                                    console.log(model.connectionIcon)
-                                }
+                                source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark/" : "light/") + model.connectionIcon + ".svg"
                             }
 
                             Label {
@@ -202,6 +197,33 @@ ItemPage {
 
                             Item {
                                 Layout.fillWidth: true
+                            }
+
+                            Image {
+                                id: busyIndicator
+                                width: 22
+                                height: width
+                                source: "qrc:/images/view-refresh.svg"
+                                sourceSize: Qt.size(width, height)
+                                visible: connectionState === NM.NetworkModelItem.Activating ||
+                                         connectionState === NM.NetworkModelItem.Deactivating
+
+                                ColorOverlay {
+                                    anchors.fill: busyIndicator
+                                    source: busyIndicator
+                                    color: Meui.Theme.textColor
+                                    opacity: 1
+                                    visible: true
+                                }
+
+                                RotationAnimator {
+                                    target: busyIndicator
+                                    running: busyIndicator.visible
+                                    from: 0
+                                    to: 360
+                                    loops: Animation.Infinite
+                                    duration: 1000
+                                }
                             }
 
                             // Activated

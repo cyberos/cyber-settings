@@ -77,6 +77,15 @@ public:
     };
     Q_ENUM(ItemType)
 
+    enum State {
+        isUnknown = 0, /**< The active connection is in an unknown state */
+        Activating, /**< The connection is activating */
+        Activated, /**< The connection is activated */
+        Deactivating, /**< The connection is being torn down and cleaned up */
+        Deactivated /**< The connection is no longer active */
+    };
+    Q_ENUM(State)
+
     explicit NetworkModelItem(QObject *parent = nullptr);
     explicit NetworkModelItem(const NetworkModelItem *item, QObject *parent = nullptr);
     ~NetworkModelItem() override;

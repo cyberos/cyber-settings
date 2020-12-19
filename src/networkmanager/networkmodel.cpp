@@ -413,7 +413,10 @@ void NetworkModel::addConnection(const NetworkManager::Connection::Ptr &connecti
 
     initializeSignals(connection);
 
-    NetworkManager::ConnectionSettings::Ptr settings = connection->settings();
+    // From data
+    NetworkManager::ConnectionSettings::Ptr settings = NetworkManager::findConnection(connection->path())->settings();
+
+    // NetworkManager::ConnectionSettings::Ptr settings = connection->settings();
     NetworkManager::VpnSetting::Ptr vpnSetting;
     NetworkManager::WirelessSetting::Ptr wirelessSetting;
 
@@ -481,18 +484,19 @@ void NetworkModel::addWirelessNetwork(const NetworkManager::WirelessNetwork::Ptr
     // AccessPoint appeared signal, this time we know SSID, but we don't attempt any merging, because it's usually the other way around, thus
     // we need to attempt to merge it here with a connection we guess it's related to this new AP
     for (NetworkModelItem *item : m_list.returnItems(NetworkItemsList::Type, NetworkManager::ConnectionSettings::Wireless)) {
-        if (item->itemType() == NetworkModelItem::AvailableConnection) {
-            NetworkManager::ConnectionSettings::Ptr connectionSettings = NetworkManager::findConnection(item->connectionPath())->settings();
-            if (connectionSettings && connectionSettings->connectionType() == NetworkManager::ConnectionSettings::Wireless) {
-                NetworkManager::WirelessSetting::Ptr wirelessSetting = connectionSettings->setting(NetworkManager::Setting::Wireless).dynamicCast<NetworkManager::WirelessSetting>();
-                if (QString::fromUtf8(wirelessSetting->ssid()) == network->ssid()) {
-                    const QString bssid =  NetworkManager::macAddressAsString(wirelessSetting->bssid());
-                    const QString restrictedHw = NetworkManager::macAddressAsString(wirelessSetting->macAddress());
-                    if ((bssid.isEmpty() || bssid == network->referenceAccessPoint()->hardwareAddress()) &&
-                            (restrictedHw.isEmpty() || restrictedHw == device->hardwareAddress())) {
-                        updateFromWirelessNetwork(item, network, device);
-                        return;
-                    }
+        if (item->itemType() != NetworkModelItem::AvailableConnection)
+            continue;
+
+        NetworkManager::ConnectionSettings::Ptr connectionSettings = NetworkManager::findConnection(item->connectionPath())->settings();
+        if (connectionSettings && connectionSettings->connectionType() == NetworkManager::ConnectionSettings::Wireless) {
+            NetworkManager::WirelessSetting::Ptr wirelessSetting = connectionSettings->setting(NetworkManager::Setting::Wireless).dynamicCast<NetworkManager::WirelessSetting>();
+            if (QString::fromUtf8(wirelessSetting->ssid()) == network->ssid()) {
+                const QString bssid =  NetworkManager::macAddressAsString(wirelessSetting->bssid());
+                const QString restrictedHw = NetworkManager::macAddressAsString(wirelessSetting->macAddress());
+                if ((bssid.isEmpty() || bssid == network->referenceAccessPoint()->hardwareAddress()) &&
+                    (restrictedHw.isEmpty() || restrictedHw == device->hardwareAddress())) {
+                    updateFromWirelessNetwork(item, network, device);
+                    return;
                 }
             }
         }
@@ -500,8 +504,9 @@ void NetworkModel::addWirelessNetwork(const NetworkManager::WirelessNetwork::Ptr
 
     NetworkManager::WirelessSetting::NetworkMode mode = NetworkManager::WirelessSetting::Infrastructure;
     NetworkManager::WirelessSecurityType securityType = NetworkManager::UnknownSecurity;
+
     NetworkManager::AccessPoint::Ptr ap = network->referenceAccessPoint();
-    if (ap && ap->capabilities().testFlag(NetworkManager::AccessPoint::Privacy)) {
+    if (ap && (ap->capabilities().testFlag(NetworkManager::AccessPoint::Privacy) || ap->wpaFlags() || ap->rsnFlags())) {
         securityType = NetworkManager::findBestWirelessSecurity(device->wirelessCapabilities(), true, (device->mode() == NetworkManager::WirelessDevice::Adhoc),
                                                                 ap->capabilities(), ap->wpaFlags(), ap->rsnFlags());
         if (network->referenceAccessPoint()->mode() == NetworkManager::AccessPoint::Infra) {
@@ -791,27 +796,29 @@ void NetworkModel::connectionRemoved(const QString &connection)
 void NetworkModel::connectionUpdated()
 {
     NetworkManager::Connection *connectionPtr = qobject_cast<NetworkManager::Connection*>(sender());
-    if (connectionPtr) {
-        NetworkManager::ConnectionSettings::Ptr settings = connectionPtr->settings();
-        for (NetworkModelItem *item : m_list.returnItems(NetworkItemsList::Connection, connectionPtr->path())) {
-            item->setConnectionPath(connectionPtr->path());
-            item->setName(settings->id());
-            item->setTimestamp(settings->timestamp());
-            item->setType(settings->connectionType());
-            item->setUuid(settings->uuid());
+    if (!connectionPtr) {
+        return;
+    }
 
-            if (item->type() == NetworkManager::ConnectionSettings::Wireless) {
-                NetworkManager::WirelessSetting::Ptr wirelessSetting;
-                wirelessSetting = settings->setting(NetworkManager::Setting::Wireless).dynamicCast<NetworkManager::WirelessSetting>();
-                item->setMode(wirelessSetting->mode());
-                item->setSecurityType(NetworkManager::securityTypeFromConnectionSetting(settings));
-                item->setSsid(QString::fromUtf8(wirelessSetting->ssid()));
-                // TODO check whether BSSID has changed and update the wireless info
-            }
+    NetworkManager::ConnectionSettings::Ptr settings = connectionPtr->settings();
+    for (NetworkModelItem *item : m_list.returnItems(NetworkItemsList::Connection, connectionPtr->path())) {
+        item->setConnectionPath(connectionPtr->path());
+        item->setName(settings->id());
+        item->setTimestamp(settings->timestamp());
+        item->setType(settings->connectionType());
+        item->setUuid(settings->uuid());
 
-            updateItem(item);
-            qCDebug(gLcNm) << "Item " << item->name() << ": connection updated";
+        if (item->type() == NetworkManager::ConnectionSettings::Wireless) {
+            NetworkManager::WirelessSetting::Ptr wirelessSetting;
+            wirelessSetting = settings->setting(NetworkManager::Setting::Wireless).dynamicCast<NetworkManager::WirelessSetting>();
+            item->setMode(wirelessSetting->mode());
+            item->setSecurityType(NetworkManager::securityTypeFromConnectionSetting(settings));
+            item->setSsid(QString::fromUtf8(wirelessSetting->ssid()));
+            // TODO check whether BSSID has changed and update the wireless info
         }
+
+        updateItem(item);
+        qCDebug(gLcNm) << "Item " << item->name() << ": connection updated";
     }
 }
 
@@ -1075,6 +1082,9 @@ void NetworkModel::updateFromWirelessNetwork(NetworkModelItem *item, const Netwo
             }
         }
     }
-    item->setSecurityType(securityType);
+
+    // rekols: No need to update
+    // item->setSecurityType(securityType);
+
     updateItem(item);
 }

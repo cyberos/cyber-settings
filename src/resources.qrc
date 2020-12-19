@@ -36,5 +36,18 @@
         <file>images/sidebar/language.svg</file>
         <file>images/locked.svg</file>
         <file>images/checked.svg</file>
+        <file>images/light/network-wired.svg</file>
+        <file>images/light/network-wireless-connected-00.svg</file>
+        <file>images/light/network-wireless-connected-25.svg</file>
+        <file>images/light/network-wireless-connected-50.svg</file>
+        <file>images/light/network-wireless-connected-75.svg</file>
+        <file>images/light/network-wireless-connected-100.svg</file>
+        <file>images/dark/network-wired.svg</file>
+        <file>images/dark/network-wireless-connected-00.svg</file>
+        <file>images/dark/network-wireless-connected-25.svg</file>
+        <file>images/dark/network-wireless-connected-50.svg</file>
+        <file>images/dark/network-wireless-connected-75.svg</file>
+        <file>images/dark/network-wireless-connected-100.svg</file>
+        <file>images/view-refresh.svg</file>
     </qresource>
 </RCC>
