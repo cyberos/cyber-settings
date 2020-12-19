@@ -79,7 +79,7 @@ ItemPage {
                             spacing: Meui.Units.largeSpacing
 
                             Image {
-                                width: 16
+                                width: 22
                                 height: width
                                 sourceSize: Qt.size(width, height)
                                 source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark/" : "light/") + "network-wired.svg"

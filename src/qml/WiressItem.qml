@@ -41,7 +41,7 @@ Item {
                     networking.deactivateConnection(model.connectionPath, model.devicePath);
                 }
             } else if (predictableWirelessPassword) {
-
+                passwordDialog.open()
             }
         }
     }
@@ -64,6 +64,23 @@ Item {
 
         Item {
             Layout.fillWidth: true
+        }
+
+        // Activated
+        Image {
+            width: 16
+            height: width
+            sourceSize: Qt.size(width, height)
+            source: "qrc:/images/checked.svg"
+            visible: model.connectionState === 2
+
+            ColorOverlay {
+                anchors.fill: parent
+                source: parent
+                color: Meui.Theme.highlightColor
+                opacity: 1
+                visible: true
+            }
         }
 
         // Locked
@@ -110,26 +127,68 @@ Item {
             }
         }
 
-        // Activated
-        Image {
-            width: 16
-            height: width
-            sourceSize: Qt.size(width, height)
-            source: "qrc:/images/checked.svg"
-            visible: model.connectionState === 2
-
-            ColorOverlay {
-                anchors.fill: parent
-                source: parent
-                color: Meui.Theme.highlightColor
-                opacity: 1
-                visible: true
-            }
-        }
-
         IconButton {
             source: "qrc:/images/info.svg"
             onClicked: control.infoButtonClicked()
+        }
+    }
+
+    Dialog {
+        id: passwordDialog
+        title: qsTr("Connect to Network")
+
+        implicitWidth: 400
+        height: 200
+        modal: true
+
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 4
+
+        onOpened: passwordField.forceActiveFocus()
+        onAccepted: networking.addAndActivateConnection(model.devicePath, model.specificPath, passwordField.text)
+
+        footer: DialogButtonBox {
+            Button {
+                text: qsTr("Connect")
+                enabled: passwordField.acceptableInput
+                flat: true
+
+                DialogButtonBox.buttonRole: DialogButtonBox.AcceptRole
+            }
+
+            Button {
+                text: qsTr("Cancel")
+                flat: true
+
+                DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
+            }
+        }
+
+        ColumnLayout {
+            width: parent.width
+
+            TextField {
+                id: passwordField
+                focus: true
+                echoMode: showPasswordCheckbox.checked ? TextInput.Normal : TextInput.Password
+                placeholderText: qsTr("Password")
+                validator: RegExpValidator {
+                    regExp: {
+                        if (model.securityType === NM.NetworkModelItem.StaticWep)
+                            return /^(?:[\x20-\x7F]{5}|[0-9a-fA-F]{10}|[\x20-\x7F]{13}|[0-9a-fA-F]{26}){1}$/;
+                        return /^(?:[\x20-\x7F]{8,64}){1}$/;
+                    }
+                }
+                onAccepted: passwordDialog.accept()
+
+                Layout.fillWidth: true
+            }
+
+            CheckBox {
+                id: showPasswordCheckbox
+                checked: false
+                text: qsTr("Show password")
+            }
         }
     }
 }
