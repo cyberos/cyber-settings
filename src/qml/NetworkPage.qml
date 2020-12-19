@@ -11,6 +11,7 @@ ItemPage {
     headerTitle: qsTr("Network")
 
     property var itemHeight: 50
+    property var settingsMap: ({})
 
     NM.Networking {
         id: networking
@@ -24,13 +25,16 @@ ItemPage {
         id: networkSettings
     }
 
-    Component.onCompleted: {
-        wirelessSwitch.checked = networking.wirelessEnabled
+    WirelessDetailsPage {
+        id: wiressDetailsPage
+        visible: false
+        onBackClicked: {
+            stackView.pop()
+        }
     }
 
     Scrollable {
-        anchors.fill: parent
-
+        id: homePage
         contentHeight: mainLayout.implicitHeight
 
         ColumnLayout {
@@ -113,7 +117,13 @@ ItemPage {
                     Switch {
                         id: wirelessSwitch
                         Layout.fillHeight: true
+                        leftPadding: 0
+                        rightPadding: 0
                         onCheckedChanged: networking.wirelessEnabled = checked
+                    }
+
+                    Component.onCompleted: {
+                        wirelessSwitch.checked = networking.wirelessEnabled
                     }
                 }
 
@@ -135,117 +145,32 @@ ItemPage {
 
                     ScrollBar.vertical: ScrollBar {}
 
-                    delegate: Item {
+                    delegate: WiressItem {
                         height: control.itemHeight
                         width: wirelessView.width
 
-                        property bool passwordIsStatic: (model.securityType === NM.NetworkModelItem.StaticWep || model.securityType === NM.NetworkModelItem.WpaPsk ||
-                                                         model.securityType === NM.NetworkModelItem.Wpa2Psk || model.securityType === NM.NetworkModelItem.SAE)
-                        property bool predictableWirelessPassword: !model.uuid && model.type === NM.NetworkModelItem.Wireless && passwordIsStatic
+                        onInfoButtonClicked: {
+                            wiressDetailsPage.settingsMap = {
+                                "connection": {},
+                                "802-11-wireless": {},
+                            };
 
-                        MouseArea {
-                            anchors.fill: parent
-                            acceptedButtons: Qt.LeftButton
+                            Object.keys(wiressDetailsPage.settingsMap).forEach(function(key) {
+                                wiressDetailsPage.settingsMap[key] = networkSettings.getSettings(model.connectionPath, key)
+                            })
 
-                            onClicked: {
-                                if (uuid || !predictableWirelessPassword) {
-                                    if (connectionState === NM.NetworkModelItem.Deactivated) {
-                                        if (!predictableWirelessPassword && !uuid) {
-                                            networking.addAndActivateConnection(model.connectionPath, model.specificPath);
-                                        } else {
-                                            networking.activateConnection(model.connectionPath, model.devicePath, model.specificPath);
-                                        }
-                                    } else {
-                                        networking.deactivateConnection(model.connectionPath, model.devicePath);
-                                    }
-                                } else if (predictableWirelessPassword) {
-                                }
-                            }
-                        }
-
-                        RowLayout {
-                            anchors.fill: parent
-                            spacing: Meui.Units.largeSpacing
-
-                            Image {
-                                width: 16
-                                height: width
-                                sourceSize: Qt.size(width, height)
-                                source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark/" : "light/") + model.connectionIcon + ".svg"
-                            }
-
-                            Label {
-                                text: model.itemUniqueName
-                            }
-
-                            // Locked
-                            Image {
-                                width: 16
-                                height: width
-                                sourceSize: Qt.size(width, height)
-                                source: "qrc:/images/locked.svg"
-                                visible: model.securityType !== -1 && model.securityType !== 0
-
-                                ColorOverlay {
-                                    anchors.fill: parent
-                                    source: parent
-                                    color: Meui.Theme.textColor
-                                    opacity: 1
-                                    visible: true
-                                }
-                            }
-
-                            Item {
-                                Layout.fillWidth: true
-                            }
-
-                            Image {
-                                id: busyIndicator
-                                width: 22
-                                height: width
-                                source: "qrc:/images/view-refresh.svg"
-                                sourceSize: Qt.size(width, height)
-                                visible: connectionState === NM.NetworkModelItem.Activating ||
-                                         connectionState === NM.NetworkModelItem.Deactivating
-
-                                ColorOverlay {
-                                    anchors.fill: busyIndicator
-                                    source: busyIndicator
-                                    color: Meui.Theme.textColor
-                                    opacity: 1
-                                    visible: true
-                                }
-
-                                RotationAnimator {
-                                    target: busyIndicator
-                                    running: busyIndicator.visible
-                                    from: 0
-                                    to: 360
-                                    loops: Animation.Infinite
-                                    duration: 1000
-                                }
-                            }
-
-                            // Activated
-                            Image {
-                                width: 16
-                                height: width
-                                sourceSize: Qt.size(width, height)
-                                source: "qrc:/images/checked.svg"
-                                visible: model.connectionState === 2
-
-                                ColorOverlay {
-                                    anchors.fill: parent
-                                    source: parent
-                                    color: Meui.Theme.highlightColor
-                                    opacity: 1
-                                    visible: true
-                                }
-                            }
+                            wiressDetailsPage.load(model)
+                            stackView.push(wiressDetailsPage)
                         }
                     }
                 }
             }
         }
+    }
+
+    StackView {
+        id: stackView
+        anchors.fill: parent
+        initialItem: homePage
     }
 }

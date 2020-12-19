@@ -29,7 +29,7 @@ ItemPage {
 
             Label {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                text: qsTr("Cyber")
+                text: qsTr("CyberOS")
                 font.pointSize: 24
                 font.bold: true
                 bottomPadding: Meui.Units.largeSpacing * 2

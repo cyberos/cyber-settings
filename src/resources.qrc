@@ -49,5 +49,10 @@
         <file>images/dark/network-wireless-connected-75.svg</file>
         <file>images/dark/network-wireless-connected-100.svg</file>
         <file>images/view-refresh.svg</file>
+        <file>images/info.svg</file>
+        <file>qml/IconButton.qml</file>
+        <file>qml/WiressItem.qml</file>
+        <file>qml/WirelessDetailsPage.qml</file>
+        <file>images/go-previous.svg</file>
     </qresource>
 </RCC>
