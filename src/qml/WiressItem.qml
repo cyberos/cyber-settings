@@ -10,9 +10,9 @@ import Cyber.NetworkManager 1.0 as NM
 Item {
     id: control
 
-    property bool passwordIsStatic: (model.securityType === NM.NetworkModelItem.StaticWep || model.securityType === NM.NetworkModelItem.WpaPsk ||
-                                     model.securityType === NM.NetworkModelItem.Wpa2Psk || model.securityType === NM.NetworkModelItem.SAE)
-    property bool predictableWirelessPassword: !model.uuid && model.type === NM.NetworkModelItem.Wireless && passwordIsStatic
+    property bool passwordIsStatic: (model.securityType === NM.NetworkModel.StaticWep || model.securityType === NM.NetworkModel.WpaPsk ||
+                                     model.securityType === NM.NetworkModel.Wpa2Psk || model.securityType === NM.NetworkModel.SAE)
+    property bool predictableWirelessPassword: !model.uuid && model.type === NM.NetworkModel.Wireless && passwordIsStatic
 
     Rectangle {
         anchors.fill: parent
@@ -21,6 +21,12 @@ Item {
                                                  Meui.Theme.textColor.g,
                                                  Meui.Theme.textColor.b,
                                                  0.1) : "transparent"
+
+        Behavior on color {
+            ColorAnimation {
+                duration: 125
+            }
+        }
     }
 
     MouseArea {
@@ -30,10 +36,10 @@ Item {
         acceptedButtons: Qt.LeftButton
 
         onClicked: {
-            if (uuid || !predictableWirelessPassword) {
-                if (connectionState === NM.NetworkModelItem.Deactivated) {
-                    if (!predictableWirelessPassword && !uuid) {
-                        networking.addAndActivateConnection(model.connectionPath, model.specificPath);
+            if (model.uuid || !predictableWirelessPassword) {
+                if (connectionState === NM.NetworkModel.Deactivated) {
+                    if (!predictableWirelessPassword && !model.uuid) {
+                        networking.addAndActivateConnection(model.devicePath, model.specificPath);
                     } else {
                         networking.activateConnection(model.connectionPath, model.devicePath, model.specificPath);
                     }
@@ -70,8 +76,8 @@ Item {
             id: busyIndicator
             width: 22
             height: width
-            visible: connectionState === NM.NetworkModelItem.Activating ||
-                     connectionState === NM.NetworkModelItem.Deactivating
+            visible: connectionState === NM.NetworkModel.Activating ||
+                     connectionState === NM.NetworkModel.Deactivating
             running: busyIndicator.visible
         }
 
@@ -81,7 +87,7 @@ Item {
             height: width
             sourceSize: Qt.size(width, height)
             source: "qrc:/images/checked.svg"
-            visible: model.connectionState === 2
+            visible: model.connectionState === NM.NetworkModel.Activated
 
             ColorOverlay {
                 anchors.fill: parent
@@ -168,7 +174,7 @@ Item {
                 placeholderText: qsTr("Password")
                 validator: RegExpValidator {
                     regExp: {
-                        if (model.securityType === NM.NetworkModelItem.StaticWep)
+                        if (model.securityType === NM.NetworkModel.StaticWep)
                             return /^(?:[\x20-\x7F]{5}|[0-9a-fA-F]{10}|[\x20-\x7F]{13}|[0-9a-fA-F]{26}){1}$/;
                         return /^(?:[\x20-\x7F]{8,64}){1}$/;
                     }

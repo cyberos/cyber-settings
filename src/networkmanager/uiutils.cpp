@@ -737,7 +737,8 @@ QString UiUtils::labelFromWirelessSecurity(NetworkManager::WirelessSecurityType 
         break;
     default:
         /*: @label unknown security */
-        tip = QObject::tr("Unknown security type");
+        // tip = QObject::tr("Unknown security type");
+        tip = QObject::tr("None");
         break;
     }
     return tip;

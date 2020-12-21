@@ -18,8 +18,8 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PLASMA_NM_APPLET_PROXY_MODEL_H
-#define PLASMA_NM_APPLET_PROXY_MODEL_H
+#ifndef APPLETPROXYMODEL_H
+#define APPLETPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
 
@@ -27,8 +27,9 @@
 
 class Q_DECL_EXPORT AppletProxyModel : public QSortFilterProxyModel
 {
-Q_OBJECT
+    Q_OBJECT
     Q_PROPERTY(QAbstractItemModel * sourceModel READ sourceModel WRITE setSourceModel)
+
 public:
     explicit AppletProxyModel(QObject *parent = nullptr);
     ~AppletProxyModel() override;
@@ -38,5 +39,4 @@ protected:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 };
 
-
-#endif // PLASMA_NM_APPLET_PROXY_MODEL_H
+#endif // APPLETPROXYMODEL_H

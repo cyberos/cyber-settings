@@ -1,7 +1,6 @@
 /*
     Copyright (C) 2019 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
     Copyright 2013-2014 Jan Grulich <jgrulich@redhat.com>
-
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
@@ -9,12 +8,10 @@
     later version accepted by the membership of KDE e.V. (or its
     successor approved by the membership of KDE e.V.), which shall
     act as a proxy defined in Section 6 of version 3 of the license.
-
     This library is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
     Lesser General Public License for more details.
-
     You should have received a copy of the GNU Lesser General Public
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -182,7 +179,6 @@ void Networking::activateConnection(const QString &connectionPath, const QString
     }
 #endif
 #endif
-
     QDBusPendingReply<QDBusObjectPath> reply = NetworkManager::activateConnection(connectionPath, device, specificObject);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
     watcher->setProperty("connectionName", connection->name());
@@ -214,8 +210,7 @@ void Networking::addAndActivateConnection(const QString &device, const QString &
     if (!ap)
         return;
 
-    NetworkManager::ConnectionSettings::Ptr settings =
-            NetworkManager::ConnectionSettings::Ptr(new NetworkManager::ConnectionSettings(NetworkManager::ConnectionSettings::Wireless));
+    NetworkManager::ConnectionSettings::Ptr settings = NetworkManager::ConnectionSettings::Ptr(new NetworkManager::ConnectionSettings(NetworkManager::ConnectionSettings::Wireless));
     settings->setId(ap->ssid());
     settings->setUuid(NetworkManager::ConnectionSettings::createNewUuid());
     settings->setAutoconnect(true);
@@ -225,17 +220,16 @@ void Networking::addAndActivateConnection(const QString &device, const QString &
     wifiSetting->setInitialized(true);
     wifiSetting = settings->setting(NetworkManager::Setting::Wireless).dynamicCast<NetworkManager::WirelessSetting>();
     wifiSetting->setSsid(ap->ssid().toUtf8());
-    if (ap->mode() == NetworkManager::AccessPoint::Adhoc)
+    if (ap->mode() == NetworkManager::AccessPoint::Adhoc) {
         wifiSetting->setMode(NetworkManager::WirelessSetting::Adhoc);
-    NetworkManager::WirelessSecuritySetting::Ptr wifiSecurity = settings->setting(NetworkManager::Setting::WirelessSecurity).dynamicCast<NetworkManager::WirelessSecuritySetting>();
+    }
 
-    NetworkManager::WirelessSecurityType securityType =
-            NetworkManager::findBestWirelessSecurity(wifiDev->wirelessCapabilities(), true,
-                                                     (ap->mode() == NetworkManager::AccessPoint::Adhoc), ap->capabilities(), ap->wpaFlags(), ap->rsnFlags());
+    NetworkManager::WirelessSecuritySetting::Ptr wifiSecurity = settings->setting(NetworkManager::Setting::WirelessSecurity).dynamicCast<NetworkManager::WirelessSecuritySetting>();
+    NetworkManager::WirelessSecurityType securityType = NetworkManager::findBestWirelessSecurity(wifiDev->wirelessCapabilities(), true, (ap->mode() == NetworkManager::AccessPoint::Adhoc), ap->capabilities(), ap->wpaFlags(), ap->rsnFlags());
 
     if (securityType != NetworkManager::NoneSecurity) {
         wifiSecurity->setInitialized(true);
-        wifiSetting->setSecurity(QLatin1String("802-11-wireless-security"));
+        wifiSetting->setSecurity("802-11-wireless-security");
     }
 
     if (securityType == NetworkManager::Leap ||

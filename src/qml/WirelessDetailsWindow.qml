@@ -54,7 +54,7 @@ Window {
 
             Label {
                 id: ipv4AddressLabel
-                text: model.ipV4Address
+                // text: model.ipV4Address
                 color: Meui.Theme.disabledTextColor
             }
 
@@ -66,7 +66,7 @@ Window {
 
             Label {
                 id: ipV6AddressLabel
-                text: model.ipV6Address
+                // text: model.ipV6Address
                 color: Meui.Theme.disabledTextColor
             }
 
@@ -78,7 +78,7 @@ Window {
 
             Label {
                 id: macAddressLabel
-                text: model.macAddress
+                // text: model.macAddress
                 color: Meui.Theme.disabledTextColor
             }
 
@@ -90,7 +90,7 @@ Window {
 
             Label {
                 id: routerLabel
-                text: model.gateway
+                // text: model.gateway
                 color: Meui.Theme.disabledTextColor
             }
 
@@ -102,7 +102,7 @@ Window {
 
             Label {
                 id: dnsLabel
-                text: model.nameServer
+                // text: model.nameServer
                 color: Meui.Theme.disabledTextColor
             }
         }

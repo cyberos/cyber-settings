@@ -1,5 +1,4 @@
 /*
-    Copyright (C) 2019 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
     Copyright 2013-2018 Jan Grulich <jgrulich@redhat.com>
 
     This library is free software; you can redistribute it and/or
@@ -19,11 +18,13 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PLASMA_NM_NETWORK_MODEL_H
-#define PLASMA_NM_NETWORK_MODEL_H
+#ifndef NETWORKMODEL_H
+#define NETWORKMODEL_H
 
 #include <QAbstractListModel>
 #include <QLoggingCategory>
+
+#include "networkitemslist.h"
 
 #include <NetworkManagerQt/Manager>
 #include <NetworkManagerQt/VpnConnection>
@@ -34,24 +35,21 @@
 #include <ModemManagerQt/modem.h>
 #endif
 
-#include "networkitemslist.h"
-
 Q_DECLARE_LOGGING_CATEGORY(gLcNm)
 
 class Q_DECL_EXPORT NetworkModel : public QAbstractListModel
 {
     Q_OBJECT
+
 public:
     explicit NetworkModel(QObject *parent = nullptr);
     ~NetworkModel() override;
 
     enum ItemRole {
-        NetworkItemRole = Qt::UserRole + 1,
-        ConnectionDetailsRole,
+        ConnectionDetailsRole = Qt::UserRole + 1,
         ConnectionIconRole,
         ConnectionPathRole,
         ConnectionStateRole,
-        ConnectionStateStringRole,
         DeviceName,
         DevicePathRole,
         DeviceStateRole,
@@ -65,13 +63,6 @@ public:
         SecurityTypeStringRole,
         SectionRole,
         SignalRole,
-        SignalStrengthRole,
-        LinkSpeedRole,
-        IPv4AddressRole,
-        IPv6AddressRole,
-        GatewayRole,
-        NameServerRole,
-        MacAddressRole,
         SlaveRole,
         SsidRole,
         SpecificPathRole,
@@ -84,6 +75,49 @@ public:
         RxBytesRole,
         TxBytesRole
     };
+    Q_ENUMS(ItemRole)
+
+    enum ConnectionStatus {
+        UnknownState = 0,
+        Activating,
+        Activated,
+        Deactivating,
+        Deactivated
+    };
+    Q_ENUMS(ConnectionStatus)
+
+    enum ConnectionType {
+        UnknownConnectionType = 0,
+        Adsl,
+        Bluetooth,
+        Bond,
+        Bridge,
+        Cdma,
+        Gsm,
+        Infiniband,
+        OLPCMesh,
+        Pppoe,
+        Vlan,
+        Vpn,
+        Wimax,
+        Wired,
+        Wireless
+    };
+    Q_ENUMS(ConnectionType)
+
+    enum SecurityType {
+        UnknownSecurity = -1,
+        NoneSecurity = 0,
+        StaticWep,
+        DynamicWep,
+        Leap,
+        WpaPsk,
+        WpaEap,
+        Wpa2Psk,
+        Wpa2Eap,
+        SAE
+    };
+    Q_ENUMS(SecurityType)
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
@@ -141,4 +175,4 @@ private:
     NetworkManager::WirelessSecurityType alternativeWirelessSecurity(const NetworkManager::WirelessSecurityType type);
 };
 
-#endif // PLASMA_NM_NETWORK_MODEL_H
+#endif // NETWORKMODEL_H

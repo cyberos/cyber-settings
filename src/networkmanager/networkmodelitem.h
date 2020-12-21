@@ -1,5 +1,4 @@
 /*
-    Copyright (C) 2019 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
     Copyright 2013-2018 Jan Grulich <jgrulich@redhat.com>
 
     This library is free software; you can redistribute it and/or
@@ -19,8 +18,8 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PLASMA_NM_MODEL_NETWORK_MODEL_ITEM_H
-#define PLASMA_NM_MODEL_NETWORK_MODEL_ITEM_H
+#ifndef NETWORKMODELITEM_H
+#define NETWORKMODELITEM_H
 
 #include <NetworkManagerQt/ActiveConnection>
 #include <NetworkManagerQt/Connection>
@@ -33,58 +32,9 @@
 class Q_DECL_EXPORT NetworkModelItem : public QObject
 {
     Q_OBJECT
+
 public:
-    enum ConnectionType {
-        Unknown = 0,
-        Adsl,
-        Bluetooth,
-        Bond,
-        Bridge,
-        Cdma,
-        Gsm,
-        Infiniband,
-        OLPCMesh,
-        Pppoe,
-        Vlan,
-        Vpn,
-        Wimax,
-        Wired,
-        Wireless,
-        Team,
-        Generic,
-        Tun,
-        IpTunnel
-    };
-    Q_ENUM(ConnectionType)
-
-    enum SecurityType {
-        UnknownSecurity = -1,
-        NoneSecurity = 0,
-        StaticWep,
-        DynamicWep,
-        Leap,
-        WpaPsk,
-        WpaEap,
-        Wpa2Psk,
-        Wpa2Eap
-    };
-    Q_ENUM(SecurityType)
-
-    enum ItemType {
-        UnavailableConnection,
-        AvailableConnection,
-        AvailableAccessPoint
-    };
-    Q_ENUM(ItemType)
-
-    enum State {
-        isUnknown = 0, /**< The active connection is in an unknown state */
-        Activating, /**< The connection is activating */
-        Activated, /**< The connection is activated */
-        Deactivating, /**< The connection is being torn down and cleaned up */
-        Deactivated /**< The connection is no longer active */
-    };
-    Q_ENUM(State)
+    enum ItemType { UnavailableConnection, AvailableConnection, AvailableAccessPoint };
 
     explicit NetworkModelItem(QObject *parent = nullptr);
     explicit NetworkModelItem(const NetworkModelItem *item, QObject *parent = nullptr);
@@ -99,8 +49,6 @@ public:
     NetworkManager::ActiveConnection::State connectionState() const;
     void setConnectionState(NetworkManager::ActiveConnection::State state);
 
-    QString connectionStateString() const;
-
     QStringList details() const;
 
     QString deviceName() const;
@@ -114,7 +62,8 @@ public:
 
     bool duplicate() const;
 
-    QString icon() const;
+    void setIcon(const QString &icon);
+    QString icon() const { return m_icon; }
 
     ItemType itemType() const;
 
@@ -133,8 +82,6 @@ public:
 
     int signal() const;
     void setSignal(int signal);
-
-    QString signalStrength() const;
 
     bool slave() const;
     void setSlave(bool slave);
@@ -168,23 +115,17 @@ public:
     qulonglong txBytes() const;
     void setTxBytes(qulonglong bytes);
 
-    QString linkSpeed() const;
-
-    QString ipV4Address() const;
-    QString ipV6Address() const;
-
-    QString gateway() const;
-
-    QString nameServer() const;
-
-    QString macAddress() const;
-
     bool operator==(const NetworkModelItem *item) const;
+
+    QVector<int> changedRoles() const { return m_changedRoles; }
+    void clearChangedRoles() { m_changedRoles.clear(); }
 
 public Q_SLOTS:
     void invalidateDetails();
 
 private:
+    QString computeIcon() const;
+    void refreshIcon();
     void updateDetails() const;
 
     QString m_activeConnectionPath;
@@ -210,6 +151,8 @@ private:
     NetworkManager::VpnConnection::State m_vpnState;
     qulonglong m_rxBytes;
     qulonglong m_txBytes;
+    QString m_icon;
+    QVector<int> m_changedRoles;
 };
 
-#endif // PLASMA_NM_MODEL_NETWORK_MODEL_ITEM_H
+#endif // NETWORKMODELITEM_H

@@ -18,8 +18,8 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PLASMA_NM_MODEL_NETWORK_ITEMS_LIST_H
-#define PLASMA_NM_MODEL_NETWORK_ITEMS_LIST_H
+#ifndef NETWORKITEMSLIST_H
+#define NETWORKITEMSLIST_H
 
 #include <QAbstractListModel>
 
@@ -29,7 +29,8 @@ class NetworkModelItem;
 
 class NetworkItemsList : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
+
 public:
     enum FilterType {
         ActiveConnection,
@@ -54,8 +55,9 @@ public:
 
     void insertItem(NetworkModelItem *item);
     void removeItem(NetworkModelItem *item);
+
 private:
     QList<NetworkModelItem*> m_items;
 };
 
-#endif // PLASMA_NM_MODEL_NETWORK_ITEMS_LIST_H
+#endif // NETWORKITEMSLIST_H

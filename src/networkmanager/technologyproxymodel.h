@@ -1,5 +1,4 @@
 /****************************************************************************
- * This file is part of Liri.
  *
  * Copyright (C) 2017 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -34,6 +33,7 @@ class TechnologyProxyModel : public QSortFilterProxyModel
     Q_PROPERTY(Type type READ type WRITE setType NOTIFY typeChanged)
     Q_PROPERTY(bool showInactiveConnections READ showInactiveConnections WRITE setShowInactiveConnections NOTIFY showInactiveConnectionsChanged)
     Q_PROPERTY(QAbstractItemModel *sourceModel READ sourceModel WRITE setSourceModel)
+
 public:
     enum Type {
         UnknownType = 0,

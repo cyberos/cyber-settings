@@ -37,22 +37,22 @@ set(SRCS
 
     src/networkmanager/appletproxymodel.cpp
     src/networkmanager/appletproxymodel.h
-    src/networkmanager/connectionicon.cpp
-    src/networkmanager/connectionicon.h
-    src/networkmanager/connectionsettings.cpp
-    src/networkmanager/connectionsettings.h
-    src/networkmanager/networking.cpp
-    src/networkmanager/networking.h
+
     src/networkmanager/networkitemslist.cpp
     src/networkmanager/networkitemslist.h
+
     src/networkmanager/networkmodel.cpp
     src/networkmanager/networkmodel.h
+
     src/networkmanager/networkmodelitem.cpp
     src/networkmanager/networkmodelitem.h
-    src/networkmanager/networksettings.cpp
-    src/networkmanager/networksettings.h
+
+    src/networkmanager/networking.cpp
+    src/networkmanager/networking.h
+
     src/networkmanager/technologyproxymodel.cpp
     src/networkmanager/technologyproxymodel.h
+
     src/networkmanager/uiutils.cpp
     src/networkmanager/uiutils.h
 )

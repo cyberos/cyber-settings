@@ -19,9 +19,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PLASMA_NM_UIUTILS_H
-#define PLASMA_NM_UIUTILS_H
-
+#ifndef UIUTILS_H
+#define UIUTILS_H
 
 #include <NetworkManagerQt/Device>
 #include <NetworkManagerQt/ModemDevice>

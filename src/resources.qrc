@@ -54,5 +54,6 @@
         <file>qml/WiressItem.qml</file>
         <file>images/go-previous.svg</file>
         <file>qml/WirelessDetailsWindow.qml</file>
+        <file>qml/WiredItem.qml</file>
     </qresource>
 </RCC>

@@ -11,11 +11,9 @@
 #include "language.h"
 
 #include "networkmanager/appletproxymodel.h"
-#include "networkmanager/connectionicon.h"
-#include "networkmanager/networking.h"
 #include "networkmanager/networkmodel.h"
 #include "networkmanager/networkmodelitem.h"
-#include "networkmanager/networksettings.h"
+#include "networkmanager/networking.h"
 #include "networkmanager/technologyproxymodel.h"
 
 Application::Application(int &argc, char **argv)
@@ -58,10 +56,8 @@ Application::Application(int &argc, char **argv)
     qmlRegisterUncreatableType<NetworkModelItem>(network_uri, 1, 0, "NetworkModelItem",
                                                  QLatin1String("Cannot instantiate NetworkModelItem"));
     qmlRegisterType<AppletProxyModel>(network_uri, 1, 0, "AppletProxyModel");
-    qmlRegisterType<ConnectionIcon>(network_uri, 1, 0, "ConnectionIcon");
-    qmlRegisterType<Networking>(network_uri, 1, 0, "Networking");
     qmlRegisterType<NetworkModel>(network_uri, 1, 0, "NetworkModel");
-    qmlRegisterType<NetworkSettings>(network_uri, 1, 0, "NetworkSettings");
+    qmlRegisterType<Networking>(network_uri, 1, 0, "Networking");
     qmlRegisterType<TechnologyProxyModel>(network_uri, 1, 0, "TechnologyProxyModel");
 
     m_engine.addImportPath(QStringLiteral("qrc:/"));

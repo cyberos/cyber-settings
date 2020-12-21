@@ -21,10 +21,6 @@ ItemPage {
         id: networkModel
     }
 
-    NM.NetworkSettings {
-        id: networkSettings
-    }
-
     Scrollable {
         anchors.fill: parent
         contentHeight: mainLayout.implicitHeight
@@ -61,32 +57,9 @@ ItemPage {
 
                     ScrollBar.vertical: ScrollBar {}
 
-                    delegate: Item {
-                        id: item
+                    delegate: WiredItem {
                         height: control.itemHeight
                         width: wiredView.width
-
-                        RowLayout {
-                            anchors.fill: parent
-                            spacing: Meui.Units.largeSpacing
-
-                            Image {
-                                width: 22
-                                height: width
-                                sourceSize: Qt.size(width, height)
-                                source: "qrc:/images/" + (Meui.Theme.darkMode ? "dark/" : "light/") + "network-wired.svg"
-                            }
-
-                            Label {
-                                text: model.itemUniqueName
-                                Layout.fillWidth: true
-                            }
-
-                            Label {
-                                text: model.connectionStateString
-                                color: Meui.Theme.disabledTextColor
-                            }
-                        }
                     }
                 }
             }

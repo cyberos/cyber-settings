@@ -1,5 +1,4 @@
 /*
-    Copyright (C) 2019 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
     Copyright 2013-2018 Jan Grulich <jgrulich@redhat.com>
 
     This library is free software; you can redistribute it and/or
@@ -19,6 +18,9 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "networkmodelitem.h"
+#include "uiutils.h"
+
 #include <NetworkManagerQt/AdslDevice>
 #include <NetworkManagerQt/BluetoothDevice>
 #include <NetworkManagerQt/BondDevice>
@@ -28,7 +30,6 @@
 #include <NetworkManagerQt/ModemDevice>
 #include <NetworkManagerQt/Settings>
 #include <NetworkManagerQt/TeamDevice>
-#include <NetworkManagerQt/Utils>
 #include <NetworkManagerQt/VlanDevice>
 #include <NetworkManagerQt/VpnConnection>
 #include <NetworkManagerQt/VpnSetting>
@@ -43,9 +44,6 @@
 #include <ModemManagerQt/modem3gpp.h>
 #include <ModemManagerQt/modemcdma.h>
 #endif
-
-#include "networkmodelitem.h"
-#include "uiutils.h"
 
 NetworkModelItem::NetworkModelItem(QObject *parent)
     : QObject(parent)
@@ -105,7 +103,10 @@ QString NetworkModelItem::connectionPath() const
 
 void NetworkModelItem::setConnectionPath(const QString &path)
 {
-    m_connectionPath = path;
+    if (m_connectionPath != path) {
+        m_connectionPath = path;
+        m_changedRoles << NetworkModel::ConnectionPathRole << NetworkModel::UniRole;
+    }
 }
 
 NetworkManager::ActiveConnection::State NetworkModelItem::connectionState() const
@@ -115,26 +116,11 @@ NetworkManager::ActiveConnection::State NetworkModelItem::connectionState() cons
 
 void NetworkModelItem::setConnectionState(NetworkManager::ActiveConnection::State state)
 {
-    m_connectionState = state;
-}
-
-QString NetworkModelItem::connectionStateString() const
-{
-    switch (m_connectionState)
-    {
-    case NetworkManager::ActiveConnection::Activating:
-        return tr("Activating");
-    case NetworkManager::ActiveConnection::Activated:
-        return tr("Activated");
-    case NetworkManager::ActiveConnection::Deactivating:
-        return tr("Deactivating");
-    case NetworkManager::ActiveConnection::Deactivated:
-        return tr("Deactivated");
-    default:
-        break;
+    if (m_connectionState != state) {
+        m_connectionState = state;
+        m_changedRoles << NetworkModel::ConnectionStateRole << NetworkModel::SectionRole;
+        refreshIcon();
     }
-
-    return tr("Unknown");
 }
 
 QStringList NetworkModelItem::details() const
@@ -157,12 +143,18 @@ QString NetworkModelItem::deviceName() const
 
 void NetworkModelItem::setDeviceName(const QString &name)
 {
-    m_deviceName = name;
+    if (m_deviceName != name) {
+        m_deviceName = name;
+        m_changedRoles << NetworkModel::DeviceName;
+    }
 }
 
 void NetworkModelItem::setDevicePath(const QString &path)
 {
-    m_devicePath = path;
+    if (m_devicePath != path) {
+        m_devicePath = path;
+        m_changedRoles << NetworkModel::DevicePathRole << NetworkModel::ItemTypeRole << NetworkModel::UniRole;
+    }
 }
 
 QString NetworkModelItem::deviceState() const
@@ -172,7 +164,10 @@ QString NetworkModelItem::deviceState() const
 
 void NetworkModelItem::setDeviceState(const NetworkManager::Device::State state)
 {
-    m_deviceState = state;
+    if (m_deviceState != state) {
+        m_deviceState = state;
+        m_changedRoles << NetworkModel::DeviceStateRole;
+    }
 }
 
 bool NetworkModelItem::duplicate() const
@@ -180,7 +175,20 @@ bool NetworkModelItem::duplicate() const
     return m_duplicate;
 }
 
-QString NetworkModelItem::icon() const
+void NetworkModelItem::setIcon(const QString& icon)
+{
+    if (icon != m_icon) {
+        m_icon = icon;
+        m_changedRoles << NetworkModel::ConnectionIconRole;
+    }
+}
+
+void NetworkModelItem::refreshIcon()
+{
+    setIcon(computeIcon());
+}
+
+QString NetworkModelItem::computeIcon() const
 {
     switch (m_type) {
         case NetworkManager::ConnectionSettings::Adsl:
@@ -234,27 +242,11 @@ QString NetworkModelItem::icon() const
             }
             break;
         case NetworkManager::ConnectionSettings::Wireless:
-//            if (m_signal == 0 ) {
-//                if (m_mode == NetworkManager::WirelessSetting::Adhoc || m_mode == NetworkManager::WirelessSetting::Ap) {
-//                    return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
-//                }
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-0") : QStringLiteral("network-wireless-0-locked");
-//            } else if (m_signal < 20) {
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-20") : QStringLiteral("network-wireless-20-locked");
-//            } else if (m_signal < 40) {
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-40") : QStringLiteral("network-wireless-40-locked");
-//            } else if (m_signal < 60) {
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-60") : QStringLiteral("network-wireless-60-locked");
-//            } else if (m_signal < 80) {
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-80") : QStringLiteral("network-wireless-80-locked");
-//            } else {
-//                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
-//            }
-
-            if (m_signal == 0) {
+            if (m_signal == 0 ) {
                 if (m_mode == NetworkManager::WirelessSetting::Adhoc || m_mode == NetworkManager::WirelessSetting::Ap) {
-                    return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-100") : QStringLiteral("network-wireless-100-locked");
+                    return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-connected-100") : QStringLiteral("network-wireless-connected-100");
                 }
+                return (m_securityType <= NetworkManager::NoneSecurity) ? QStringLiteral("network-wireless-connected-100") : QStringLiteral("network-wireless-connected-100");
             } else if (m_signal <= 25) {
                 return QStringLiteral("network-wireless-connected-25");
             } else if (m_signal <= 50) {
@@ -280,13 +272,13 @@ QString NetworkModelItem::icon() const
 NetworkModelItem::ItemType NetworkModelItem::itemType() const
 {
     if (!m_devicePath.isEmpty() ||
-            m_type == NetworkManager::ConnectionSettings::Bond ||
-            m_type == NetworkManager::ConnectionSettings::Bridge ||
-            m_type == NetworkManager::ConnectionSettings::Vlan ||
-            m_type == NetworkManager::ConnectionSettings::Team ||
-            ((NetworkManager::status() == NetworkManager::Connected ||
-              NetworkManager::status() == NetworkManager::ConnectedLinkLocal ||
-              NetworkManager::status() == NetworkManager::ConnectedSiteOnly) && m_type == NetworkManager::ConnectionSettings::Vpn)) {
+        m_type == NetworkManager::ConnectionSettings::Bond ||
+        m_type == NetworkManager::ConnectionSettings::Bridge ||
+        m_type == NetworkManager::ConnectionSettings::Vlan ||
+        m_type == NetworkManager::ConnectionSettings::Team ||
+        ((NetworkManager::status() == NetworkManager::Connected ||
+          NetworkManager::status() == NetworkManager::ConnectedLinkLocal ||
+          NetworkManager::status() == NetworkManager::ConnectedSiteOnly) && (m_type == NetworkManager::ConnectionSettings::Vpn || m_type == NetworkManager::ConnectionSettings::WireGuard))) {
         if (m_connectionPath.isEmpty() && m_type == NetworkManager::ConnectionSettings::Wireless) {
             return NetworkModelItem::AvailableAccessPoint;
         } else {
@@ -303,7 +295,10 @@ NetworkManager::WirelessSetting::NetworkMode NetworkModelItem::mode() const
 
 void NetworkModelItem::setMode(const NetworkManager::WirelessSetting::NetworkMode mode)
 {
-    m_mode = mode;
+    if (m_mode != mode) {
+        m_mode = mode;
+        refreshIcon();
+    }
 }
 
 QString NetworkModelItem::name() const
@@ -313,7 +308,10 @@ QString NetworkModelItem::name() const
 
 void NetworkModelItem::setName(const QString &name)
 {
-    m_name = name;
+    if (m_name != name) {
+        m_name = name;
+        m_changedRoles << NetworkModel::ItemUniqueNameRole << NetworkModel::NameRole;
+    }
 }
 
 QString NetworkModelItem::originalName() const
@@ -321,17 +319,18 @@ QString NetworkModelItem::originalName() const
     if (m_deviceName.isEmpty()) {
         return m_name;
     }
-    // return m_name % QLatin1String(" (") % m_deviceName % QLatin1Char(')');
 
-    return m_name + QLatin1String(" (") + m_deviceName + QLatin1Char(')');
+    return QLatin1String("%1 (%2)").arg(m_name).arg(m_deviceName);
+
+    // return m_name % QLatin1String(" (") % m_deviceName % ')';
 }
 
 QString NetworkModelItem::sectionType() const
 {
-    if (m_connectionState == NetworkManager::ActiveConnection::Activated) {
-        return tr("Active connections");
+    if (m_connectionState == NetworkManager::ActiveConnection::Deactivated) {
+        return "Available connections";
     }  else {
-        return tr("Available connections");
+        return QString();
     }
 }
 
@@ -342,7 +341,11 @@ NetworkManager::WirelessSecurityType NetworkModelItem::securityType() const
 
 void NetworkModelItem::setSecurityType(NetworkManager::WirelessSecurityType type)
 {
-    m_securityType = type;
+    if (m_securityType != type) {
+        m_securityType = type;
+        m_changedRoles << NetworkModel::SecurityTypeStringRole << NetworkModel::SecurityTypeRole;
+        refreshIcon();
+    }
 }
 
 int NetworkModelItem::signal() const
@@ -352,21 +355,11 @@ int NetworkModelItem::signal() const
 
 void NetworkModelItem::setSignal(int signal)
 {
-    m_signal = signal;
-}
-
-QString NetworkModelItem::signalStrength() const
-{
-    if (m_signal < 20)
-        return tr("None");
-    else if (m_signal < 40)
-        return tr("Weak");
-    else if (m_signal < 50)
-        return tr("Ok");
-    else if (m_signal < 80)
-        return tr("Good");
-    else
-        return tr("Excellent");
+    if (m_signal != signal) {
+        m_signal = signal;
+        m_changedRoles << NetworkModel::SignalRole;
+        refreshIcon();
+    }
 }
 
 bool NetworkModelItem::slave() const
@@ -376,7 +369,10 @@ bool NetworkModelItem::slave() const
 
 void NetworkModelItem::setSlave(bool slave)
 {
-    m_slave = slave;
+    if (m_slave != slave) {
+        m_slave = slave;
+        m_changedRoles << NetworkModel::SlaveRole;
+    }
 }
 
 QString NetworkModelItem::specificPath() const
@@ -386,7 +382,10 @@ QString NetworkModelItem::specificPath() const
 
 void NetworkModelItem::setSpecificPath(const QString &path)
 {
-    m_specificPath = path;
+    if (m_specificPath != path) {
+        m_specificPath = path;
+        m_changedRoles << NetworkModel::SpecificPathRole;
+    }
 }
 
 QString NetworkModelItem::ssid() const
@@ -396,7 +395,10 @@ QString NetworkModelItem::ssid() const
 
 void NetworkModelItem::setSsid(const QString &ssid)
 {
-    m_ssid = ssid;
+    if (m_ssid != ssid) {
+        m_ssid = ssid;
+        m_changedRoles << NetworkModel::SsidRole << NetworkModel::UniRole;
+    }
 }
 
 NetworkManager::ConnectionSettings::ConnectionType NetworkModelItem::type() const
@@ -411,20 +413,28 @@ QDateTime NetworkModelItem::timestamp() const
 
 void NetworkModelItem::setTimestamp(const QDateTime &date)
 {
-    m_timestamp = date;
+    if (m_timestamp != date) {
+        m_timestamp = date;
+        m_changedRoles << NetworkModel::TimeStampRole;
+    }
 }
 
 void NetworkModelItem::setType(NetworkManager::ConnectionSettings::ConnectionType type)
 {
-    m_type = type;
+    if (m_type != type) {
+        m_type = type;
+        m_changedRoles << NetworkModel::TypeRole << NetworkModel::ItemTypeRole << NetworkModel::UniRole;
+
+        refreshIcon();
+    }
 }
 
 QString NetworkModelItem::uni() const
 {
     if (m_type == NetworkManager::ConnectionSettings::Wireless && m_uuid.isEmpty()) {
-        return QStringLiteral("%1%%2").arg(m_ssid, m_devicePath);
+        return m_ssid + '%' + m_devicePath;
     } else {
-        return QStringLiteral("%1%%2").arg(m_connectionPath, m_devicePath);
+        return m_connectionPath + '%' + m_devicePath;
     }
 }
 
@@ -435,7 +445,10 @@ QString NetworkModelItem::uuid() const
 
 void NetworkModelItem::setUuid(const QString &uuid)
 {
-    m_uuid = uuid;
+    if (m_uuid != uuid) {
+        m_uuid = uuid;
+        m_changedRoles << NetworkModel::UuidRole;
+    }
 }
 
 QString NetworkModelItem::vpnState() const
@@ -445,7 +458,10 @@ QString NetworkModelItem::vpnState() const
 
 void NetworkModelItem::setVpnState(NetworkManager::VpnConnection::State state)
 {
-    m_vpnState = state;
+    if (m_vpnState != state) {
+        m_vpnState = state;
+        m_changedRoles << NetworkModel::VpnState;
+    }
 }
 
 QString NetworkModelItem::vpnType() const
@@ -455,7 +471,10 @@ QString NetworkModelItem::vpnType() const
 
 void NetworkModelItem::setVpnType(const QString &type)
 {
-    m_vpnType = type;
+    if (m_vpnType != type) {
+        m_vpnType = type;
+        m_changedRoles << NetworkModel::VpnType;
+    }
 }
 
 qulonglong NetworkModelItem::rxBytes() const
@@ -465,7 +484,10 @@ qulonglong NetworkModelItem::rxBytes() const
 
 void NetworkModelItem::setRxBytes(qulonglong bytes)
 {
-    m_rxBytes = bytes;
+    if (m_rxBytes != bytes) {
+        m_rxBytes = bytes;
+        m_changedRoles << NetworkModel::RxBytesRole;
+    }
 }
 
 qulonglong NetworkModelItem::txBytes() const
@@ -475,120 +497,10 @@ qulonglong NetworkModelItem::txBytes() const
 
 void NetworkModelItem::setTxBytes(qulonglong bytes)
 {
-    m_txBytes = bytes;
-}
-
-QString NetworkModelItem::linkSpeed() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (m_type == NetworkManager::ConnectionSettings::Wired) {
-        NetworkManager::WiredDevice::Ptr wiredDevice = device.objectCast<NetworkManager::WiredDevice>();
-        if (wiredDevice)
-            return UiUtils::connectionSpeed(wiredDevice->bitRate());
-    } else if (m_type == NetworkManager::ConnectionSettings::Wireless) {
-        NetworkManager::WirelessDevice::Ptr wirelessDevice = device.objectCast<NetworkManager::WirelessDevice>();
-        if (wirelessDevice)
-            return UiUtils::connectionSpeed(wirelessDevice->bitRate());
+    if (m_txBytes != bytes) {
+        m_txBytes = bytes;
+        m_changedRoles << NetworkModel::TxBytesRole;
     }
-
-    return QString();
-}
-
-QString NetworkModelItem::ipV4Address() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (device && device->ipV4Config().isValid() && m_connectionState == NetworkManager::ActiveConnection::Activated) {
-        if (!device->ipV4Config().addresses().isEmpty()) {
-            QHostAddress addr = device->ipV4Config().addresses().first().ip();
-            if (!addr.isNull())
-                return addr.toString();
-        }
-    }
-
-    return QString();
-}
-
-QString NetworkModelItem::ipV6Address() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (device && device->ipV6Config().isValid() && m_connectionState == NetworkManager::ActiveConnection::Activated) {
-        if (!device->ipV6Config().addresses().isEmpty()) {
-            QHostAddress addr = device->ipV6Config().addresses().first().ip();
-            if (!addr.isNull())
-                return addr.toString();
-        }
-    }
-
-    return QString();
-}
-
-QString NetworkModelItem::gateway() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (device && device->ipV4Config().isValid() && m_connectionState == NetworkManager::ActiveConnection::Activated)
-        return device->ipV4Config().gateway();
-
-    return QString();
-}
-
-QString NetworkModelItem::nameServer() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (device && device->ipV4Config().isValid() && m_connectionState == NetworkManager::ActiveConnection::Activated) {
-        if (!device->ipV4Config().nameservers().isEmpty()) {
-            QHostAddress addr = device->ipV4Config().nameservers().first();
-            if (!addr.isNull())
-                return addr.toString();
-        }
-    }
-
-    return QString();
-}
-
-QString NetworkModelItem::macAddress() const
-{
-    NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
-
-    if (m_type == NetworkManager::ConnectionSettings::Wired) {
-        NetworkManager::WiredDevice::Ptr wiredDevice = device.objectCast<NetworkManager::WiredDevice>();
-        if (wiredDevice)
-            return wiredDevice->permanentHardwareAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Wireless) {
-        NetworkManager::WirelessDevice::Ptr wirelessDevice = device.objectCast<NetworkManager::WirelessDevice>();
-        if (wirelessDevice)
-            return wirelessDevice->permanentHardwareAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Bluetooth) {
-        NetworkManager::BluetoothDevice::Ptr bluetoothDevice = device.objectCast<NetworkManager::BluetoothDevice>();
-        if (bluetoothDevice)
-            return bluetoothDevice->hardwareAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Infiniband) {
-        NetworkManager::InfinibandDevice::Ptr infinibandDevice = device.objectCast<NetworkManager::InfinibandDevice>();
-        if (infinibandDevice)
-            return infinibandDevice->hwAddress();;
-    } else if (m_type == NetworkManager::ConnectionSettings::Bond) {
-        NetworkManager::BondDevice::Ptr bondDevice = device.objectCast<NetworkManager::BondDevice>();
-        if (bondDevice)
-            return bondDevice->hwAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Bridge) {
-        NetworkManager::BridgeDevice::Ptr bridgeDevice = device.objectCast<NetworkManager::BridgeDevice>();
-        if (bridgeDevice)
-            return bridgeDevice->hwAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Vlan) {
-        NetworkManager::VlanDevice::Ptr vlanDevice = device.objectCast<NetworkManager::VlanDevice>();
-        if (vlanDevice)
-            return vlanDevice->hwAddress();
-    } else if (m_type == NetworkManager::ConnectionSettings::Team) {
-        NetworkManager::TeamDevice::Ptr teamDevice = device.objectCast<NetworkManager::TeamDevice>();
-        if (teamDevice)
-            return teamDevice->hwAddress();
-    }
-
-    return QString();
 }
 
 bool NetworkModelItem::operator==(const NetworkModelItem *item) const
@@ -609,6 +521,7 @@ bool NetworkModelItem::operator==(const NetworkModelItem *item) const
 void NetworkModelItem::invalidateDetails()
 {
     m_detailsValid = false;
+    m_changedRoles << NetworkModel::ConnectionDetailsRole;
 }
 
 void NetworkModelItem::updateDetails() const
@@ -622,12 +535,24 @@ void NetworkModelItem::updateDetails() const
 
     NetworkManager::Device::Ptr device = NetworkManager::findNetworkInterface(m_devicePath);
 
-    // Get IPv[46]Address
+    // Get IPv[46]Address and related nameservers + IPv4 default gateway
     if (device && device->ipV4Config().isValid() && m_connectionState == NetworkManager::ActiveConnection::Activated) {
         if (!device->ipV4Config().addresses().isEmpty()) {
             QHostAddress addr = device->ipV4Config().addresses().first().ip();
             if (!addr.isNull()) {
                 m_details << tr("IPv4 Address") << addr.toString();
+            }
+        }
+        if (!device->ipV4Config().gateway().isEmpty()) {
+            QString addr = device->ipV4Config().gateway();
+            if (!addr.isNull()) {
+                m_details << tr("IPv4 Default Gateway") << addr;
+            }
+        }
+        if (!device->ipV4Config().nameservers().isEmpty()) {
+            QHostAddress addr = device->ipV4Config().nameservers().first();
+            if (!addr.isNull()) {
+                m_details << tr("IPv4 Nameserver") << addr.toString();
             }
         }
     }
@@ -639,8 +564,13 @@ void NetworkModelItem::updateDetails() const
                 m_details << tr("IPv6 Address") << addr.toString();
             }
         }
+        if (!device->ipV6Config().nameservers().isEmpty()) {
+            QHostAddress addr = device->ipV6Config().nameservers().first();
+            if (!addr.isNull()) {
+                m_details << tr("IPv6 Nameserver") << addr.toString();
+            }
+        }
     }
-
     if (m_type == NetworkManager::ConnectionSettings::Wired) {
         NetworkManager::WiredDevice::Ptr wiredDevice = device.objectCast<NetworkManager::WiredDevice>();
         if (wiredDevice) {
@@ -655,9 +585,7 @@ void NetworkModelItem::updateDetails() const
         if (m_mode == NetworkManager::WirelessSetting::Infrastructure) {
             m_details << tr("Signal strength") << QStringLiteral("%1%").arg(m_signal);
         }
-        if (m_connectionState == NetworkManager::ActiveConnection::Activated) {
-            m_details << tr("Security type") << UiUtils::labelFromWirelessSecurity(m_securityType);
-        }
+        m_details << tr("Security type") << UiUtils::labelFromWirelessSecurity(m_securityType);
         if (wirelessDevice) {
             if (m_connectionState == NetworkManager::ActiveConnection::Activated) {
                 m_details << tr("Connection speed") << UiUtils::connectionSpeed(wirelessDevice->bitRate());
@@ -679,11 +607,11 @@ void NetworkModelItem::updateDetails() const
                     }
                 } else {
                     ModemManager::ModemCdma::Ptr cdmaNet = modem->interface(ModemManager::ModemDevice::CdmaInterface).objectCast<ModemManager::ModemCdma>();
-                    m_details << tr("Network ID") << QString::number(cdmaNet->nid());
+                    m_details << tr("Network ID") << QString("%1").arg(cdmaNet->nid());
                 }
 
                 if (modemNetwork) {
-                    m_details << tr("Signal Quality") << QStringLiteral("%1%").arg(modemNetwork->signalQuality().signal);
+                    m_details << tr("Signal Quality") << QString("%1%").arg(modemNetwork->signalQuality().signal);
                     m_details << tr("Access Technology") << UiUtils::convertAccessTechnologyToString(modemNetwork->accessTechnologies());
                 }
             }
@@ -738,17 +666,21 @@ void NetworkModelItem::updateDetails() const
         NetworkManager::VlanDevice::Ptr vlanDevice = device.objectCast<NetworkManager::VlanDevice>();
         m_details << tr("Type") << tr("Vlan");
         if (vlanDevice) {
-            m_details << tr("Vlan ID") << QString::number(vlanDevice->vlanId());
+            m_details << tr("Vlan ID") << QString("%1").arg(vlanDevice->vlanId());
             m_details << tr("MAC Address") << vlanDevice->hwAddress();
         }
     } else if (m_type == NetworkManager::ConnectionSettings::Adsl) {
         m_details << tr("Type") << tr("Adsl");
     }
-    else if (m_type == NetworkManager::ConnectionSettings::Team) {
+      else if (m_type == NetworkManager::ConnectionSettings::Team) {
         NetworkManager::TeamDevice::Ptr teamDevice = device.objectCast<NetworkManager::TeamDevice>();
         m_details << tr("Type") << tr("Team");
         if (teamDevice) {
             m_details << tr("MAC Address") << teamDevice->hwAddress();
         }
+    }
+
+    if (device && m_connectionState == NetworkManager::ActiveConnection::Activated) {
+        m_details << tr("Device") << device->interfaceName();
     }
 }
