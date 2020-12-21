@@ -2,6 +2,8 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
+import QtQuick.Window 2.3
+
 import MeuiKit 1.0 as Meui
 import Cyber.NetworkManager 1.0 as NM
 
@@ -41,7 +43,7 @@ Item {
                     networking.deactivateConnection(model.connectionPath, model.devicePath);
                 }
             } else if (predictableWirelessPassword) {
-                passwordDialog.open()
+                passwordDialog.show()
             }
         }
     }
@@ -133,44 +135,42 @@ Item {
         }
     }
 
-    Dialog {
+    Window {
         id: passwordDialog
-        title: qsTr("Connect to Network")
+        title: model.itemUniqueName
 
-        implicitWidth: 400
-        height: 200
-        modal: true
+        width: 300
+        height: mainLayout.implicitHeight + Meui.Units.largeSpacing * 2
+        minimumWidth: width
+        minimumHeight: height
+        maximumHeight: height
+        maximumWidth: width
+        flags: Qt.Dialog
+        modality: Qt.WindowModal
 
-        x: (parent.width - width) / 2
-        y: (parent.height - height) / 4
+        signal accept()
 
-        onOpened: passwordField.forceActiveFocus()
-        onAccepted: networking.addAndActivateConnection(model.devicePath, model.specificPath, passwordField.text)
+        onVisibleChanged: {
+            passwordField.text = ""
+            passwordField.forceActiveFocus()
+            showPasswordCheckbox.checked = false
+        }
 
-        footer: DialogButtonBox {
-            Button {
-                text: qsTr("Connect")
-                enabled: passwordField.acceptableInput
-                flat: true
-
-                DialogButtonBox.buttonRole: DialogButtonBox.AcceptRole
-            }
-
-            Button {
-                text: qsTr("Cancel")
-                flat: true
-
-                DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
-            }
+        onAccept: {
+            networking.addAndActivateConnection(model.devicePath, model.specificPath, passwordField.text)
+            passwordDialog.close()
         }
 
         ColumnLayout {
-            width: parent.width
+            id: mainLayout
+            anchors.fill: parent
+            anchors.margins: Meui.Units.largeSpacing
 
             TextField {
                 id: passwordField
                 focus: true
                 echoMode: showPasswordCheckbox.checked ? TextInput.Normal : TextInput.Password
+                selectByMouse: true
                 placeholderText: qsTr("Password")
                 validator: RegExpValidator {
                     regExp: {
@@ -180,14 +180,37 @@ Item {
                     }
                 }
                 onAccepted: passwordDialog.accept()
-
                 Layout.fillWidth: true
+            }
+
+            Item {
+                height: Meui.Units.smallSpacing
             }
 
             CheckBox {
                 id: showPasswordCheckbox
                 checked: false
                 text: qsTr("Show password")
+            }
+
+            Item {
+                height: Meui.Units.largeSpacing
+            }
+
+            RowLayout {
+                Button {
+                    text: qsTr("Connect")
+                    enabled: passwordField.acceptableInput
+                    Layout.fillWidth: true
+                    flat: true
+                    onClicked: passwordDialog.accept()
+                }
+
+                Button {
+                    text: qsTr("Cancel")
+                    Layout.fillWidth: true
+                    onClicked: passwordDialog.close()
+                }
             }
         }
     }
