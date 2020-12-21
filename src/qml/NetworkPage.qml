@@ -65,17 +65,31 @@ ItemPage {
             }
 
             HorizontalDivider {
-                visible: wiredView.visible && wirelessView.visible
+                visible: wiredView.visible && networking.wirelessHardwareEnabled
             }
 
             // Wireless
             ColumnLayout {
                 id: wirelessLayout
+                spacing: Meui.Units.largeSpacing
 
                 RowLayout {
+                    spacing: Meui.Units.largeSpacing
+
                     Label {
                         text: "WLAN"
                         color: Meui.Theme.disabledTextColor
+                    }
+
+                    Meui.BusyIndicator {
+                        id: wlanBusyIndicator
+                        width: wirelessSwitch.height
+                        height: width
+                        visible: networking.wirelessEnabled && wirelessView.count === 0
+                        running: wlanBusyIndicator.visible
+                    }
+
+                    Item {
                         Layout.fillWidth: true
                     }
 
