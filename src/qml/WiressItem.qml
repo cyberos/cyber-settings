@@ -14,8 +14,6 @@ Item {
                                      model.securityType === NM.NetworkModelItem.Wpa2Psk || model.securityType === NM.NetworkModelItem.SAE)
     property bool predictableWirelessPassword: !model.uuid && model.type === NM.NetworkModelItem.Wireless && passwordIsStatic
 
-    signal infoButtonClicked()
-
     Rectangle {
         anchors.fill: parent
         radius: Meui.Theme.smallRadius
@@ -68,6 +66,15 @@ Item {
             Layout.fillWidth: true
         }
 
+        Meui.BusyIndicator {
+            id: busyIndicator
+            width: 22
+            height: width
+            visible: connectionState === NM.NetworkModelItem.Activating ||
+                     connectionState === NM.NetworkModelItem.Deactivating
+            running: busyIndicator.visible
+        }
+
         // Activated
         Image {
             width: 16
@@ -102,36 +109,18 @@ Item {
             }
         }
 
-        Image {
-            id: busyIndicator
-            width: 22
-            height: width
-            source: "qrc:/images/view-refresh.svg"
-            sourceSize: Qt.size(width, height)
-            visible: connectionState === NM.NetworkModelItem.Activating ||
-                     connectionState === NM.NetworkModelItem.Deactivating
-
-            ColorOverlay {
-                anchors.fill: busyIndicator
-                source: busyIndicator
-                color: Meui.Theme.textColor
-                opacity: 1
-                visible: true
-            }
-
-            RotationAnimator {
-                target: busyIndicator
-                running: busyIndicator.visible
-                from: 0
-                to: 360
-                loops: Animation.Infinite
-                duration: 1000
-            }
-        }
-
         IconButton {
             source: "qrc:/images/info.svg"
-            onClicked: control.infoButtonClicked()
+            onClicked: detailsWindow.show()
+        }
+    }
+
+    WirelessDetailsWindow {
+        id: detailsWindow
+
+        onForgetBtnClicked: {
+            networking.removeConnection(model.connectionPath)
+            detailsWindow.close()
         }
     }
 

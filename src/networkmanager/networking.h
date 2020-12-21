@@ -38,6 +38,7 @@ class Networking : public QObject
     Q_PROPERTY(bool airplaneModeEnabled READ isAirplaneModeEnabled WRITE setAirplaneModeEnabled NOTIFY airplaneModeEnabledChanged)
     Q_PROPERTY(QString activeConnections READ activeConnections NOTIFY activeConnectionsChanged)
     Q_PROPERTY(QString networkStatus READ networkStatus NOTIFY networkStatusChanged)
+
 public:
     enum SortedConnectionType {
         Wired,
@@ -53,6 +54,18 @@ public:
         Other
     };
     Q_ENUM(SortedConnectionType)
+
+    enum HandlerAction {
+        ActivateConnection,
+        AddAndActivateConnection,
+        AddConnection,
+        DeactivateConnection,
+        RemoveConnection,
+        RequestScan,
+        UpdateConnection,
+        CreateHotspot,
+    };
+    Q_ENUM(HandlerAction)
 
     explicit Networking(QObject *parent = nullptr);
 
@@ -78,6 +91,7 @@ public:
     Q_INVOKABLE void activateConnection(const QString &connectionPath, const QString &device, const QString &specificObject);
     Q_INVOKABLE void addAndActivateConnection(const QString &device, const QString &specificObject, const QString &password);
     Q_INVOKABLE void deactivateConnection(const QString &connectionName, const QString &device);
+    Q_INVOKABLE void removeConnection(const QString &connectionPath);
 
     static SortedConnectionType connectionTypeToSortedType(NetworkManager::ConnectionSettings::ConnectionType type);
 

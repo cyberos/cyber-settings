@@ -25,16 +25,8 @@ ItemPage {
         id: networkSettings
     }
 
-    WirelessDetailsPage {
-        id: wiressDetailsPage
-        visible: false
-        onBackClicked: {
-            stackView.pop()
-        }
-    }
-
     Scrollable {
-        id: homePage
+        anchors.fill: parent
         contentHeight: mainLayout.implicitHeight
 
         ColumnLayout {
@@ -148,29 +140,9 @@ ItemPage {
                     delegate: WiressItem {
                         height: control.itemHeight
                         width: wirelessView.width
-
-                        onInfoButtonClicked: {
-                            wiressDetailsPage.settingsMap = {
-                                "connection": {},
-                                "802-11-wireless": {},
-                            };
-
-                            Object.keys(wiressDetailsPage.settingsMap).forEach(function(key) {
-                                wiressDetailsPage.settingsMap[key] = networkSettings.getSettings(model.connectionPath, key)
-                            })
-
-                            wiressDetailsPage.load(model)
-                            stackView.push(wiressDetailsPage)
-                        }
                     }
                 }
             }
         }
-    }
-
-    StackView {
-        id: stackView
-        anchors.fill: parent
-        initialItem: homePage
     }
 }

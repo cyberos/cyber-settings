@@ -9,10 +9,6 @@ Page {
     property alias headerVisible: headerItem.visible
     property string headerTitle
 
-    property bool canGoBack: false
-
-    signal backClicked()
-
     background: Rectangle {
         color: "transparent"
     }
@@ -27,16 +23,6 @@ Page {
             anchors.margins: Meui.Units.largeSpacing * 2
             anchors.fill: parent
             spacing: Meui.Units.largeSpacing
-
-            IconButton {
-                width: headerLabel.height * 0.8
-                height: width
-                id: goBack
-                source: "qrc:/images/go-previous.svg"
-                visible: page.canGoBack
-                onClicked: page.backClicked()
-
-            }
 
             Label {
                 id: headerLabel

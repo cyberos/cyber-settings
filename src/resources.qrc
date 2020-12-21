@@ -52,7 +52,7 @@
         <file>images/info.svg</file>
         <file>qml/IconButton.qml</file>
         <file>qml/WiressItem.qml</file>
-        <file>qml/WirelessDetailsPage.qml</file>
         <file>images/go-previous.svg</file>
+        <file>qml/WirelessDetailsWindow.qml</file>
     </qresource>
 </RCC>

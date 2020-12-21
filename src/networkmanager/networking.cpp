@@ -328,6 +328,31 @@ void Networking::deactivateConnection(const QString &connectionName, const QStri
     });
 }
 
+void Networking::removeConnection(const QString &connectionPath)
+{
+    NetworkManager::Connection::Ptr con = NetworkManager::findConnection(connectionPath);
+
+    if (!con || con->uuid().isEmpty()) {
+        qCWarning(gLcNm) << "Not possible to remove connection " << connectionPath;
+        return;
+    }
+
+    // Remove slave connections
+    for (const NetworkManager::Connection::Ptr &connection : NetworkManager::listConnections()) {
+        NetworkManager::ConnectionSettings::Ptr settings = connection->settings();
+        if (settings->master() == con->uuid()) {
+            connection->remove();
+        }
+    }
+
+    QDBusPendingReply<> reply = con->remove();
+    // QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    // watcher->setProperty("action", Networking::RemoveConnection);
+    // watcher->setProperty("connection", con->name());
+    // connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] (QDBusPendingCallWatcher * watcher) {
+    // });
+}
+
 Networking::SortedConnectionType Networking::connectionTypeToSortedType(NetworkManager::ConnectionSettings::ConnectionType type)
 {
     switch (type) {
