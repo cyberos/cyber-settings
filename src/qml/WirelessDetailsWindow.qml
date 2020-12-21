@@ -20,6 +20,11 @@ Window {
 
     signal forgetBtnClicked()
 
+    Rectangle {
+        anchors.fill: parent
+        color: Meui.Theme.backgroundColor
+    }
+
     ColumnLayout {
         id: detailsLayout
         anchors.fill: parent

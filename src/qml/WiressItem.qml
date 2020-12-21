@@ -150,6 +150,11 @@ Item {
             passwordDialog.close()
         }
 
+        Rectangle {
+            anchors.fill: parent
+            color: Meui.Theme.backgroundColor
+        }
+
         ColumnLayout {
             id: mainLayout
             anchors.fill: parent
