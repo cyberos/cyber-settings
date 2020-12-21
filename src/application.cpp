@@ -15,6 +15,7 @@
 #include "networkmanager/networkmodelitem.h"
 #include "networkmanager/networking.h"
 #include "networkmanager/technologyproxymodel.h"
+#include "networkmanager/wiressitemsettings.h"
 
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
@@ -59,6 +60,7 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<NetworkModel>(network_uri, 1, 0, "NetworkModel");
     qmlRegisterType<Networking>(network_uri, 1, 0, "Networking");
     qmlRegisterType<TechnologyProxyModel>(network_uri, 1, 0, "TechnologyProxyModel");
+    qmlRegisterType<WirelessItemSettings>(network_uri, 1, 0, "WirelessItemSettings");
 
     m_engine.addImportPath(QStringLiteral("qrc:/"));
     m_engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));

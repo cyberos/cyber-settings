@@ -50,6 +50,9 @@ set(SRCS
     src/networkmanager/networking.cpp
     src/networkmanager/networking.h
 
+    src/networkmanager/wiressitemsettings.cpp
+    src/networkmanager/wiressitemsettings.h
+
     src/networkmanager/technologyproxymodel.cpp
     src/networkmanager/technologyproxymodel.h
 

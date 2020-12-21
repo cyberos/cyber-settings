@@ -3,6 +3,7 @@ import QtQuick.Window 2.3
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import MeuiKit 1.0 as Meui
+import Cyber.NetworkManager 1.0 as NM
 
 Window {
     id: control
@@ -10,6 +11,7 @@ Window {
 
     width: detailsLayout.implicitWidth + Meui.Units.largeSpacing * 4
     height: detailsLayout.implicitHeight + Meui.Units.largeSpacing * 4
+
     minimumWidth: width
     minimumHeight: height
     maximumHeight: height
@@ -20,6 +22,18 @@ Window {
 
     signal forgetBtnClicked()
 
+    NM.WirelessItemSettings {
+        id: settings
+    }
+
+    Component.onCompleted: {
+        if (model.connectionPath) {
+            settings.path = model.connectionPath
+            autoJoinSwitch.checked = settings.autoConnect
+            autoJoinSwitch.visible = true
+        }
+    }
+
     Rectangle {
         anchors.fill: parent
         color: Meui.Theme.backgroundColor
@@ -29,10 +43,30 @@ Window {
         id: detailsLayout
         anchors.fill: parent
         anchors.margins: Meui.Units.largeSpacing
+        spacing: Meui.Units.largeSpacing * 2
 
         GridLayout {
             columns: 2
             columnSpacing: Meui.Units.largeSpacing * 2
+
+            Label {
+                id: autoJoinLabel
+                font.bold: true
+                text: qsTr("Auto-Join")
+                Layout.alignment: Qt.AlignRight
+                visible: {
+                    if (model.connectionPath)
+                        autoJoinSwitch.visible
+                }
+            }
+
+            Switch {
+                id: autoJoinSwitch
+                leftPadding: 0
+                Layout.fillHeight: true
+                visible: true
+                onCheckedChanged: settings.autoConnect = checked
+            }
 
             Label {
                 font.bold: true
@@ -105,6 +139,10 @@ Window {
                 // text: model.nameServer
                 color: Meui.Theme.disabledTextColor
             }
+        }
+
+        Item {
+            Layout.fillHeight: true
         }
 
         Button {

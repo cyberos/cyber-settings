@@ -74,7 +74,7 @@ ItemPage {
 
                 RowLayout {
                     Label {
-                        text: "Wireless"
+                        text: "WLAN"
                         color: Meui.Theme.disabledTextColor
                         Layout.fillWidth: true
                     }
