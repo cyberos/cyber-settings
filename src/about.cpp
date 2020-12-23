@@ -37,9 +37,10 @@ QString About::settingsVersion()
 
 QString About::developers()
 {
-    return QString("Flex Zhong (ChungZH)\n"
-                   "Felix Yan (felixonmars)\n"
-                   "omame (omaemae)\n"
-                   "probonopd\n"
-                   "Reven Martin (rekols)");
+    return QString("Flex Zhong (@ChungZH)\n"
+                   "Felix Yan (@felixonmars)\n"
+                   "omame (@omaemae)\n"
+                   "@probonopd\n"
+                   "Reven Martin (@rekols)\n"
+                   "小子 (@Z-bin)");
 }
