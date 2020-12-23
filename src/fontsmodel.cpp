@@ -25,6 +25,7 @@
 #include <QDirIterator>
 
 // Freetype and Fontconfig
+#include <ft2build.h>
 #include <freetype/freetype.h>
 #include <fontconfig/fontconfig.h>
 #include <ft2build.h>
