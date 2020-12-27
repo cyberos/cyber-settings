@@ -1,9 +1,10 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
+import QtQuick.Window 2.3
 import MeuiKit 1.0 as Meui
 
-ApplicationWindow {
+Meui.Window {
     visible: true
     width: 900
     height: 600
@@ -13,32 +14,13 @@ ApplicationWindow {
     minimumWidth: 900
     minimumHeight: 600
 
-    background: Rectangle {
-        color: Meui.Theme.backgroundColor
-
-        Behavior on color {
-            ColorAnimation {
-                duration: 250
-            }
-        }
-    }
-
-    RowLayout {
-        anchors.fill: parent
-
-        Rectangle {
+    content: RowLayout {
+        SideBar {
+            id: sideBar
             Layout.fillHeight: true
-            width: 260
-            color: Meui.Theme.secondBackgroundColor
-            radius: 4
 
-            SideBar {
-                id: sideBar
-                anchors.fill: parent
-
-                onCurrentIndexChanged: {
-                    switchPageFromIndex(currentIndex)
-                }
+            onCurrentIndexChanged: {
+                switchPageFromIndex(currentIndex)
             }
         }
 

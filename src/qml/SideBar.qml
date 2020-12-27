@@ -13,6 +13,11 @@ Item {
     property alias model: listModel
     property alias currentIndex: listView.currentIndex
 
+    Rectangle {
+        anchors.fill: parent
+        color: Meui.Theme.secondBackgroundColor
+    }
+
     ListModel {
         id: listModel
 
