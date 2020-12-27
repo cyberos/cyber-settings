@@ -14,6 +14,16 @@ Meui.Window {
     minimumWidth: 900
     minimumHeight: 600
 
+    headerBar: Item {
+        Rectangle {
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            implicitWidth: 260
+            color: Meui.Theme.secondBackgroundColor
+        }
+    }
+
     content: RowLayout {
         SideBar {
             id: sideBar

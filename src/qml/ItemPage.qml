@@ -16,11 +16,14 @@ Page {
     header: Item {
         id: headerItem
         width: headerLayout.implicitWidth
-        height: headerLayout.implicitHeight + Meui.Units.largeSpacing * 2
+        height: headerLayout.implicitHeight + Meui.Units.largeSpacing
 
         RowLayout {
             id: headerLayout
-            anchors.margins: Meui.Units.largeSpacing * 2
+            anchors.topMargin: Meui.Units.largeSpacing
+            anchors.leftMargin: Meui.Units.largeSpacing * 2
+            anchors.rightMargin: Meui.Units.largeSpacing * 2
+            anchors.bottomMargin: Meui.Units.largeSpacing * 2
             anchors.fill: parent
             spacing: Meui.Units.largeSpacing
 

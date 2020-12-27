@@ -84,19 +84,6 @@ Item {
             margins: Meui.Units.largeSpacing
         }
 
-        Label {
-            text: qsTr("Settings")
-            font.bold: true
-            font.pointSize: 18
-            topPadding: 10
-            leftPadding: 16
-            Layout.alignment: Qt.AlignTop
-        }
-
-        Item {
-            height: Meui.Units.smallSpacing
-        }
-
         ListView {
             id: listView
             Layout.fillHeight: true
