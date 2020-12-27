@@ -29,7 +29,7 @@ ApplicationWindow {
         Rectangle {
             Layout.fillHeight: true
             width: 260
-            color: Meui.Theme.viewBackgroundColor
+            color: Meui.Theme.secondBackgroundColor
             radius: 4
 
             SideBar {
