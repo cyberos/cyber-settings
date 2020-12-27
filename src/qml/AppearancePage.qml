@@ -105,14 +105,17 @@ ItemPage {
                 cellWidth: height
                 cellHeight: height
                 interactive: false
-                model: ListModel {
-                    ListElement { accentColor: "#2273E6" }
-                    ListElement { accentColor: "#E82E3E" }
-                    ListElement { accentColor: "#35BF56" }
-                    ListElement { accentColor: "#5542C3" }
-                    ListElement { accentColor: "#CA64AC" }
-                    ListElement { accentColor: "#F5B800" }
+                model: ListModel {}
+
+                Component.onCompleted: {
+                    model.append({"accentColor": String(Meui.Theme.blueColor)})
+                    model.append({"accentColor": String(Meui.Theme.redColor)})
+                    model.append({"accentColor": String(Meui.Theme.greenColor)})
+                    model.append({"accentColor": String(Meui.Theme.purpleColor)})
+                    model.append({"accentColor": String(Meui.Theme.pinkColor)})
+                    model.append({"accentColor": String(Meui.Theme.orangeColor)})
                 }
+
                 delegate: Rectangle {
                     property bool isSelected: Qt.colorEqual(Meui.Theme.highlightColor, accentColor)
                     width: 32 + Meui.Units.largeSpacing
