@@ -38,6 +38,7 @@ ItemPage {
             BatteryItem {
                 id: batteryBackground
                 Layout.fillWidth: true
+                enableAnimation: !battery.onBattery
                 height: 150
 
                 ColumnLayout {
@@ -51,9 +52,17 @@ ItemPage {
                     RowLayout {
                         Label {
                             id: percentLabel
-                            text: battery.chargePercent + "%"
+                            text: battery.chargePercent
                             color: "white"
                             font.pointSize: 40
+                            font.weight: Font.DemiBold
+                        }
+
+                        Label {
+                            text: "%"
+                            color: "white"
+                            font.pointSize: 12
+                            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         }
 
                         Image {
