@@ -83,6 +83,10 @@ ItemPage {
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                 }
 
+                Item {
+                    Layout.fillWidth: true
+                }
+
                 Switch {
                     checked: appearance.dimsWallpaper
                     height: dimsTipsLabel.height

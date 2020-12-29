@@ -6,8 +6,8 @@ import MeuiKit 1.0 as Meui
 
 Meui.Window {
     visible: true
-    width: 900
-    height: 600
+    width: 950
+    height: 650
     title: qsTr("Settings")
     id: rootWindow
 

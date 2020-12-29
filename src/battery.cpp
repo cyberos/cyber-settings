@@ -1,8 +1,33 @@
 #include "battery.h"
+#include <QDateTime>
+#include <QDBusArgument>
+#include <QDBusReply>
+#include <QDebug>
 
 static const QString s_sServer = "org.cyber.Settings";
 static const QString s_sPath = "/PrimaryBattery";
 static const QString s_sInterface = "org.cyber.PrimaryBattery";
+
+//DBus Battery Info Structure
+struct BatteryInfo {
+    uint time, state;
+    double value;
+};
+Q_DECLARE_METATYPE(BatteryInfo)
+
+const QDBusArgument &operator<<(QDBusArgument &argument, const BatteryInfo &info) {
+    argument.beginStructure();
+    argument << info.time << info.value << info.state;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, BatteryInfo &info) {
+    argument.beginStructure();
+    argument >> info.time >> info.value >> info.state;
+    argument.endStructure();
+    return argument;
+}
 
 Battery::Battery(QObject *parent)
     : QObject(parent)
@@ -38,6 +63,8 @@ Battery::Battery(QObject *parent)
             m_onBattery = interface.property("OnBattery").toBool();
         }
 
+        m_udi = m_interface.property("udi").toString();
+
         emit validChanged();
     }
 }
@@ -55,6 +82,37 @@ bool Battery::onBattery() const
 void Battery::refresh()
 {
     m_interface.call("refresh");
+}
+
+QVariantList Battery::getHistory(const int timespan, const int resolution)
+{
+    QVariantList listValues;
+    QVariantMap listItem;
+
+    QDBusMessage historyMessage = QDBusMessage::createMethodCall("org.freedesktop.UPower", m_udi,
+                                                                 "org.freedesktop.UPower.Device", "GetHistory");
+    QVariantList historyMessageArguments;
+    historyMessageArguments.append("charge");
+    historyMessageArguments.append((uint) timespan);
+    historyMessageArguments.append((uint) resolution);
+    historyMessage.setArguments(historyMessageArguments);
+
+    quint64 offset = QDateTime::currentDateTime().toSecsSinceEpoch();
+
+    QDBusReply<QDBusArgument> historyArgument = QDBusConnection::systemBus().call(historyMessage);
+    if (historyArgument.isValid()) {
+        QDBusArgument arrayArgument = historyArgument.value();
+        arrayArgument.beginArray();
+        while (!arrayArgument.atEnd()) {
+            BatteryInfo info;
+            arrayArgument >> info;
+            listItem.insert("time", offset - info.time);
+            listItem.insert("value", info.value);
+            listValues += listItem;
+        }
+    }
+
+    return listValues;
 }
 
 int Battery::chargeState() const

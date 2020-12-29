@@ -45,42 +45,38 @@ Item {
                     velocity: 1000
                 }
             }
-        }
-    }
 
-    ParticleSystem {
-        id: particleSystem
-    }
+            ParticleSystem {
+                anchors.fill: parent
 
-    Emitter {
-        id: emitter
-        system: particleSystem
-        width: parent.width
-        height: parent.height
-        emitRate: 5
-        lifeSpan: 2000
-        lifeSpanVariation: 500
-        size: 16
-        endSize: 32
-        enabled: control.enableAnimation
+                Emitter {
+                    id: emitter
+                    anchors.fill: parent
+                    emitRate: 5
+                    lifeSpan: 2000
+                    lifeSpanVariation: 500
+                    size: 16
+                    endSize: 32
+                    enabled: control.enableAnimation
 
-        velocity: AngleDirection {
-            angle: 0
-            angleVariation: 15
-            magnitude: 100
-            magnitudeVariation: 50
-        }
-    }
+                    velocity: AngleDirection {
+                        angle: 0
+                        angleVariation: 15
+                        magnitude: 100
+                        magnitudeVariation: 50
+                    }
+                }
 
-    ItemParticle {
-        system: particleSystem
-
-        delegate: Rectangle {
-            id: particleRect
-            width: 10
-            height: 10
-            radius: 10
-            color: Qt.rgba(255, 255, 255, 0.3)
+                ItemParticle {
+                    delegate: Rectangle {
+                        id: particleRect
+                        width: Math.ceil(Math.random() * (10 - 7)) + 7
+                        height: width
+                        radius: width
+                        color: Qt.rgba(255, 255, 255, 0.3)
+                    }
+                }
+            }
         }
     }
 }

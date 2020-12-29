@@ -23,6 +23,7 @@ public:
     bool onBattery() const;
 
     Q_INVOKABLE void refresh();
+    Q_INVOKABLE QVariantList getHistory(const int timespan, const int resolution);
 
     int chargeState() const;
     int chargePercent() const;
@@ -48,6 +49,7 @@ private:
     QDBusInterface m_interface;
     bool m_available;
     bool m_onBattery;
+    QString m_udi;
 };
 
 #endif // BATTERY_H
