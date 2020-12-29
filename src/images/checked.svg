@@ -52,13 +52,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       d="M 0.85935134,3.3457772 2.0923853,4.9723167 4.9708458,0.63396727"
-       fill="none"
-       stroke="#ffffff"
-       stroke-linecap="square"
-       stroke-width="1.25909"
-       id="path5"
-       style="fill:#000000;fill-opacity:1" />
+    <g
+       transform="matrix(0.97013889,0,0,1.164148,-413.7488,-626.64923)"
+       id="g7"
+       style="fill:#000000;fill-opacity:1">
+      <path
+         class="ColorScheme-Text"
+         d="m 431.82,538.29 -3.1484,3.6094 -1.5254,-1.5527 -0.66211,0.67578 2.2266,2.2676 3.7734,-4.3223 z"
+         fill="currentColor"
+         id="path5-3"
+         style="fill:#000000;fill-opacity:1" />
+    </g>
   </g>
 </svg>
