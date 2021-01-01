@@ -52,7 +52,7 @@ Item {
                 Emitter {
                     id: emitter
                     anchors.fill: parent
-                    emitRate: 5
+                    emitRate: 7
                     lifeSpan: 2000
                     lifeSpanVariation: 500
                     size: 16
@@ -61,8 +61,8 @@ Item {
 
                     velocity: AngleDirection {
                         angle: 0
-                        angleVariation: 15
-                        magnitude: 100
+                        //angleVariation: 15
+                        magnitude: 175
                         magnitudeVariation: 50
                     }
                 }
@@ -70,7 +70,7 @@ Item {
                 ItemParticle {
                     delegate: Rectangle {
                         id: particleRect
-                        width: Math.ceil(Math.random() * (10 - 7)) + 7
+                        width: Math.ceil(Math.random() * (10 - 4)) + 4
                         height: width
                         radius: width
                         color: Qt.rgba(255, 255, 255, 0.3)
