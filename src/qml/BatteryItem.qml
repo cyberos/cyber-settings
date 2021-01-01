@@ -61,7 +61,6 @@ Item {
 
                     velocity: AngleDirection {
                         angle: 0
-                        //angleVariation: 15
                         magnitude: 175
                         magnitudeVariation: 50
                     }
