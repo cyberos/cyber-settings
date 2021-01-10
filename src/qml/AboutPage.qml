@@ -56,6 +56,11 @@ ItemPage {
             }
 
             StandardItem {
+                key: qsTr("Memory Size")
+                value: about.memorySize
+            }
+
+            StandardItem {
                 key: qsTr("Username")
                 value: about.userName
             }
