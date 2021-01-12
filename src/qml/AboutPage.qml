@@ -56,7 +56,7 @@ ItemPage {
             }
 
             StandardItem {
-                key: qsTr("Memory Size")
+                key: qsTr("RAM Size")
                 value: about.memorySize
             }
 
