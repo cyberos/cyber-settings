@@ -61,6 +61,7 @@ ItemPage {
                     cache: false
                     opacity: 1.0
 
+                    // This behavior doesn't seem to work. No idea why.
                     Behavior on opacity {
                         NumberAnimation {
                             duration: 125
