@@ -47,7 +47,7 @@ ItemPage {
                 radius: Meui.Theme.bigRadius + Meui.Units.smallSpacing / 2
 
                 border.color: Meui.Theme.highlightColor
-                border.width: image.status == Image.Ready & isSelected ? 2 : 0
+                border.width: image.status == Image.Ready & isSelected ? 3 : 0
 
                 Image {
                     id: image

@@ -26,16 +26,15 @@ Item {
             width: 128
             height: width
             color: "transparent"
-            border.width: 2
+            border.width: 3
             border.color: control.checked ? Meui.Theme.highlightColor : "transparent"
             radius: Meui.Theme.bigRadius + control.iconSpacing
             visible: true
 
             Image {
                 id: icon
-                width: _box.width - control.iconSpacing * 2
-                height: _box.height - control.iconSpacing * 2
-                anchors.centerIn: parent
+                anchors.fill: parent
+                anchors.margins: Meui.Units.smallSpacing
                 sourceSize: Qt.size(icon.width, icon.height)
 
                 layer.enabled: true
@@ -51,30 +50,6 @@ Item {
                     }
                 }
             }
-
-//            Item {
-//                anchors.fill: parent
-//                anchors.margins: control.iconSpacing
-
-//                Image {
-//                    id: icon
-//                    anchors.fill: parent
-//                    sourceSize: Qt.size(icon.width + control.iconSpacing + 2, icon.height + control.iconSpacing + 2)
-
-//                    layer.enabled: true
-//                    layer.effect: OpacityMask {
-//                        maskSource: Item {
-//                            width: icon.width
-//                            height: icon.height
-
-//                            Rectangle {
-//                                anchors.fill: parent
-//                                radius: Meui.Theme.bigRadius
-//                            }
-//                        }
-//                    }
-//                }
-//            }
         }
 
         Label {
