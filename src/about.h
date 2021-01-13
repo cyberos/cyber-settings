@@ -15,7 +15,9 @@ class About : public QObject
     Q_PROPERTY(QString hostname READ hostname NOTIFY stub)
     Q_PROPERTY(QString userName READ userName NOTIFY stub)
     Q_PROPERTY(QString settingsVersion READ settingsVersion NOTIFY stub)
+    Q_PROPERTY(QString memorySize READ memorySize NOTIFY stub)
     Q_PROPERTY(QString developers READ developers NOTIFY stub)
+
 
     QML_ELEMENT
 
@@ -27,8 +29,12 @@ public:
     QString hostname();
     QString userName();
     QString settingsVersion();
+    QString memorySize();
 
     QString developers();
+
+private:
+    qlonglong calculateTotalRam() const;
 
 // Only here so that QML doesn't whine about non-NOTIFYable properties.
 signals:

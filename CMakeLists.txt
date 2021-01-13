@@ -18,6 +18,7 @@ find_package(PkgConfig REQUIRED)
 
 find_package(KF5NetworkManagerQt REQUIRED)
 find_package(KF5ModemManagerQt REQUIRED)
+find_package(KF5CoreAddons REQUIRED)
 
 pkg_search_module(FontConfig REQUIRED fontconfig IMPORTED_TARGET)
 pkg_search_module(ICU REQUIRED icu-i18n)
@@ -102,6 +103,7 @@ target_link_libraries(${PROJECT_NAME}
 
         KF5::NetworkManagerQt
         KF5::ModemManagerQt
+        KF5::CoreAddons
 
         PkgConfig::FontConfig
         ${FREETYPE_LIBRARIES}
