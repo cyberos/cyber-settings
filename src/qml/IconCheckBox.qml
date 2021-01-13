@@ -7,6 +7,7 @@ import MeuiKit 1.0 as Meui
 Item {
     id: control
 
+    property var iconSpacing: Meui.Units.smallSpacing * 0.8
     property alias source: icon.source
     property alias text: label.text
     property bool checked: false
@@ -20,33 +21,60 @@ Item {
         id: mainLayout
         anchors.fill: parent
 
-        Image {
-            id: icon
+        Rectangle {
+            id: _box
             width: 128
             height: width
-            sourceSize: Qt.size(width, height)
+            color: "transparent"
+            border.width: 2
+            border.color: control.checked ? Meui.Theme.highlightColor : "transparent"
+            radius: Meui.Theme.bigRadius + control.iconSpacing
+            visible: true
 
-            layer.enabled: true
-            layer.effect: OpacityMask {
-                maskSource: Item {
-                    width: icon.width
-                    height: icon.height
+            Image {
+                id: icon
+                width: _box.width - control.iconSpacing * 2
+                height: _box.height - control.iconSpacing * 2
+                anchors.centerIn: parent
+                sourceSize: Qt.size(icon.width, icon.height)
 
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: Meui.Theme.bigRadius
+                layer.enabled: true
+                layer.effect: OpacityMask {
+                    maskSource: Item {
+                        width: icon.width
+                        height: icon.height
+
+                        Rectangle {
+                            anchors.fill: parent
+                            radius: Meui.Theme.bigRadius
+                        }
                     }
                 }
             }
 
-            Rectangle {
-                anchors.fill: parent
-                color: "transparent"
-                border.width: 2
-                border.color: control.checked ? Meui.Theme.highlightColor : "transparent"
-                radius: Meui.Theme.bigRadius
-                visible: true
-            }
+//            Item {
+//                anchors.fill: parent
+//                anchors.margins: control.iconSpacing
+
+//                Image {
+//                    id: icon
+//                    anchors.fill: parent
+//                    sourceSize: Qt.size(icon.width + control.iconSpacing + 2, icon.height + control.iconSpacing + 2)
+
+//                    layer.enabled: true
+//                    layer.effect: OpacityMask {
+//                        maskSource: Item {
+//                            width: icon.width
+//                            height: icon.height
+
+//                            Rectangle {
+//                                anchors.fill: parent
+//                                radius: Meui.Theme.bigRadius
+//                            }
+//                        }
+//                    }
+//                }
+//            }
         }
 
         Label {

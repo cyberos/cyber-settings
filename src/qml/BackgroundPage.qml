@@ -61,7 +61,6 @@ ItemPage {
                     cache: false
                     opacity: 1.0
 
-                    // This behavior doesn't seem to work. No idea why.
                     Behavior on opacity {
                         NumberAnimation {
                             duration: 125
@@ -91,10 +90,10 @@ ItemPage {
                     onClicked: background.setBackground(item.modelData)
 
                     onEntered: function() {
-                        parent.opacity = 0.7
+                        image.opacity = 0.7
                     }
                     onExited: function() {
-                        parent.opacity = 1.0
+                        image.opacity = 1.0
                     }
                 }
             }
