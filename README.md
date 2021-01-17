@@ -2,6 +2,7 @@
 
 The System Settings application for Cyber Desktop.
 
+![cyber-settings](screenshots/cyber-settings.png)
 ## Dependencies
 
 ```shell
