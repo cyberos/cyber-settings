@@ -168,7 +168,6 @@ Item {
                         id: itemTitle
                         text: model.title
                         color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
-                        font.bold: isCurrent
 
                         Behavior on color {
                             ColorAnimation {
