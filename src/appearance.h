@@ -32,6 +32,7 @@ class Appearance : public QObject
     Q_PROPERTY(int dockDirection READ dockDirection WRITE setDockDirection NOTIFY dockDirectionChanged)
     Q_PROPERTY(int fontPointSize READ fontPointSize WRITE setFontPointSize NOTIFY fontPointSizeChanged)
     Q_PROPERTY(bool dimsWallpaper READ dimsWallpaper WRITE setDimsWallpaper NOTIFY dimsWallpaperChanged)
+    Q_PROPERTY(double devicePixelRatio READ devicePixelRatio WRITE setDevicePixelRatio NOTIFY devicePixelRatioChanged)
 
 public:
     explicit Appearance(QObject *parent = nullptr);
@@ -55,11 +56,15 @@ public:
 
     Q_INVOKABLE void setAccentColor(int accentColor);
 
+    double devicePixelRatio() const;
+    Q_INVOKABLE void setDevicePixelRatio(double value);
+
 signals:
     void dockIconSizeChanged();
     void dockDirectionChanged();
     void fontPointSizeChanged();
     void dimsWallpaperChanged();
+    void devicePixelRatioChanged();
 
 private:
     QDBusInterface m_interface;

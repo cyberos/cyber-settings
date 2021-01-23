@@ -159,3 +159,19 @@ void Appearance::setAccentColor(int accentColor)
         iface.call("setAccentColor", accentColor);
     }
 }
+
+double Appearance::devicePixelRatio() const
+{
+    return m_interface.property("devicePixelRatio").toDouble();
+}
+
+void Appearance::setDevicePixelRatio(double value)
+{
+    QDBusInterface iface("org.cyber.Settings",
+                         "/Theme",
+                         "org.cyber.Theme",
+                         QDBusConnection::sessionBus(), this);
+    if (iface.isValid()) {
+        iface.call("setDevicePixelRatio", value);
+    }
+}

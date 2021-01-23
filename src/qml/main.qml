@@ -13,6 +13,7 @@ Meui.Window {
 
     minimumWidth: 900
     minimumHeight: 600
+    hideHeaderOnMaximize: true
 
     headerBar: Item {
         Rectangle {
@@ -43,17 +44,6 @@ Meui.Window {
 
             pushEnter: Transition {}
             pushExit: Transition {}
-
-            Rectangle {
-                anchors.fill: parent
-                color: Meui.Theme.backgroundColor
-
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 250
-                    }
-                }
-            }
         }
     }
 
