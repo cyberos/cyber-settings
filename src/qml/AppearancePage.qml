@@ -126,7 +126,7 @@ ItemPage {
                     height: width
                     color: "transparent"
                     radius: width / 2
-                    border.color: Meui.Theme.textColor
+                    border.color: Meui.Theme.highlightColor
                     border.width: isSelected ? 2 : 0
 
                     Rectangle {
