@@ -7,7 +7,7 @@
 #include <unicode/unistr.h>
 
 static const QStringList supportList = {"en_US", "en_AU", "en_CA", "en_NZ", "en_GB",
-                                        "ja", "ko", "ru", "de", "it", "zh_CN", "zh_HK", "zh_TW"
+                                        "ja", "ko", "ru", "de", "it", "zh_CN", "zh_HK"
                                        };
 
 Language::Language(QObject *parent)
