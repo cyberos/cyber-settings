@@ -58,11 +58,11 @@ Meui.Window {
             if (pageName === sideBar.model.get(i).name) {
                 switchPageFromIndex(i)
                 sideBar.view.currentIndex = i
-
-                // If the window is minimized, it needs to be displayed agin.
-                rootWindow.show()
-                rootWindow.raise()
             }
         }
+
+        // If the window is minimized, it needs to be displayed agin.
+        rootWindow.show()
+        rootWindow.raise()
     }
 }
