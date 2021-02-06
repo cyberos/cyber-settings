@@ -69,26 +69,6 @@ ItemPage {
                 key: qsTr("Hostname")
                 value: about.hostname
             }
-
-            HorizontalDivider {}
-
-            // Cyber Info
-            Label {
-                text: qsTr("Other Info")
-                color: Meui.Theme.disabledTextColor
-                topPadding: Meui.Units.largeSpacing * 2
-                bottomPadding: Meui.Units.smallSpacing
-            }
-
-            StandardItem {
-                key: qsTr("Cyber Settings Build")
-                value: about.settingsVersion
-            }
-
-            StandardItem {
-                key: qsTr("Developers")
-                value: about.developers
-            }
         }
     }
 }
