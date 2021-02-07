@@ -18,7 +18,7 @@ ItemPage {
         leftMargin: Meui.Units.largeSpacing
         rightMargin: Meui.Units.largeSpacing
 
-        cellWidth: 200
+        cellWidth: 320
         cellHeight: 180
 
         clip: true
@@ -58,7 +58,7 @@ ItemPage {
                     fillMode: Image.PreserveAspectCrop
                     asynchronous: true
                     mipmap: true
-                    cache: false
+                    cache: true
                     opacity: 1.0
 
                     Behavior on opacity {
