@@ -69,6 +69,45 @@ ItemPage {
                 key: qsTr("Hostname")
                 value: about.hostname
             }
+
+            HorizontalDivider {}
+
+            Label {
+                text: qsTr("CyberOS Team")
+                color: Meui.Theme.disabledTextColor
+                topPadding: Meui.Units.largeSpacing
+                bottomPadding: Meui.Units.smallSpacing
+            }
+
+            StandardItem {
+                key: "Flex Zhong"
+                value: "@ChungZH"
+            }
+
+            StandardItem {
+                key: "Felix Yan"
+                value: "@felixonmars"
+            }
+
+            StandardItem {
+                key: "omame"
+                value: "@omaemae"
+            }
+
+            StandardItem {
+                key: "Simon Peter"
+                value: "@probonopd"
+            }
+
+            StandardItem {
+                key: "Reven Martin"
+                value: "@rekols"
+            }
+
+            StandardItem {
+                key: "小子"
+                value: "@Z-bin"
+            }
         }
     }
 }

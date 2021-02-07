@@ -51,8 +51,8 @@ set(SRCS
     src/networkmanager/networking.cpp
     src/networkmanager/networking.h
 
-    src/networkmanager/wiressitemsettings.cpp
-    src/networkmanager/wiressitemsettings.h
+    src/networkmanager/wirelessitemsettings.cpp
+    src/networkmanager/wirelessitemsettings.h
 
     src/networkmanager/technologyproxymodel.cpp
     src/networkmanager/technologyproxymodel.h
@@ -69,27 +69,6 @@ qt5_add_dbus_adaptor(DBUS_SOURCES
                      src/org.cyber.SettingsUI.xml
                      src/application.h Application)
 set_source_files_properties(${DBUS_SOURCES} PROPERTIES SKIP_AUTOGEN ON)
-
-execute_process(
-  COMMAND git rev-list --count HEAD 
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE COMMIT_COUNT
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-
-execute_process(
-  COMMAND git rev-parse --short HEAD
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE COMMIT_HASH
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-
-configure_file(
-  ${CMAKE_SOURCE_DIR}/src/version.h.in
-  ${CMAKE_BINARY_DIR}/generated/version.h
-)
-
-include_directories(${CMAKE_BINARY_DIR}/generated)
 
 add_executable(${PROJECT_NAME} ${DBUS_SOURCES} ${SRCS} ${RESOURCES})
 target_link_libraries(${PROJECT_NAME}

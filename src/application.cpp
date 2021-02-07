@@ -15,7 +15,7 @@
 #include "networkmanager/networkmodelitem.h"
 #include "networkmanager/networking.h"
 #include "networkmanager/technologyproxymodel.h"
-#include "networkmanager/wiressitemsettings.h"
+#include "networkmanager/wirelessitemsettings.h"
 
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)

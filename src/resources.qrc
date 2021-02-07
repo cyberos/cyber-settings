@@ -51,7 +51,7 @@
         <file>images/view-refresh.svg</file>
         <file>images/info.svg</file>
         <file>qml/IconButton.qml</file>
-        <file>qml/WiressItem.qml</file>
+        <file>qml/WirelessItem.qml</file>
         <file>images/go-previous.svg</file>
         <file>qml/WirelessDetailsWindow.qml</file>
         <file>qml/WiredItem.qml</file>

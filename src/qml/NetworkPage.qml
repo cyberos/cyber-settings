@@ -124,7 +124,7 @@ ItemPage {
 
                     ScrollBar.vertical: ScrollBar {}
 
-                    delegate: WiressItem {
+                    delegate: WirelessItem {
                         height: control.itemHeight
                         width: wirelessView.width
                     }

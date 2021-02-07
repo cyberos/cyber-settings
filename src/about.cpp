@@ -39,11 +39,6 @@ QString About::userName()
     return QString::fromUtf8(userName);
 }
 
-QString About::settingsVersion()
-{
-    return QObject::tr(SETTINGS_VERSION);
-}
-
 QString About::memorySize()
 {
     QString ram;
@@ -53,16 +48,6 @@ QString About::memorySize()
         ram = KFormat().formatByteSize(totalRam, 0);
     }
     return ram;
-}
-
-QString About::developers()
-{
-    return QString("Flex Zhong (@ChungZH)\n"
-                   "Felix Yan (@felixonmars)\n"
-                   "omame (@omaemae)\n"
-                   "@probonopd\n"
-                   "Reven Martin (@rekols)\n"
-                   "小子 (@Z-bin)");
 }
 
 qlonglong About::calculateTotalRam() const

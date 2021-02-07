@@ -31,6 +31,7 @@ Window {
             settings.path = model.connectionPath
             autoJoinSwitch.checked = settings.autoConnect
             autoJoinSwitch.visible = true
+            autoJoinLabel.visible = true
         }
     }
 
@@ -54,17 +55,14 @@ Window {
                 font.bold: true
                 text: qsTr("Auto-Join")
                 Layout.alignment: Qt.AlignRight
-                visible: {
-                    if (model.connectionPath)
-                        autoJoinSwitch.visible
-                }
+                visible: false
             }
 
             Switch {
                 id: autoJoinSwitch
                 leftPadding: 0
                 Layout.fillHeight: true
-                visible: true
+                visible: false
                 onCheckedChanged: settings.autoConnect = checked
             }
 

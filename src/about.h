@@ -5,7 +5,6 @@
 #include <QString>
 #include <QSysInfo>
 #include <qqml.h>
-#include <version.h>
 
 class About : public QObject
 {
@@ -14,9 +13,7 @@ class About : public QObject
     Q_PROPERTY(QString kernelVersion READ kernelVersion NOTIFY stub)
     Q_PROPERTY(QString hostname READ hostname NOTIFY stub)
     Q_PROPERTY(QString userName READ userName NOTIFY stub)
-    Q_PROPERTY(QString settingsVersion READ settingsVersion NOTIFY stub)
     Q_PROPERTY(QString memorySize READ memorySize NOTIFY stub)
-    Q_PROPERTY(QString developers READ developers NOTIFY stub)
 
 
     QML_ELEMENT
