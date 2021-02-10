@@ -35,30 +35,6 @@ set(SRCS
     src/language.cpp
     src/about.cpp
     src/background.cpp
-
-    src/networkmanager/appletproxymodel.cpp
-    src/networkmanager/appletproxymodel.h
-
-    src/networkmanager/networkitemslist.cpp
-    src/networkmanager/networkitemslist.h
-
-    src/networkmanager/networkmodel.cpp
-    src/networkmanager/networkmodel.h
-
-    src/networkmanager/networkmodelitem.cpp
-    src/networkmanager/networkmodelitem.h
-
-    src/networkmanager/networking.cpp
-    src/networkmanager/networking.h
-
-    src/networkmanager/wirelessitemsettings.cpp
-    src/networkmanager/wirelessitemsettings.h
-
-    src/networkmanager/technologyproxymodel.cpp
-    src/networkmanager/technologyproxymodel.h
-
-    src/networkmanager/uiutils.cpp
-    src/networkmanager/uiutils.h
 )
 
 set(RESOURCES
