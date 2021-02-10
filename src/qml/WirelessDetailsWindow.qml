@@ -80,6 +80,18 @@ Window {
 
             Label {
                 font.bold: true
+                text: qsTr("Signal")
+                Layout.alignment: Qt.AlignRight
+            }
+
+            Label {
+                id: signalLabel
+                text: model.signal
+                color: Meui.Theme.disabledTextColor
+            }
+
+            Label {
+                font.bold: true
                 text: qsTr("IPv4 Address")
                 Layout.alignment: Qt.AlignRight
             }
