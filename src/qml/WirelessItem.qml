@@ -5,7 +5,7 @@ import QtGraphicalEffects 1.0
 import QtQuick.Window 2.3
 
 import MeuiKit 1.0 as Meui
-import Cyber.NetworkManager 1.0 as NM
+import Cyber.NetworkManagement 1.0 as NM
 
 Item {
     id: control

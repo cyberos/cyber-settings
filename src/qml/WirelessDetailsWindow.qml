@@ -3,7 +3,7 @@ import QtQuick.Window 2.3
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import MeuiKit 1.0 as Meui
-import Cyber.NetworkManager 1.0 as NM
+import Cyber.NetworkManagement 1.0 as NM
 
 Window {
     id: control
@@ -75,6 +75,18 @@ Window {
             Label {
                 id: securityLabel
                 text: model.securityTypeString
+                color: Meui.Theme.disabledTextColor
+            }
+
+            Label {
+                font.bold: true
+                text: qsTr("Signal")
+                Layout.alignment: Qt.AlignRight
+            }
+
+            Label {
+                id: signalLabel
+                text: model.signal
                 color: Meui.Theme.disabledTextColor
             }
 
