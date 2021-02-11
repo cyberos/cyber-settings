@@ -35,10 +35,12 @@ ItemPage {
                 text: qsTr("Brightness")
                 color: Meui.Theme.disabledTextColor
                 bottomPadding: Meui.Units.largeSpacing
+                visible: brightness.enabled
             }
 
             RowLayout {
                 spacing: Meui.Units.largeSpacing
+                visible: brightness.enabled
 
                 Image {
                     width: brightnessSlider.height
@@ -69,9 +71,12 @@ ItemPage {
 
             Item {
                 height: Meui.Units.largeSpacing
+                visible: brightness.enabled
             }
 
-            HorizontalDivider {}
+            HorizontalDivider {
+                visible: brightness.enabled
+            }
 
             Label {
                 text: qsTr("Scale")
