@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
-import QtGraphicalEffects 1.0
+import QtGraphicalEffects 1.15
 import MeuiKit 1.0 as Meui
 
 Item {
@@ -16,6 +16,9 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: Meui.Theme.secondBackgroundColor
+        Behavior on color {
+            ColorAnimation { duration: 125 }
+        }
     }
 
     ListModel {
