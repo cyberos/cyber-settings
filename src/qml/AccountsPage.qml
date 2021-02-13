@@ -36,6 +36,7 @@ ItemPage {
             }
 
             RowLayout {
+                Layout.fillWidth: true
                 Image {
                     id: currentUserImage
                     width: 64
@@ -56,35 +57,68 @@ ItemPage {
                         }
                     }
                 }
-
                 Label {
                     Layout.alignment: Qt.AlignVCenter
                     id: currentUserLabel
-                    text: currentUser.userName
+                    text: currentUser.displayName
                     font.pointSize: 16
-                    // font.bold: true
                     bottomPadding: Meui.Units.smallSpacing
                     leftPadding: Meui.Units.largeSpacing
                 }
-            }
 
-            /*
-             * This will be useful when creating additional settings
-             * for additional users. Currently though, I don't know
-             * how to use the AccountsManager to get other users.
-             * For now, I'm leaving this here as a proof-of-concept.
-             *  - @omaemae
-             */
-
-            Button {
-                text: "FIXME: Placeholder"
-                onClicked: hideable.toggle()
-            }
-            
-            Hideable {
-                id: hideable
                 Label {
-                    text: "You found a placeholder!"
+                    Layout.alignment: Qt.AlignVCenter
+                    id: currentUserLabel2
+                    text: `(${currentUser.userName})`
+                    color: Meui.Theme.disabledTextColor
+                    visible: currentUser.displayName !== currentUser.userName
+                    font.pointSize: 16
+                    bottomPadding: Meui.Units.smallSpacing
+                }
+
+                Item {
+                    Layout.fillWidth: true
+                }
+
+                Button {
+                    text: additionalSettings.shown ? qsTr("Hide additional settings") : qsTr("Show additional settings")
+                    onClicked: additionalSettings.toggle()
+                }
+            }
+
+            Hideable {
+                id: additionalSettings
+                HorizontalDivider {}
+
+                Label {
+                    text: qsTr("Additional settings")
+                    color: Meui.Theme.disabledTextColor
+                    Layout.bottomMargin: Meui.Units.largeSpacing
+                }
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Layout.bottomMargin: Meui.Units.smallSpacing
+
+                    Label {
+                        text: qsTr("Automatic login")
+                    }
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    Switch {
+                        id: automaticLoginSwitch
+                        Layout.fillHeight: true
+                        leftPadding: 0
+                        rightPadding: 0
+                        onCheckedChanged: currentUser.automaticLogin = checked
+                    }
+
+                    Component.onCompleted: {
+                        automaticLoginSwitch.checked = currentUser.automaticLogin
+                    }
                 }
             }
         }
