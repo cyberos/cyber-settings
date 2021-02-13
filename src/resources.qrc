@@ -57,5 +57,6 @@
         <file>qml/WiredItem.qml</file>
         <file>qml/AccountsPage.qml</file>
         <file>images/sidebar/accounts.svg</file>
+        <file>qml/Hideable.qml</file>
     </qresource>
 </RCC>

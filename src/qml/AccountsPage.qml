@@ -67,6 +67,26 @@ ItemPage {
                     leftPadding: Meui.Units.largeSpacing
                 }
             }
+
+            /*
+             * This will be useful when creating additional settings
+             * for additional users. Currently though, I don't know
+             * how to use the AccountsManager to get other users.
+             * For now, I'm leaving this here as a proof-of-concept.
+             *  - @omaemae
+             */
+
+            Button {
+                text: "FIXME: Placeholder"
+                onClicked: hideable.toggle()
+            }
+            
+            Hideable {
+                id: hideable
+                Label {
+                    text: "You found a placeholder!"
+                }
+            }
         }
     }
 }
