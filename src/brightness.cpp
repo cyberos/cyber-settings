@@ -18,7 +18,6 @@
  */
 
 #include "brightness.h"
-#include <QDebug>
 
 Brightness::Brightness(QObject *parent)
     : QObject(parent)
@@ -27,11 +26,13 @@ Brightness::Brightness(QObject *parent)
               "/Brightness",
               "org.cyber.Brightness", m_dbusConnection)
     , m_value(0)
+    , m_enabled(false)
 {
     if (!m_iface.isValid())
         return;
 
     m_value = m_iface.property("brightness").toInt();
+    m_enabled = m_iface.property("brightnessEnabled").toBool();
 }
 
 void Brightness::setValue(int value)
@@ -42,4 +43,9 @@ void Brightness::setValue(int value)
 int Brightness::value() const
 {
     return m_value;
+}
+
+bool Brightness::enabled() const
+{
+    return m_enabled;
 }
