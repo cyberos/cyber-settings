@@ -55,5 +55,7 @@
         <file>images/go-previous.svg</file>
         <file>qml/WirelessDetailsWindow.qml</file>
         <file>qml/WiredItem.qml</file>
+        <file>qml/AccountsPage.qml</file>
+        <file>images/sidebar/accounts.svg</file>
     </qresource>
 </RCC>

@@ -22,6 +22,13 @@ Item {
         id: listModel
 
         ListElement {
+            title: qsTr("Accounts")
+            name: "accounts"
+            page: "qrc:/qml/AccountsPage.qml"
+            iconSource: "qrc:/images/sidebar/accounts.svg"
+        }
+
+        ListElement {
             title: qsTr("Display")
             name: "display"
             page: "qrc:/qml/DisplayPage.qml"
