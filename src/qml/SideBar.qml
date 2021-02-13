@@ -167,7 +167,7 @@ Item {
                             source: icon
                             color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
                             opacity: 1
-                            visible: true
+                            visible: Meui.Theme.darkMode || isCurrent
                         }
                     }
 
