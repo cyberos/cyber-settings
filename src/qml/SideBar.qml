@@ -148,12 +148,6 @@ Item {
                                     0.1)
                             : "transparent"
                     smooth: true
-                    Behavior on color {
-                        ColorAnimation {
-                            duration: 125
-                            easing.type: Easing.InOutCubic
-                        }
-                    }
                 }
 
                 RowLayout {
@@ -182,13 +176,6 @@ Item {
                         id: itemTitle
                         text: model.title
                         color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
-
-                        Behavior on color {
-                            ColorAnimation {
-                                duration: 125
-                                easing.type: Easing.InOutCubic
-                            }
-                        }
                     }
 
                     Item {
