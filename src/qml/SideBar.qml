@@ -17,7 +17,10 @@ Item {
         anchors.fill: parent
         color: Meui.Theme.secondBackgroundColor
         Behavior on color {
-            ColorAnimation { duration: 125 }
+            ColorAnimation {
+                duration: 125
+                easing.type: Easing.InOutCubic
+            }
         }
     }
 
@@ -148,6 +151,7 @@ Item {
                     Behavior on color {
                         ColorAnimation {
                             duration: 125
+                            easing.type: Easing.InOutCubic
                         }
                     }
                 }
@@ -182,6 +186,7 @@ Item {
                         Behavior on color {
                             ColorAnimation {
                                 duration: 125
+                                easing.type: Easing.InOutCubic
                             }
                         }
                     }

@@ -28,6 +28,12 @@ Item {
             color: "transparent"
             border.width: 3
             border.color: control.checked ? Meui.Theme.highlightColor : "transparent"
+            Behavior on border.color {
+                ColorAnimation {
+                    duration: 125
+                    easing.type: Easing.InOutCubic
+                }
+            }
             radius: Meui.Theme.bigRadius + control.iconSpacing
             visible: true
 

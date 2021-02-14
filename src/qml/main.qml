@@ -24,7 +24,10 @@ Meui.Window {
             implicitWidth: 260
             color: Meui.Theme.secondBackgroundColor
             Behavior on color {
-                ColorAnimation { duration: 125 }
+                ColorAnimation {
+                    duration: 125
+                    easing.type: Easing.InOutCubic
+                }
             }
         }
     }

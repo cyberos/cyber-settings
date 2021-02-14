@@ -9,7 +9,10 @@ Item {
     Layout.fillWidth: true
 
     Behavior on height {
-        NumberAnimation { duration: 125 }
+        NumberAnimation {
+            duration: 125
+            easing.type: Easing.InOutCubic
+        }
     }
 
     property bool shown: false

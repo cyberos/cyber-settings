@@ -43,6 +43,7 @@ Item {
             Behavior on width {
                 SmoothedAnimation {
                     velocity: 1000
+                    easing.type: Easing.InOutCubic
                 }
             }
 

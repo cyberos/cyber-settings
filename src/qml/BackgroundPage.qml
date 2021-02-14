@@ -64,7 +64,7 @@ ItemPage {
                     Behavior on opacity {
                         NumberAnimation {
                             duration: 125
-                            easing.type: Easing.InOutQuad
+                            easing.type: Easing.InOutCubic
                         }
                     }
 
