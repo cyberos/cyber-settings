@@ -37,7 +37,7 @@ ItemPage {
 
                 RowLayout {
                     Label {
-                        text: "Wired"
+                        text: qsTr("Wired")
                         color: Meui.Theme.disabledTextColor
                         Layout.fillWidth: true
                     }
@@ -77,7 +77,7 @@ ItemPage {
                     spacing: Meui.Units.largeSpacing
 
                     Label {
-                        text: "WLAN"
+                        text: qsTr("Wi-Fi")
                         color: Meui.Theme.disabledTextColor
                     }
 

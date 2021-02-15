@@ -309,6 +309,16 @@
         <source>Network</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/qml/NetworkPage.qml" line="40"/>
+        <source>Wired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/NetworkPage.qml" line="80"/>
+        <source>Wi-Fi</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SideBar</name>
