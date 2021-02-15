@@ -59,29 +59,85 @@
         <translation>Konta</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="33"/>
+        <location filename="../src/qml/AccountsPage.qml" line="37"/>
         <source>Currently logged in as</source>
         <translation>Zalogowano jako</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="84"/>
+        <location filename="../src/qml/AccountsPage.qml" line="88"/>
         <source>Hide additional settings</source>
         <translation>Schowaj dodatkowe ustawienia</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="84"/>
+        <location filename="../src/qml/AccountsPage.qml" line="88"/>
         <source>Show additional settings</source>
         <translation>Pokaż dodatkowe ustawienia</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="94"/>
+        <location filename="../src/qml/AccountsPage.qml" line="99"/>
         <source>Additional settings</source>
         <translation>Dodatkowe ustawienia</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="104"/>
+        <location filename="../src/qml/AccountsPage.qml" line="109"/>
         <source>Automatic login</source>
         <translation>Automatyczne logowanie</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AccountsPage.qml" line="131"/>
+        <source>Other Accounts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AccountsPage.qml" line="197"/>
+        <source>Add user</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AddUserDialog</name>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="47"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="60"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Anuluj</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="73"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="78"/>
+        <source>User name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="84"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="89"/>
+        <source>Password</source>
+        <translation type="unfinished">Hasło</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="96"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="101"/>
+        <source>Verify password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="108"/>
+        <source>Account type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <source>Standard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <source>Administrator</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -326,54 +382,53 @@
 <context>
     <name>SideBar</name>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="31"/>
+        <location filename="../src/qml/SideBar.qml" line="32"/>
         <source>Accounts</source>
         <translation>Konta</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="38"/>
+        <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
         <translation>Ekran</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="45"/>
+        <location filename="../src/qml/SideBar.qml" line="46"/>
         <source>Network</source>
         <translation>Sieć</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="52"/>
+        <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
         <translation>Wygląd</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="59"/>
+        <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
         <translation>Dok</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="66"/>
+        <location filename="../src/qml/SideBar.qml" line="60"/>
         <source>Wallpaper</source>
         <translation>Tapety</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="73"/>
+        <location filename="../src/qml/SideBar.qml" line="74"/>
         <source>Language</source>
         <translation>Język</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="80"/>
+        <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
         <translation>Bateria</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="87"/>
+        <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
         <translation>O systemie</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="101"/>
         <source>Settings</source>
-        <translation>Ustawienia</translation>
+        <translation type="vanished">Ustawienia</translation>
     </message>
 </context>
 <context>
@@ -450,7 +505,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/qml/main.qml" line="12"/>
+        <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
