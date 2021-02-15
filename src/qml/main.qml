@@ -14,20 +14,44 @@ Meui.Window {
 
     minimumWidth: 900
     minimumHeight: 600
-    hideHeaderOnMaximize: true
+    headerBarHeight: 60
 
     headerBar: Item {
         Rectangle {
             anchors.left: parent.left
             anchors.top: parent.top
             anchors.bottom: parent.bottom
-            implicitWidth: 260
+            implicitWidth: sideBar.width
             color: Meui.Theme.secondBackgroundColor
+
             Behavior on color {
                 ColorAnimation {
                     duration: 125
                     easing.type: Easing.InOutCubic
                 }
+            }
+        }
+
+        RowLayout {
+            anchors.fill: parent
+
+            Label {
+                text: rootWindow.title
+                leftPadding: Meui.Units.largeSpacing * 2 + Meui.Units.smallSpacing
+                font.pointSize: parent.height / 3
+                Layout.preferredWidth: sideBar.width
+                Layout.alignment: Qt.AlignBottom
+            }
+
+            Label {
+                text: stackView.currentItem.headerTitle
+                font.pointSize: parent.height / 3
+                leftPadding: Meui.Units.largeSpacing * 2
+                Layout.alignment: Qt.AlignBottom
+            }
+
+            Item {
+                Layout.fillWidth: true
             }
         }
     }
