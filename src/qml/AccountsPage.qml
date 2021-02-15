@@ -154,7 +154,7 @@ ItemPage {
                             width: 64
                             height: width
                             sourceSize: Qt.size(width, height)
-                            source: "file:///" + iconFileName
+                            source: iconFileName ? "file:///" + iconFileName : ""
                             visible: status === Image.Ready
 
                             layer.enabled: true

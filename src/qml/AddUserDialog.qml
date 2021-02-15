@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import MeuiKit 1.0 as Meui
+import Cyber.Settings 1.0
 import Cyber.Accounts 1.0
 
 Dialog {
@@ -13,15 +14,24 @@ Dialog {
     modal: true
     padding: Meui.Units.largeSpacing * 2
 
+    onRejected: clear()
+
     AccountsManager {
         id: manager
+
+        onUserAdded: {
+            if (account.userName === userNameField.text) {
+                account.passwordMode = UserAccount.RegularPasswordMode;
+                account.setPassword(Password.cryptPassword(passwordField.text));
+
+                control.clear()
+            }
+        }
     }
 
     onVisibleChanged: {
         if (visible)
             userNameField.forceActiveFocus()
-        else
-            control.clear()
     }
 
     function clear() {

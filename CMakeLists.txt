@@ -9,12 +9,14 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 set(QT Core Gui Quick QuickControls2 DBus Xml Concurrent LinguistTools)
 find_package(Qt5 REQUIRED ${QT})
 find_package(MeuiKit REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(PkgConfig REQUIRED)
+find_package(Libcrypt REQUIRED)
 
 find_package(KF5NetworkManagerQt REQUIRED)
 find_package(KF5ModemManagerQt REQUIRED)
@@ -35,6 +37,7 @@ set(SRCS
     src/language.cpp
     src/about.cpp
     src/background.cpp
+    src/password.cpp
 )
 
 set(RESOURCES
@@ -63,6 +66,7 @@ target_link_libraries(${PROJECT_NAME}
         PkgConfig::FontConfig
         ${FREETYPE_LIBRARIES}
         ${ICU_LDFLAGS}
+        Libcrypt::Libcrypt
 )
 
 file(GLOB TS_FILES translations/*.ts)

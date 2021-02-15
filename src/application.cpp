@@ -11,6 +11,16 @@
 #include "about.h"
 #include "background.h"
 #include "language.h"
+#include "password.h"
+
+static QObject *passwordSingleton(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    Password *object = new Password();
+    return object;
+}
 
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
@@ -46,6 +56,7 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<About>(uri, 1, 0, "About");
     qmlRegisterType<Background>(uri, 1, 0, "Background");
     qmlRegisterType<Language>(uri, 1, 0, "Language");
+    qmlRegisterSingletonType<Password>(uri, 1, 0, "Password", passwordSingleton);
 
     // Translations
     QLocale locale;
