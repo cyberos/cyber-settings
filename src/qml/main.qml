@@ -14,7 +14,7 @@ Meui.Window {
 
     minimumWidth: 900
     minimumHeight: 600
-    headerBarHeight: 60
+    headerBarHeight: 50
 
     headerBar: Item {
         Rectangle {
