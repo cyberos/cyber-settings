@@ -8,7 +8,7 @@ Item {
     clip: true
     Layout.fillWidth: true
 
-    Behavior on height {
+    Behavior on implicitHeight {
         NumberAnimation {
             duration: 125
             easing.type: Easing.InOutCubic

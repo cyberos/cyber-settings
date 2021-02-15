@@ -143,11 +143,11 @@ ItemPage {
 
                 delegate: Item {
                     width: _userView.width
-                    height: 64 + Meui.Units.largeSpacing * 2
-
+                    height: _itemLayout.implicitHeight + Meui.Units.largeSpacing * 2
                     visible: userId !== currentUser.userId
 
                     RowLayout {
+                        id: _itemLayout
                         anchors.fill: parent
 
                         Image {
