@@ -6,11 +6,11 @@ import QtGraphicalEffects 1.15
 import MeuiKit 1.0 as Meui
 
 Meui.Window {
+    id: rootWindow
+    title: qsTr("Settings")
     visible: true
     width: 950
     height: 650
-    title: qsTr("Settings")
-    id: rootWindow
 
     minimumWidth: 900
     minimumHeight: 600

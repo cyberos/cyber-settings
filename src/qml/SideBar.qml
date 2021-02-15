@@ -105,7 +105,7 @@ Item {
             clip: true
             model: listModel
 
-            spacing: Meui.Units.largeSpacing
+            spacing: Meui.Units.smallSpacing * 1.5
 
             ScrollBar.vertical: ScrollBar {}
 
