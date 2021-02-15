@@ -1,5 +1,7 @@
 #include "application.h"
 #include <QCommandLineParser>
+#include <QTranslator>
+#include <QLocale>
 
 #include "settingsuiadaptor.h"
 #include "fontsmodel.h"
@@ -44,6 +46,18 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<About>(uri, 1, 0, "About");
     qmlRegisterType<Background>(uri, 1, 0, "Background");
     qmlRegisterType<Language>(uri, 1, 0, "Language");
+
+    // Translations
+    QLocale locale;
+    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cyber-settings/translations/").arg(locale.name());
+    if (QFile::exists(qmFilePath)) {
+        QTranslator *translator = new QTranslator(QGuiApplication::instance());
+        if (translator->load(qmFilePath)) {
+            QGuiApplication::installTranslator(translator);
+        } else {
+            translator->deleteLater();
+        }
+    }
 
     m_engine.addImportPath(QStringLiteral("qrc:/"));
     m_engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
