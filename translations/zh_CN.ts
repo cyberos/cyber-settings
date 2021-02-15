@@ -97,7 +97,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation>亮色模式</translation>
+        <translation>浅色模式</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
