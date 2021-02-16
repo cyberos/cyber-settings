@@ -45,7 +45,7 @@ ItemPage {
                     width: 64
                     height: width
                     sourceSize: Qt.size(width, height)
-                    source: "file:///" + currentUser.iconFileName
+                    source: currentUser.iconFileName ? "file:///" + currentUser.iconFileName : "image://icontheme/default-user"
                     visible: status === Image.Ready
 
                     layer.enabled: true
@@ -154,7 +154,7 @@ ItemPage {
                             width: 64
                             height: width
                             sourceSize: Qt.size(width, height)
-                            source: iconFileName ? "file:///" + iconFileName : ""
+                            source: iconFileName ? "file:///" + iconFileName : "image://icontheme/default-user"
                             visible: status === Image.Ready
 
                             layer.enabled: true

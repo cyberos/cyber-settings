@@ -31,7 +31,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>RAM Size</source>
-        <translation>内存 大小</translation>
+        <translation>内存大小</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
