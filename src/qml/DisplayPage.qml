@@ -90,23 +90,23 @@ ItemPage {
                 Layout.fillWidth: true
 
                 TabButton {
-                    text: qsTr("100%")
+                    text: "100%"
                 }
 
                 TabButton {
-                    text: qsTr("125%")
+                    text: "125%"
                 }
 
                 TabButton {
-                    text: qsTr("150%")
+                    text: "150%"
                 }
 
                 TabButton {
-                    text: qsTr("175%")
+                    text: "175%"
                 }
 
                 TabButton {
-                    text: qsTr("200%")
+                    text: "200%"
                 }
 
                 currentIndex: {

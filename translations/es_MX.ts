@@ -72,42 +72,42 @@
 <context>
     <name>AccountsPage</name>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="10"/>
+        <location filename="../src/qml/AccountsPage.qml" line="12"/>
         <source>Accounts</source>
         <translation>Cuentas</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="37"/>
+        <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
         <translation>Iniciado actualmente como</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="88"/>
+        <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
         <translation>Ocultar ajustes adicionales</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="88"/>
+        <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
         <translation>Mostrar ajustes adicionales</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="99"/>
+        <location filename="../src/qml/AccountsPage.qml" line="136"/>
         <source>Additional settings</source>
         <translation>Ajustes adicionales</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="109"/>
+        <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
         <translation>Inicio de sesión automático</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="131"/>
+        <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
         <translation>Otras Cuentas</translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="197"/>
+        <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
         <translation>Agregar usuario</translation>
     </message>
@@ -296,31 +296,6 @@
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
         <source>Scale</source>
         <translation>Escala</translation>
-    </message>
-    <message>
-        <location filename="../src/qml/DisplayPage.qml" line="93"/>
-        <source>100%</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/DisplayPage.qml" line="97"/>
-        <source>125%</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/DisplayPage.qml" line="101"/>
-        <source>150%</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
-        <source>175%</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/DisplayPage.qml" line="109"/>
-        <source>200%</source>
-        <translation></translation>
     </message>
 </context>
 <context>
