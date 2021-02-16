@@ -2,6 +2,8 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.15
+import Qt.labs.platform 1.0 as LabsPlatform
+
 import MeuiKit 1.0 as Meui
 import Cyber.Settings 1.0
 import Cyber.Accounts 1.0
@@ -40,13 +42,48 @@ ItemPage {
             }
 
             RowLayout {
+                LabsPlatform.FileDialog {
+                    id: currentUserFileDialog
+                    folder: LabsPlatform.StandardPaths.writableLocation(LabsPlatform.StandardPaths.PicturesLocation)
+                    nameFilters: ["Pictures (*.png *.jpg *.gif)"]
+                    onFileChanged: {
+                        currentUser.iconFileName = currentFile.toString().replace("file://", "")
+                        currentUserImage.source = currentFile
+                        currentUserImage.update()
+                    }
+                }
+
                 Image {
                     id: currentUserImage
+                    Layout.preferredWidth: 64
+                    Layout.preferredHeight: 64
                     width: 64
                     height: width
                     sourceSize: Qt.size(width, height)
-                    source: currentUser.iconFileName ? "file:///" + currentUser.iconFileName : "image://icontheme/default-user"
-                    visible: status === Image.Ready
+                    source: currentUser.iconFileName ? "file://" + currentUser.iconFileName : "image://icontheme/default-user"
+                    asynchronous: true
+                    fillMode: Image.PreserveAspectCrop
+                    cache: false
+
+                    property bool counter: false
+
+                    MouseArea {
+                        id: userImageMouseArea
+                        anchors.fill: parent
+                        acceptedButtons: Qt.LeftButton
+                        onClicked: currentUserFileDialog.open()
+                        cursorShape: Qt.PointingHandCursor
+                        hoverEnabled: true
+                    }
+
+                    ColorOverlay {
+                        id: colorOverlay
+                        anchors.fill: currentUserImage
+                        source: currentUserImage
+                        color: "#000000"
+                        opacity: userImageMouseArea.pressed ? 0.3 : 0.2
+                        visible: userImageMouseArea.containsMouse || userImageMouseArea.pressed
+                    }
 
                     layer.enabled: true
                     layer.effect: OpacityMask {

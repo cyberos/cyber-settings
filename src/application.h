@@ -1,12 +1,12 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QDBusConnection>
 
-class Application : public QGuiApplication
+class Application : public QApplication
 {
     Q_OBJECT
 

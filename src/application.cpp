@@ -23,7 +23,7 @@ static QObject *passwordSingleton(QQmlEngine *engine, QJSEngine *scriptEngine)
 }
 
 Application::Application(int &argc, char **argv)
-    : QGuiApplication(argc, argv)
+    : QApplication(argc, argv)
 {
     setOrganizationName("cyberos");
 
@@ -62,9 +62,9 @@ Application::Application(int &argc, char **argv)
     QLocale locale;
     QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cyber-settings/translations/").arg(locale.name());
     if (QFile::exists(qmFilePath)) {
-        QTranslator *translator = new QTranslator(QGuiApplication::instance());
+        QTranslator *translator = new QTranslator(QApplication::instance());
         if (translator->load(qmFilePath)) {
-            QGuiApplication::installTranslator(translator);
+            QApplication::installTranslator(translator);
         } else {
             translator->deleteLater();
         }
@@ -77,7 +77,7 @@ Application::Application(int &argc, char **argv)
         switchToPage(module);
     }
 
-    QGuiApplication::exec();
+    QApplication::exec();
 }
 
 void Application::switchToPage(const QString &name)
