@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="nb_NO">
 <context>
     <name>AboutPage</name>
     <message>
@@ -72,42 +72,42 @@
 <context>
     <name>AccountsPage</name>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="12"/>
+        <location filename="../src/qml/AccountsPage.qml" line="10"/>
         <source>Accounts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="39"/>
+        <location filename="../src/qml/AccountsPage.qml" line="37"/>
         <source>Currently logged in as</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="125"/>
+        <location filename="../src/qml/AccountsPage.qml" line="88"/>
         <source>Hide additional settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="125"/>
+        <location filename="../src/qml/AccountsPage.qml" line="88"/>
         <source>Show additional settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="136"/>
+        <location filename="../src/qml/AccountsPage.qml" line="99"/>
         <source>Additional settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="146"/>
+        <location filename="../src/qml/AccountsPage.qml" line="109"/>
         <source>Automatic login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="168"/>
+        <location filename="../src/qml/AccountsPage.qml" line="131"/>
         <source>Other Accounts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AccountsPage.qml" line="234"/>
+        <location filename="../src/qml/AccountsPage.qml" line="197"/>
         <source>Add user</source>
         <translation type="unfinished"></translation>
     </message>
@@ -294,6 +294,31 @@
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
         <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DisplayPage.qml" line="93"/>
+        <source>100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DisplayPage.qml" line="97"/>
+        <source>125%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DisplayPage.qml" line="101"/>
+        <source>150%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DisplayPage.qml" line="105"/>
+        <source>175%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DisplayPage.qml" line="109"/>
+        <source>200%</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

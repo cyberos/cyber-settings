@@ -4,11 +4,11 @@ import QtGraphicalEffects 1.15
 
 Item {
     id: _root
-    height: shown ? _content.implicitHeight : 0
+    implicitHeight: shown ? _content.implicitHeight : 0
     clip: true
     Layout.fillWidth: true
 
-    Behavior on height {
+    Behavior on implicitHeight {
         NumberAnimation {
             duration: 125
             easing.type: Easing.InOutCubic

@@ -16,6 +16,7 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: Meui.Theme.secondBackgroundColor
+
         Behavior on color {
             ColorAnimation {
                 duration: 125
@@ -56,17 +57,17 @@ Item {
         }
 
         ListElement {
-            title: qsTr("Dock")
-            name: "dock"
-            page: "qrc:/qml/DockPage.qml"
-            iconSource: "qrc:/images/sidebar/dock.svg"
-        }
-
-        ListElement {
             title: qsTr("Wallpaper")
             name: "wallpaper"
             page: "qrc:/qml/BackgroundPage.qml"
             iconSource: "qrc:/images/sidebar/wallpaper.svg"
+        }
+
+        ListElement {
+            title: qsTr("Dock")
+            name: "dock"
+            page: "qrc:/qml/DockPage.qml"
+            iconSource: "qrc:/images/sidebar/dock.svg"
         }
 
         ListElement {
@@ -97,18 +98,6 @@ Item {
             margins: Meui.Units.largeSpacing
         }
 
-        Label {
-            text: qsTr("Settings")
-            font.bold: true
-            font.pointSize: 18
-            leftPadding: 16
-            Layout.alignment: Qt.AlignTop
-        }
-
-        Item {
-            height: Meui.Units.smallSpacing
-        }
-
         ListView {
             id: listView
             Layout.fillHeight: true
@@ -116,7 +105,7 @@ Item {
             clip: true
             model: listModel
 
-            spacing: Meui.Units.largeSpacing
+            spacing: Meui.Units.smallSpacing * 1.5
 
             ScrollBar.vertical: ScrollBar {}
 

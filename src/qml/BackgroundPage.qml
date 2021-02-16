@@ -14,9 +14,7 @@ ItemPage {
 
     GridView {
         anchors.fill: parent
-        topMargin: Meui.Units.smallSpacing
-        leftMargin: Meui.Units.largeSpacing
-        rightMargin: Meui.Units.largeSpacing
+        leftMargin: Meui.Units.smallSpacing
 
         cellWidth: 320
         cellHeight: 180

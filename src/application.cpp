@@ -11,9 +11,19 @@
 #include "about.h"
 #include "background.h"
 #include "language.h"
+#include "password.h"
+
+static QObject *passwordSingleton(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    Password *object = new Password();
+    return object;
+}
 
 Application::Application(int &argc, char **argv)
-    : QGuiApplication(argc, argv)
+    : QApplication(argc, argv)
 {
     setOrganizationName("cyberos");
 
@@ -46,14 +56,15 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<About>(uri, 1, 0, "About");
     qmlRegisterType<Background>(uri, 1, 0, "Background");
     qmlRegisterType<Language>(uri, 1, 0, "Language");
+    qmlRegisterSingletonType<Password>(uri, 1, 0, "Password", passwordSingleton);
 
     // Translations
     QLocale locale;
     QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cyber-settings/translations/").arg(locale.name());
     if (QFile::exists(qmFilePath)) {
-        QTranslator *translator = new QTranslator(QGuiApplication::instance());
+        QTranslator *translator = new QTranslator(QApplication::instance());
         if (translator->load(qmFilePath)) {
-            QGuiApplication::installTranslator(translator);
+            QApplication::installTranslator(translator);
         } else {
             translator->deleteLater();
         }
@@ -66,7 +77,7 @@ Application::Application(int &argc, char **argv)
         switchToPage(module);
     }
 
-    QGuiApplication::exec();
+    QApplication::exec();
 }
 
 void Application::switchToPage(const QString &name)
