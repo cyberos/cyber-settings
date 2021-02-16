@@ -108,6 +108,30 @@ ItemPage {
                 key: "小子"
                 value: "@Z-bin"
             }
+
+            HorizontalDivider {}
+
+            Label {
+                text: qsTr("CyberOS Translators")
+                color: Meui.Theme.disabledTextColor
+                topPadding: Meui.Units.largeSpacing
+                bottomPadding: Meui.Units.smallSpacing
+            }
+
+            StandardItem {
+                key: qsTr("Polish")
+                value: "omame (@omaemae)"
+            }
+
+            StandardItem {
+                key: qsTr("Simplified Chinese")
+                value: "Reven Martin (@rekols)"
+            }
+
+            StandardItem {
+                key: qsTr("Spanish")
+                value: "Sebastián (@Sebastian-byte)"
+            }
         }
     }
 }
