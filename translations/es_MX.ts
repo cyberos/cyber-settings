@@ -84,12 +84,12 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="131"/>
         <source>Other Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Otras Cuentas</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="197"/>
         <source>Add user</source>
-        <translation type="unfinished"></translation>
+        <translation>Agregar usuario</translation>
     </message>
 </context>
 <context>
@@ -97,45 +97,45 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="47"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Agregar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="60"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="73"/>
         <location filename="../src/qml/AddUserDialog.qml" line="78"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="84"/>
         <location filename="../src/qml/AddUserDialog.qml" line="89"/>
         <source>Password</source>
-        <translation type="unfinished">Contraseña</translation>
+        <translation>Contraseña</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="96"/>
         <location filename="../src/qml/AddUserDialog.qml" line="101"/>
         <source>Verify password</source>
-        <translation type="unfinished"></translation>
+        <translation>Verifica la contraseña</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="108"/>
         <source>Account type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de cuenta</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Estándar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Administrator</source>
-        <translation type="unfinished"></translation>
+        <translation>Administrador</translation>
     </message>
 </context>
 <context>
