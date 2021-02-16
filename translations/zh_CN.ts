@@ -51,22 +51,22 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="115"/>
         <source>CyberOS Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>CyberOS 翻译者</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="122"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>波兰语</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="127"/>
         <source>Simplified Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>简体中文</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="132"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>西班牙语</translation>
     </message>
 </context>
 <context>
