@@ -46,7 +46,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation>Equipo CyberOS</translation>
+        <translation>Contribuidores</translation>
     </message>
 </context>
 <context>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation>Agregar usuario</translation>
+        <translation>Crear usuario</translation>
     </message>
 </context>
 <context>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="47"/>
         <source>Add</source>
-        <translation>Agregar</translation>
+        <translation>Aceptar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="60"/>
@@ -120,7 +120,7 @@
         <location filename="../src/qml/AddUserDialog.qml" line="96"/>
         <location filename="../src/qml/AddUserDialog.qml" line="101"/>
         <source>Verify password</source>
-        <translation>Verifica la contraseña</translation>
+        <translation>Contraseña (otra vez)</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="108"/>
