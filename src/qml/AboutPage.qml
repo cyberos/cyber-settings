@@ -124,8 +124,13 @@ ItemPage {
             }
 
             StandardItem {
+                key: qsTr("Russian")
+                value: "ivan123 (@ivan123gm)"
+            }
+
+            StandardItem {
                 key: qsTr("Simplified Chinese")
-                value: "Reven Martin (@rekols)"
+                value: "Reven Martin (@rekols); Flex Zhong (@ChungZH)"
             }
 
             StandardItem {
