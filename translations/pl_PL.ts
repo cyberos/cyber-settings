@@ -56,7 +56,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="10"/>
         <source>Accounts</source>
-        <translation>Konta</translation>
+        <translation>Użytkownicy</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="37"/>
@@ -86,12 +86,12 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="131"/>
         <source>Other Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Inni użytkownicy</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="197"/>
         <source>Add user</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj użytkownika</translation>
     </message>
 </context>
 <context>
@@ -99,45 +99,46 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="47"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="60"/>
         <source>Cancel</source>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="73"/>
         <location filename="../src/qml/AddUserDialog.qml" line="78"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa użytkownika</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="84"/>
         <location filename="../src/qml/AddUserDialog.qml" line="89"/>
         <source>Password</source>
-        <translation type="unfinished">Hasło</translation>
+        <translation>Hasło</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="96"/>
         <location filename="../src/qml/AddUserDialog.qml" line="101"/>
         <source>Verify password</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>In Polish, it&apos;s more common to see &quot;Password (again)&quot; rather than &quot;Verify password&quot;.</translatorcomment>
+        <translation>Hasło (ponownie)</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="108"/>
         <source>Account type</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ użytkownika</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardowy</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Administrator</source>
-        <translation type="unfinished"></translation>
+        <translation>Administrator</translation>
     </message>
 </context>
 <context>
