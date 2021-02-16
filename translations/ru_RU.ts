@@ -59,7 +59,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation></translation>
+        <translation>Авторизован как</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
@@ -84,12 +84,12 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Другие пользователи</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить пользователя</translation>
     </message>
 </context>
 <context>
@@ -97,45 +97,45 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="47"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="60"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отмена</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="73"/>
         <location filename="../src/qml/AddUserDialog.qml" line="78"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="84"/>
         <location filename="../src/qml/AddUserDialog.qml" line="89"/>
         <source>Password</source>
-        <translation type="unfinished">Пароль</translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="96"/>
         <location filename="../src/qml/AddUserDialog.qml" line="101"/>
         <source>Verify password</source>
-        <translation type="unfinished"></translation>
+        <translation>Подтвердите пароль</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="108"/>
         <source>Account type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип пользователя</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Стандартный</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="113"/>
         <source>Administrator</source>
-        <translation type="unfinished"></translation>
+        <translation>Администратор</translation>
     </message>
 </context>
 <context>
@@ -363,12 +363,12 @@
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="40"/>
         <source>Wired</source>
-        <translation type="unfinished"></translation>
+        <translation>Проводной</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="80"/>
         <source>Wi-Fi</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi</translation>
     </message>
 </context>
 <context>
