@@ -48,26 +48,6 @@
         <source>CyberOS Team</source>
         <translation>Equipo CyberOS</translation>
     </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="115"/>
-        <source>CyberOS Translators</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="122"/>
-        <source>Polish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="127"/>
-        <source>Simplified Chinese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="132"/>
-        <source>Spanish</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>AccountsPage</name>
