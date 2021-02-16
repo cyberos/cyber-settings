@@ -62,11 +62,16 @@
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="127"/>
+        <source>Russian</source>
+        <translation>Rosyjski</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="132"/>
         <source>Simplified Chinese</source>
         <translation>Chiński (uproszczony)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="132"/>
+        <location filename="../src/qml/AboutPage.qml" line="137"/>
         <source>Spanish</source>
         <translation>Hiszpański</translation>
     </message>
