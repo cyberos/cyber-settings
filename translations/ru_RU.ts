@@ -216,7 +216,7 @@
     <message>
         <location filename="../src/qml/BackgroundPage.qml" line="9"/>
         <source>Wallpaper</source>
-        <translation>Обон</translation>
+        <translation>Обои</translation>
     </message>
 </context>
 <context>
