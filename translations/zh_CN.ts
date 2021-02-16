@@ -443,17 +443,17 @@
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="95"/>
         <source>IPv4 Address</source>
-        <translation>IPv4地址</translation>
+        <translation>IPv4 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="107"/>
         <source>IPv6 Address</source>
-        <translation>IPv6地址</translation>
+        <translation>IPv6 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="119"/>
         <source>MAC Address</source>
-        <translation>MAC地址</translation>
+        <translation>MAC 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="131"/>
@@ -463,7 +463,7 @@
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="143"/>
         <source>DNS</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsWindow.qml" line="159"/>
