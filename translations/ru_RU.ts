@@ -46,7 +46,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation>Команда CyberOS</translation>
+        <translation>Команда разработчиков CyberOS</translation>
     </message>
 </context>
 <context>
@@ -178,12 +178,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation>Общий шрифт</translation>
+        <translation>Основной шрифт</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="180"/>
         <source>Fixed Font</source>
-        <translation>Фиксированый шрифт</translation>
+        <translation>Моноширинный шрифт</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="194"/>
