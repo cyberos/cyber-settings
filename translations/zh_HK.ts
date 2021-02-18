@@ -381,7 +381,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
-        <translation>顥示</translation>
+        <translation>顯示</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
