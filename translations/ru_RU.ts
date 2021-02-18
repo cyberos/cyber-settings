@@ -424,56 +424,95 @@
     </message>
 </context>
 <context>
-    <name>WirelessDetailsWindow</name>
+    <name>WirelessDetailsDialog</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation>Автоматическое подключение</translation>
+        <translation type="unfinished">Автоматическое подключение</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation>Безопасность</translation>
+        <translation type="unfinished">Безопасность</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation>Сигнал</translation>
+        <translation type="unfinished">Сигнал</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation>IPv4 Адрес</translation>
+        <translation type="unfinished">IPv4 Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation>IPv6 Адрес</translation>
+        <translation type="unfinished">IPv6 Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation>MAC Адрес</translation>
+        <translation type="unfinished">MAC Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation>Шлюз</translation>
+        <translation type="unfinished">Шлюз</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation>DNS</translation>
+        <translation type="unfinished">DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation>Забыть эту сеть</translation>
+        <translation type="unfinished">Забыть эту сеть</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WirelessDetailsWindow</name>
+    <message>
+        <source>Auto-Join</source>
+        <translation type="vanished">Автоматическое подключение</translation>
+    </message>
+    <message>
+        <source>Security</source>
+        <translation type="vanished">Безопасность</translation>
+    </message>
+    <message>
+        <source>Signal</source>
+        <translation type="vanished">Сигнал</translation>
+    </message>
+    <message>
+        <source>IPv4 Address</source>
+        <translation type="vanished">IPv4 Адрес</translation>
+    </message>
+    <message>
+        <source>IPv6 Address</source>
+        <translation type="vanished">IPv6 Адрес</translation>
+    </message>
+    <message>
+        <source>MAC Address</source>
+        <translation type="vanished">MAC Адрес</translation>
+    </message>
+    <message>
+        <source>Gateway</source>
+        <translation type="vanished">Шлюз</translation>
+    </message>
+    <message>
+        <source>DNS</source>
+        <translation type="vanished">DNS</translation>
+    </message>
+    <message>
+        <source>Forget this network</source>
+        <translation type="vanished">Забыть эту сеть</translation>
     </message>
 </context>
 <context>

@@ -408,56 +408,99 @@
     </message>
 </context>
 <context>
+    <name>WirelessDetailsDialog</name>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
+        <source>Auto-Join</source>
+        <translation type="unfinished">Automatycznie połącz się</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
+        <source>Security</source>
+        <translation type="unfinished">Zabezpieczenie</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
+        <source>Signal</source>
+        <translation type="unfinished">Sygnał</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
+        <source>IPv4 Address</source>
+        <translation type="unfinished">Adres sieci IPv4</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
+        <source>IPv6 Address</source>
+        <translation type="unfinished">Adres sieci IPv6</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
+        <source>MAC Address</source>
+        <translation type="unfinished">Adres MAC</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
+        <source>Gateway</source>
+        <translation type="unfinished">Brama sieciowa</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
+        <source>DNS</source>
+        <translation type="unfinished">Serwery DNS</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
+        <source>Forget this network</source>
+        <translation type="unfinished">Zapomnij o tej sieci</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
+        <source>Close</source>
+        <translation type="unfinished">Zamknij</translation>
+    </message>
+</context>
+<context>
     <name>WirelessDetailsWindow</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation>Automatycznie połącz się</translation>
+        <translation type="vanished">Automatycznie połącz się</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
         <source>Security</source>
-        <translation>Zabezpieczenie</translation>
+        <translation type="vanished">Zabezpieczenie</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
         <source>Signal</source>
-        <translation>Sygnał</translation>
+        <translation type="vanished">Sygnał</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation>Adres sieci IPv4</translation>
+        <translation type="vanished">Adres sieci IPv4</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation>Adres sieci IPv6</translation>
+        <translation type="vanished">Adres sieci IPv6</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
         <source>MAC Address</source>
-        <translation>Adres MAC</translation>
+        <translation type="vanished">Adres MAC</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
         <source>Gateway</source>
-        <translation>Brama sieciowa</translation>
+        <translation type="vanished">Brama sieciowa</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
         <source>DNS</source>
-        <translation>Serwery DNS</translation>
+        <translation type="vanished">Serwery DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
         <source>Forget this network</source>
-        <translation>Zapomnij o tej sieci</translation>
+        <translation type="vanished">Zapomnij o tej sieci</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation type="vanished">Zamknij</translation>
     </message>
 </context>
 <context>

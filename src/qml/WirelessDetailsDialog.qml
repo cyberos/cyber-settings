@@ -9,8 +9,7 @@ Dialog {
     id: control
     title: model.itemUniqueName
 
-    // width: detailsLayout.implicitWidth + Meui.Units.largeSpacing * 4
-    // height: detailsLayout.implicitHeight + Meui.Units.largeSpacing * 4
+    width: Math.max(detailsLayout.implicitWidth, footer.implicitWidth)
 
     x: (rootWindow.width - width) / 4
     y: (rootWindow.height - height) / 4
@@ -34,7 +33,10 @@ Dialog {
 
     ColumnLayout {
         id: detailsLayout
+        // I couldn't find a way of making the GridLayout resize.
+        anchors.centerIn: parent
         GridLayout {
+            id: gridLayout
             columns: 2
             columnSpacing: Meui.Units.largeSpacing
             rowSpacing: Meui.Units.smallSpacing

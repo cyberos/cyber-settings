@@ -420,56 +420,95 @@
     </message>
 </context>
 <context>
-    <name>WirelessDetailsWindow</name>
+    <name>WirelessDetailsDialog</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation>自动加入网络</translation>
+        <translation type="unfinished">自动加入网络</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation>安全性</translation>
+        <translation type="unfinished">安全性</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation>信号</translation>
+        <translation type="unfinished">信号</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation>IPv4 地址</translation>
+        <translation type="unfinished">IPv4 地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation>IPv6 地址</translation>
+        <translation type="unfinished">IPv6 地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation>MAC 地址</translation>
+        <translation type="unfinished">MAC 地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation>路由器</translation>
+        <translation type="unfinished">路由器</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation>DNS</translation>
+        <translation type="unfinished">DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation>忘记这个网络</translation>
+        <translation type="unfinished">忘记这个网络</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WirelessDetailsWindow</name>
+    <message>
+        <source>Auto-Join</source>
+        <translation type="vanished">自动加入网络</translation>
+    </message>
+    <message>
+        <source>Security</source>
+        <translation type="vanished">安全性</translation>
+    </message>
+    <message>
+        <source>Signal</source>
+        <translation type="vanished">信号</translation>
+    </message>
+    <message>
+        <source>IPv4 Address</source>
+        <translation type="vanished">IPv4 地址</translation>
+    </message>
+    <message>
+        <source>IPv6 Address</source>
+        <translation type="vanished">IPv6 地址</translation>
+    </message>
+    <message>
+        <source>MAC Address</source>
+        <translation type="vanished">MAC 地址</translation>
+    </message>
+    <message>
+        <source>Gateway</source>
+        <translation type="vanished">路由器</translation>
+    </message>
+    <message>
+        <source>DNS</source>
+        <translation type="vanished">DNS</translation>
+    </message>
+    <message>
+        <source>Forget this network</source>
+        <translation type="vanished">忘记这个网络</translation>
     </message>
 </context>
 <context>

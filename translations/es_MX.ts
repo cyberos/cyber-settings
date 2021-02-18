@@ -406,56 +406,95 @@
     </message>
 </context>
 <context>
-    <name>WirelessDetailsWindow</name>
+    <name>WirelessDetailsDialog</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation>Auto Conexión</translation>
+        <translation type="unfinished">Auto Conexión</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation>Seguridad</translation>
+        <translation type="unfinished">Seguridad</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation>Señal</translation>
+        <translation type="unfinished">Señal</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation>Dirección IPv4</translation>
+        <translation type="unfinished">Dirección IPv4</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation>Dirección IPv6</translation>
+        <translation type="unfinished">Dirección IPv6</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation>Dirección Física (MAC)</translation>
+        <translation type="unfinished">Dirección Física (MAC)</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation>Puerta de Enlace Predeterminada</translation>
+        <translation type="unfinished">Puerta de Enlace Predeterminada</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation>Servidores DNS</translation>
+        <translation type="unfinished">Servidores DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation>Dejar de Recordar</translation>
+        <translation type="unfinished">Dejar de Recordar</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WirelessDetailsWindow</name>
+    <message>
+        <source>Auto-Join</source>
+        <translation type="vanished">Auto Conexión</translation>
+    </message>
+    <message>
+        <source>Security</source>
+        <translation type="vanished">Seguridad</translation>
+    </message>
+    <message>
+        <source>Signal</source>
+        <translation type="vanished">Señal</translation>
+    </message>
+    <message>
+        <source>IPv4 Address</source>
+        <translation type="vanished">Dirección IPv4</translation>
+    </message>
+    <message>
+        <source>IPv6 Address</source>
+        <translation type="vanished">Dirección IPv6</translation>
+    </message>
+    <message>
+        <source>MAC Address</source>
+        <translation type="vanished">Dirección Física (MAC)</translation>
+    </message>
+    <message>
+        <source>Gateway</source>
+        <translation type="vanished">Puerta de Enlace Predeterminada</translation>
+    </message>
+    <message>
+        <source>DNS</source>
+        <translation type="vanished">Servidores DNS</translation>
+    </message>
+    <message>
+        <source>Forget this network</source>
+        <translation type="vanished">Dejar de Recordar</translation>
     </message>
 </context>
 <context>
