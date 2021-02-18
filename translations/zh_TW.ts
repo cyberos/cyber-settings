@@ -49,24 +49,20 @@
         <translation>CyberOS 團隊</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="115"/>
         <source>CyberOS Translators</source>
-        <translation>CyberOS 翻譯者</translation>
+        <translation type="vanished">CyberOS 翻譯者</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="122"/>
         <source>Polish</source>
-        <translation>波蘭語</translation>
+        <translation type="vanished">波蘭語</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="127"/>
         <source>Simplified Chinese</source>
-        <translation>簡體中文</translation>
+        <translation type="vanished">簡體中文</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="132"/>
         <source>Spanish</source>
-        <translation>西班牙語</translation>
+        <translation type="vanished">西班牙語</translation>
     </message>
 </context>
 <context>
@@ -115,45 +111,45 @@
 <context>
     <name>AddUserDialog</name>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="47"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="60"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="73"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="78"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="74"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
         <translation>用戶名稱</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="84"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="89"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="85"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
         <translation>密碼</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="96"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="101"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="97"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
         <translation>確定密碼</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="108"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
         <translation>用戶類型</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
         <translation>標準</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
         <translation>管理員</translation>
     </message>
@@ -201,32 +197,32 @@
         <translation>常規字體</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="180"/>
+        <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
         <translation>固定字體</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="194"/>
+        <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
         <translation>字體大小</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="203"/>
+        <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
         <translation>小</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="207"/>
+        <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="211"/>
+        <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
         <translation>大</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="215"/>
+        <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
         <translation>巨大</translation>
     </message>
@@ -426,49 +422,54 @@
 <context>
     <name>WirelessDetailsWindow</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="56"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
         <source>Auto-Join</source>
         <translation>自動加入網路</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="71"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
         <source>Security</source>
         <translation>安全性</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="83"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
         <source>Signal</source>
         <translation>信號</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="95"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
         <source>IPv4 Address</source>
         <translation>IPv4地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="107"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
         <source>IPv6 Address</source>
         <translation>IPv6地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="119"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
         <source>MAC Address</source>
         <translation>MAC地址</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="131"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
         <source>Gateway</source>
         <translation>路由器 (router)</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="143"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
         <source>DNS</source>
         <translation>域名服務</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="159"/>
-        <source>Forget This Network</source>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <source>Forget this network</source>
         <translation>忘記這個網路</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

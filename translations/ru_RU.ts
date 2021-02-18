@@ -95,45 +95,45 @@
 <context>
     <name>AddUserDialog</name>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="47"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="60"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="73"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="78"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="74"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
         <translation>Имя пользователя</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="84"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="89"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="85"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
         <translation>Пароль</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="96"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="101"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="97"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
         <translation>Подтвердите пароль</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="108"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
         <translation>Тип пользователя</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
         <translation>Стандартный</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
         <translation>Администратор</translation>
     </message>
@@ -181,32 +181,32 @@
         <translation>Основной шрифт</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="180"/>
+        <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
         <translation>Моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="194"/>
+        <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
         <translation>Размер шрифта</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="203"/>
+        <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
         <translation>Маленький</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="207"/>
+        <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
         <translation>Средний</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="211"/>
+        <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
         <translation>Большой</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="215"/>
+        <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
         <translation>Огромный</translation>
     </message>
@@ -426,49 +426,54 @@
 <context>
     <name>WirelessDetailsWindow</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="56"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
         <source>Auto-Join</source>
         <translation>Автоматическое подключение</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="71"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
         <source>Security</source>
         <translation>Безопасность</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="83"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
         <source>Signal</source>
         <translation>Сигнал</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="95"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
         <source>IPv4 Address</source>
         <translation>IPv4 Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="107"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
         <source>IPv6 Address</source>
         <translation>IPv6 Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="119"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
         <source>MAC Address</source>
         <translation>MAC Адрес</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="131"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
         <source>Gateway</source>
         <translation>Шлюз</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="143"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
         <source>DNS</source>
         <translation>DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="159"/>
-        <source>Forget This Network</source>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <source>Forget this network</source>
         <translation>Забыть эту сеть</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -5,20 +5,17 @@ import QtQuick.Layouts 1.3
 import MeuiKit 1.0 as Meui
 import Cyber.NetworkManagement 1.0 as NM
 
-Window {
+Dialog {
     id: control
     title: model.itemUniqueName
 
-    width: detailsLayout.implicitWidth + Meui.Units.largeSpacing * 4
-    height: detailsLayout.implicitHeight + Meui.Units.largeSpacing * 4
+    // width: detailsLayout.implicitWidth + Meui.Units.largeSpacing * 4
+    // height: detailsLayout.implicitHeight + Meui.Units.largeSpacing * 4
 
-    minimumWidth: width
-    minimumHeight: height
-    maximumHeight: height
-    maximumWidth: width
-
-    flags: Qt.Dialog
-    modality: Qt.WindowModal
+    x: (rootWindow.width - width) / 4
+    y: (rootWindow.height - height) / 4
+    modal: true
+    padding: Meui.Units.largeSpacing * 2
 
     signal forgetBtnClicked()
 
@@ -35,130 +32,126 @@ Window {
         }
     }
 
-    Rectangle {
-        anchors.fill: parent
-        color: Meui.Theme.backgroundColor
-    }
-
     ColumnLayout {
         id: detailsLayout
-        anchors.fill: parent
-        anchors.margins: Meui.Units.largeSpacing
-        spacing: Meui.Units.largeSpacing * 2
-
         GridLayout {
             columns: 2
-            columnSpacing: Meui.Units.largeSpacing * 2
+            columnSpacing: Meui.Units.largeSpacing
+            rowSpacing: Meui.Units.smallSpacing
 
             Label {
                 id: autoJoinLabel
-                font.bold: true
                 text: qsTr("Auto-Join")
-                Layout.alignment: Qt.AlignRight
                 visible: false
+                color: Meui.Theme.disabledTextColor
             }
 
             Switch {
                 id: autoJoinSwitch
-                leftPadding: 0
+                rightPadding: 0
                 Layout.fillHeight: true
                 visible: false
+                Layout.alignment: Qt.AlignRight
                 onCheckedChanged: settings.autoConnect = checked
             }
 
             Label {
-                font.bold: true
                 text: qsTr("Security")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: securityLabel
                 text: model.securityTypeString
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
-                font.bold: true
                 text: qsTr("Signal")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: signalLabel
                 text: model.signal
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
-                font.bold: true
                 text: qsTr("IPv4 Address")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: ipv4AddressLabel
                 // text: model.ipV4Address
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
                 font.bold: true
                 text: qsTr("IPv6 Address")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: ipV6AddressLabel
                 // text: model.ipV6Address
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
                 font.bold: true
                 text: qsTr("MAC Address")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: macAddressLabel
                 // text: model.macAddress
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
                 font.bold: true
                 text: qsTr("Gateway")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: routerLabel
                 // text: model.gateway
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
 
             Label {
                 font.bold: true
                 text: qsTr("DNS")
-                Layout.alignment: Qt.AlignRight
+                color: Meui.Theme.disabledTextColor
             }
 
             Label {
                 id: dnsLabel
                 // text: model.nameServer
-                color: Meui.Theme.disabledTextColor
+                Layout.alignment: Qt.AlignRight
             }
         }
+    }
 
-        Item {
-            Layout.fillHeight: true
+    footer: DialogButtonBox {
+        padding: Meui.Units.largeSpacing * 2
+        Button {
+            text: qsTr("Forget this network")
+            Layout.alignment: Qt.AlignHCenter
+            DialogButtonBox.buttonRole: DialogButtonBox.AcceptRole
+            onClicked: control.forgetBtnClicked()
         }
 
         Button {
-            text: qsTr("Forget This Network")
+            text: qsTr("Close")
             Layout.alignment: Qt.AlignHCenter
-            onClicked: control.forgetBtnClicked()
+            DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
+            onClicked: control.reject()
         }
     }
 }

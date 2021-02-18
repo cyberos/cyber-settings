@@ -97,46 +97,46 @@
 <context>
     <name>AddUserDialog</name>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="47"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
         <translation>Dodaj</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="60"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="73"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="78"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="74"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
         <translation>Nazwa użytkownika</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="84"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="89"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="85"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
         <translation>Hasło</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="96"/>
-        <location filename="../src/qml/AddUserDialog.qml" line="101"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="97"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
         <translatorcomment>In Polish, it&apos;s more common to see &quot;Password (again)&quot; rather than &quot;Verify password&quot;.</translatorcomment>
         <translation>Hasło (ponownie)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="108"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
         <translation>Typ użytkownika</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
         <translation>Standardowy</translation>
     </message>
     <message>
-        <location filename="../src/qml/AddUserDialog.qml" line="113"/>
+        <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
         <translation>Administrator</translation>
     </message>
@@ -184,33 +184,33 @@
         <translation>Główna czcionka</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="180"/>
+        <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
         <translatorcomment>There is no better way of translating this than &quot;Font of fixed width&quot;.</translatorcomment>
         <translation>Czcionka o stałej szerokości</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="194"/>
+        <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
         <translation>Wielkość czcionki</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="203"/>
+        <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
         <translation>Mała</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="207"/>
+        <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
         <translation>Normalna</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="211"/>
+        <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
         <translation>Wielka</translation>
     </message>
     <message>
-        <location filename="../src/qml/AppearancePage.qml" line="215"/>
+        <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
         <translation>Ogromna</translation>
     </message>
@@ -410,49 +410,54 @@
 <context>
     <name>WirelessDetailsWindow</name>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="56"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="44"/>
         <source>Auto-Join</source>
         <translation>Automatycznie połącz się</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="71"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="59"/>
         <source>Security</source>
         <translation>Zabezpieczenie</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="83"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="70"/>
         <source>Signal</source>
         <translation>Sygnał</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="95"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="81"/>
         <source>IPv4 Address</source>
         <translation>Adres sieci IPv4</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="107"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="93"/>
         <source>IPv6 Address</source>
         <translation>Adres sieci IPv6</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="119"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="105"/>
         <source>MAC Address</source>
         <translation>Adres MAC</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="131"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="117"/>
         <source>Gateway</source>
         <translation>Brama sieciowa</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="143"/>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="129"/>
         <source>DNS</source>
         <translation>Serwery DNS</translation>
     </message>
     <message>
-        <location filename="../src/qml/WirelessDetailsWindow.qml" line="159"/>
-        <source>Forget This Network</source>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="144"/>
+        <source>Forget this network</source>
         <translation>Zapomnij o tej sieci</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/WirelessDetailsWindow.qml" line="151"/>
+        <source>Close</source>
+        <translation>Zamknij</translation>
     </message>
 </context>
 <context>
