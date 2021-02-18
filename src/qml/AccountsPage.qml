@@ -164,7 +164,12 @@ ItemPage {
                 }
             }
 
+            HorizontalDivider {
+                visible: otherAccountsLabel.visible
+            }
+
             Label {
+                id: otherAccountsLabel
                 text: qsTr("Other Accounts")
                 color: Meui.Theme.disabledTextColor
                 topPadding: Meui.Units.largeSpacing
