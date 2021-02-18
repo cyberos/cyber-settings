@@ -164,7 +164,6 @@ ItemPage {
 
                 Label {
                     text: qsTr("General Font")
-                    color: Meui.Theme.disabledTextColor
                     bottomPadding: Meui.Units.smallSpacing
                 }
 
@@ -178,7 +177,6 @@ ItemPage {
 
                 Label {
                     text: qsTr("Fixed Font")
-                    color: Meui.Theme.disabledTextColor
                     bottomPadding: Meui.Units.smallSpacing
                 }
 
@@ -192,7 +190,6 @@ ItemPage {
 
                 Label {
                     text: qsTr("Font Size")
-                    color: Meui.Theme.disabledTextColor
                     bottomPadding: Meui.Units.smallSpacing
                 }
 

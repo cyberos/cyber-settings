@@ -118,16 +118,16 @@ Item {
 
         IconButton {
             source: "qrc:/images/info.svg"
-            onClicked: detailsWindow.show()
+            onClicked: detailsDialog.open()
         }
     }
 
-    WirelessDetailsWindow {
-        id: detailsWindow
+    WirelessDetailsDialog {
+        id: detailsDialog
 
         onForgetBtnClicked: {
             networking.removeConnection(model.connectionPath)
-            detailsWindow.close()
+            detailsDialog.close()
         }
     }
 

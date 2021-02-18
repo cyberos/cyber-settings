@@ -53,20 +53,20 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#4d4d4f;fill-opacity:1;stroke-width:0.264583"
+       style="opacity:1;fill:#353535;fill-opacity:1;stroke-width:0.264583"
        id="background"
        width="16.933334"
        height="16.933332"
        x="-5.0862633e-07"
        y="4.4504802e-07" />
     <circle
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.240117"
+       style="opacity:0.7;fill:#aaaaaa;fill-opacity:1;stroke-width:0.240117"
        id="path857"
        cx="3.7906375"
        cy="5.7458472"
        r="1.984375" />
     <rect
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       style="opacity:0.7;fill:#aaaaaa;fill-opacity:1;stroke-width:0.264583"
        id="rect859"
        width="6.0211306"
        height="1.4291965"
@@ -74,7 +74,7 @@
        y="3.9491892"
        ry="0.71459824" />
     <rect
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.308278"
+       style="opacity:0.7;fill:#aaaaaa;fill-opacity:1;stroke-width:0.308278"
        id="rect859-3"
        width="8.1736097"
        height="1.4292792"
@@ -82,13 +82,13 @@
        y="6.1089554"
        ry="0.7146396" />
     <circle
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.240117"
+       style="opacity:0.7;fill:#aaaaaa;fill-opacity:1;stroke-width:0.240117"
        id="path857-6"
        cx="3.7906854"
        cy="11.89663"
        r="1.984375" />
     <rect
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke-width:0.308279"
+       style="opacity:0.7;fill:#aaaaaa;fill-opacity:1;stroke-width:0.308279"
        id="rect859-3-7"
        width="8.1736097"
        height="1.4292793"
