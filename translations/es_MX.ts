@@ -410,52 +410,52 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished">Auto Conexión</translation>
+        <translation>Auto Conexión</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished">Seguridad</translation>
+        <translation>Seguridad</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished">Señal</translation>
+        <translation>Fuerza de Señal</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">Dirección IPv4</translation>
+        <translation>Dirección IPv4</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">Dirección IPv6</translation>
+        <translation>Dirección IPv6</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">Dirección Física (MAC)</translation>
+        <translation>Dirección Física (MAC)</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">Puerta de Enlace Predeterminada</translation>
+        <translation>Puerta de Enlace Predeterminada</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">Servidores DNS</translation>
+        <translation>Servidores DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">Dejar de Recordar</translation>
+        <translation>Dejar de Recordar</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar</translation>
     </message>
 </context>
 <context>
