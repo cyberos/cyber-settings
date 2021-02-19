@@ -42,6 +42,7 @@ Dialog {
     }
 
     footer: DialogButtonBox {
+        padding: Meui.Units.largeSpacing * 2
         Button {
             id: addButton
             text: qsTr("Add")
