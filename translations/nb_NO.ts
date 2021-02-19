@@ -361,7 +361,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skjerm</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
