@@ -16,7 +16,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation></translation>
+        <translation>Информация о системе</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
@@ -332,7 +332,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="64"/>
         <source>Medium</source>
-        <translation>Большой</translation>
+        <translation>Средний</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="68"/>
