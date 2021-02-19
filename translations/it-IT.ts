@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Al riguardo</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome utente</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
@@ -97,24 +97,24 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aggiungere</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Annullare</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome utente</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Password</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">standard</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">chiaro</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="92"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storico</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="226"/>
@@ -302,7 +302,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="50"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimensione</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="60"/>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lingua</translation>
     </message>
 </context>
 <context>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">impostazioni</translation>
     </message>
 </context>
 </TS>
