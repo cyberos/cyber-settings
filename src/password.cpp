@@ -16,7 +16,7 @@ QString Password::cryptPassword(const QString &password) const
     QByteArray salt("$6$");
     int len = alpha.count();
     for (int i = 0; i < 16; i++)
-        salt.append(alpha.at((QRandomGenerator::global()->bounded(len))));
+        salt.append(alpha.at(QRandomGenerator::global()->bounded(len)));
 
     return QString::fromLatin1(::crypt(password.toUtf8().constData(), salt.constData()));
 }
