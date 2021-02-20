@@ -21,7 +21,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Operační systém</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uživatelské jméno</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
@@ -102,19 +102,19 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zrušit</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uživatelské jméno</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Heslo</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jazyk</translation>
     </message>
 </context>
 <context>
@@ -467,7 +467,7 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Připojit</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nastavení</translation>
     </message>
 </context>
 </TS>
