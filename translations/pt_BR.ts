@@ -16,7 +16,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation>Informação do SO</translation>
+        <translation>Informações do SO</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>RAM Size</source>
-        <translation>Tamanho da RAM</translation>
+        <translation>Memória RAM</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation>Nome do anfitrião</translation>
+        <translation>Nome do computador (hostname)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation>Time do CyberOS</translation>
+        <translation>Equipe do CyberOS</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation>Atualmente registrado como</translation>
+        <translation>Atualmente logado como</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
-        <translation>Login automático</translation>
+        <translation>Entrar automaticamente</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation>Adicionar</translation>
+        <translation>Confirmar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
@@ -120,7 +120,7 @@
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
         <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
-        <translation>Verificar senha</translation>
+        <translation>Confirmação da senha</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
@@ -153,17 +153,17 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation>Branco</translation>
+        <translation>Claro</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation>Preto</translation>
+        <translation>Escuro</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation>Escurecer o papel de parede para tema preto</translation>
+        <translation>Escurecer o plano de fundo quando utilizar o tema escuro</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
@@ -193,12 +193,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
-        <translation>Pequeno</translation>
+        <translation>Pequena</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
-        <translation>Médio</translation>
+        <translation>Média</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="208"/>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
-        <translation>Gigante</translation>
+        <translation>Muito Grande</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../src/qml/BackgroundPage.qml" line="9"/>
         <source>Wallpaper</source>
-        <translation>Papel de parede</translation>
+        <translation>Plano de fundo</translation>
     </message>
 </context>
 <context>
@@ -246,12 +246,12 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation>Última vez carregado em</translation>
+        <translation>Última carga</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
         <source>Maximum Capacity</source>
-        <translation>Capacidade maxima</translation>
+        <translation>Capacidade máxima</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="268"/>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation>Barra de tarefas</translation>
+        <translation>Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
@@ -419,32 +419,32 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">Endereço IPv4</translation>
+        <translation>Endereço IPv4</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">Endereço IPv6</translation>
+        <translation>Endereço IPv6</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">Endereço MAC</translation>
+        <translation>Endereço MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">Porta de entrada</translation>
+        <translation>Gateway</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">DNS</translation>
+        <translation type="unfinished">Servidores DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">Esquecer essa Rede</translation>
+        <translation>Esquecer essa rede</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
