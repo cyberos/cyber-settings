@@ -257,7 +257,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="268"/>
         <source>No battery found</source>
-        <translation>No se encontro ninguna batería</translation>
+        <translation>No se encontró ninguna batería</translation>
     </message>
 </context>
 <context>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation>Dejar de Recordar</translation>
+        <translation>Dejar de recordar</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
@@ -507,7 +507,7 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation>Mostrar Contraseña</translation>
+        <translation>Mostrar contraseña</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
