@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation type="unfinished"></translation>
+        <translation>මෙහෙයුම් පද්ධතිය</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation>පරිශීලක නාමය</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation type="unfinished"></translation>
+        <translation>ධාරක නාමය</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="12"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>ගිණුම්</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation>අමතර සැකසුම් සඟවන්න</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation>අමතර සැකසුම් පෙන්වන්න</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="136"/>
