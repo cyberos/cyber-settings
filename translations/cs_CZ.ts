@@ -11,12 +11,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
         <source>CyberOS</source>
-        <translation type="unfinished"></translation>
+        <translation>CyberOS</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Informace o systému</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
