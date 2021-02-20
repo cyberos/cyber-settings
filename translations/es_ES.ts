@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Acerca de</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sistema operativo</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nombre de usuario</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
@@ -97,24 +97,24 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Añadir</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cancelar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nombre del usuario</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Contraseña</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Estándar</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">claro</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="92"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Histórico</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="226"/>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Idioma</translation>
     </message>
 </context>
 <context>
@@ -467,7 +467,7 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Conectar</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Configuración</translation>
     </message>
 </context>
 </TS>
