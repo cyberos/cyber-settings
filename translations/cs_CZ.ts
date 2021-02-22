@@ -163,12 +163,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Ztmavit pozadí v tmavém režimu</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
         <source>Accent color</source>
-        <translation type="unfinished"></translation>
+        <translation>Základní barva</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="154"/>
@@ -178,12 +178,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlavní písmo</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Písmo s pevnou šířkou</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation type="unfinished"></translation>
+        <translation>Poslední nabití proběhlo</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Dok</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
@@ -376,7 +376,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Dok</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
