@@ -381,12 +381,12 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
         <source>Wallpaper</source>
-        <translation>Papel de parede</translation>
+        <translation>Plano de fundo</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="74"/>
         <source>Language</source>
-        <translation>Linguagem</translation>
+        <translation>Língua</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
