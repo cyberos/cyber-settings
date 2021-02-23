@@ -10,7 +10,7 @@ Item {
 
     Behavior on implicitHeight {
         NumberAnimation {
-            duration: 125
+            duration: 250
             easing.type: Easing.InOutCubic
         }
     }
