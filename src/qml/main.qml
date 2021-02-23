@@ -75,8 +75,23 @@ Meui.Window {
             initialItem: Qt.resolvedUrl(sideBar.model.get(0).page)
             clip: true
 
-            pushEnter: Transition {}
-            pushExit: Transition {}
+            pushEnter: Transition {
+                XAnimator {
+                    from: stackView.width
+                    to: 0
+                    duration: 400
+                    easing.type: Easing.InOutCubic
+                }
+            }
+
+            pushExit: Transition {
+                XAnimator {
+                    from: 0
+                    to: -stackView.width
+                    duration: 400
+                    easing.type: Easing.InOutCubic
+                }
+            }
         }
     }
 

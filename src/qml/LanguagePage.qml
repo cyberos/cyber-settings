@@ -50,14 +50,32 @@ ItemPage {
                     anchors.fill: parent
                     color: isSelected ? Meui.Theme.highlightColor : item.containsMouse ? Meui.Theme.disabledTextColor : "transparent"                    
                     opacity: isSelected ? 1 : 0.1
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 125
+                            easing.type: Easing.InOutCubic
+                        }
+                    }
+                    Behavior on opacity {
+                        NumberAnimation {
+                            duration: 125
+                            easing.type: Easing.InOutCubic
+                        }
+                    }
                     radius: Meui.Theme.smallRadius
                 }
 
                 Label {
                     anchors.fill: parent
-                    anchors.leftMargin: Meui.Units.smallSpacing
-                    anchors.rightMargin: Meui.Units.smallSpacing
+                    anchors.leftMargin: Meui.Units.largeSpacing * 2
+                    anchors.rightMargin: Meui.Units.largeSpacing
                     color: isSelected ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 125
+                            easing.type: Easing.InOutCubic
+                        }
+                    }
                     text: modelData
                 }
             }

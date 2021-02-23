@@ -55,7 +55,9 @@ Item {
 
     RowLayout {
         anchors.fill: parent
-        anchors.margins: Meui.Units.smallSpacing
+        //anchors.margins: Meui.Units.smallSpacing
+        anchors.leftMargin: Meui.Units.largeSpacing
+        anchors.rightMargin: Meui.Units.largeSpacing
         spacing: Meui.Units.largeSpacing
 
         Image {

@@ -11,6 +11,8 @@ Item {
 
     RowLayout {
         anchors.fill: parent
+        anchors.leftMargin: Meui.Units.largeSpacing
+        anchors.rightMargin: Meui.Units.largeSpacing
         spacing: Meui.Units.largeSpacing
 
         Image {

@@ -136,6 +136,12 @@ Item {
                                     Meui.Theme.textColor.b,
                                     0.1)
                             : "transparent"
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 125
+                            easing.type: Easing.InOutCubic
+                        }
+                    }
                     smooth: true
                 }
 
@@ -156,8 +162,14 @@ Item {
                             anchors.fill: icon
                             source: icon
                             color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
-                            opacity: 1
-                            visible: Meui.Theme.darkMode || isCurrent
+                            Behavior on color {
+                                ColorAnimation {
+                                    duration: 125
+                                    easing.type: Easing.InOutCubic
+                                }
+                            }
+                            //opacity: 1
+                            //visible: Meui.Theme.darkMode || isCurrent
                         }
                     }
 
@@ -165,6 +177,12 @@ Item {
                         id: itemTitle
                         text: model.title
                         color: isCurrent ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
+                        Behavior on color {
+                            ColorAnimation {
+                                duration: 125
+                                easing.type: Easing.InOutCubic
+                            }
+                        }
                     }
 
                     Item {
