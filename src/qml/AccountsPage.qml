@@ -81,8 +81,14 @@ ItemPage {
                         anchors.fill: currentUserImage
                         source: currentUserImage
                         color: "#000000"
-                        opacity: userImageMouseArea.pressed ? 0.3 : 0.2
-                        visible: userImageMouseArea.containsMouse || userImageMouseArea.pressed
+                        opacity: userImageMouseArea.pressed ? 0.3
+                            : userImageMouseArea.containsMouse ? 0.2 : 0
+                        Behavior on opacity {
+                            NumberAnimation {
+                                duration: 125
+                                easing.type: Easing.InOutCubic
+                            }
+                        }
                     }
 
                     layer.enabled: true
