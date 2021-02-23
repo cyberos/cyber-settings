@@ -356,7 +356,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="32"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ගිණුම්</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
@@ -396,7 +396,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">පිළිබඳව</translation>
     </message>
 </context>
 <context>
