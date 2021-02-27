@@ -6,47 +6,47 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished">Hakkında</translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
         <source>CyberOS</source>
-        <translation type="unfinished"></translation>
+        <translation>CyberOS</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation type="unfinished"></translation>
+        <translation>İS Bilgileri</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation type="unfinished">İşletim sistemi</translation>
+        <translation>İşletim Sistemi</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
         <source>Kernel Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Çekirdek Versiyonu</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>RAM Size</source>
-        <translation type="unfinished"></translation>
+        <translation>RAM Miktarı</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished">Kullanıcı Adı</translation>
+        <translation>Kullanıcı Adı</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana Bilgisayar Adı</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation type="unfinished"></translation>
+        <translation>CyberOS Ekibi</translation>
     </message>
 </context>
 <context>
@@ -54,42 +54,42 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="12"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Hesaplar</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation type="unfinished"></translation>
+        <translation>Oturum şu kullanıcı olarak açık</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek ayarları sakla</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek ayarları göster</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="136"/>
         <source>Additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek ayarlar</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik oturum açma</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Diğer Hesaplar</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı ekle</translation>
     </message>
 </context>
 <context>
@@ -97,45 +97,45 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished">Kullanıcı Adı</translation>
+        <translation>Kullanıcı Adı</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished">Şifre</translation>
+        <translation>Şifre</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
         <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifreyi doğrula</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
-        <translation type="unfinished"></translation>
+        <translation>Hesap tipi</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Standart</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
-        <translation type="unfinished"></translation>
+        <translation>Yönetici</translation>
     </message>
 </context>
 <context>
@@ -143,72 +143,72 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="8"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Görünüm</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="49"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished">aydınlık</translation>
+        <translation>Açık</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Koyu</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Koyu temada arkaplanı karart</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
         <source>Accent color</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="154"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazı Tipi</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel Yazı Tipi</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzeltilmiş Yazı Tipi</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazı Tipi Boyutu</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Küçük</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Büyük</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Çok Büyük</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../src/qml/BackgroundPage.qml" line="9"/>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplan</translation>
     </message>
 </context>
 <context>
@@ -224,39 +224,39 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="8"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pil</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="92"/>
         <source>History</source>
-        <translation type="unfinished">Geçmiş</translation>
+        <translation>Geçmiş</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="226"/>
         <location filename="../src/qml/BatteryPage.qml" line="228"/>
         <source>Yesterday</source>
-        <translation type="unfinished"></translation>
+        <translation>Dün</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="234"/>
         <location filename="../src/qml/BatteryPage.qml" line="236"/>
         <source>Today</source>
-        <translation type="unfinished"></translation>
+        <translation>Bugün</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation type="unfinished"></translation>
+        <translation>En son şarj edildi</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
         <source>Maximum Capacity</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimum Kapasite</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="268"/>
         <source>No battery found</source>
-        <translation type="unfinished"></translation>
+        <translation>Pil bulunamadı</translation>
     </message>
 </context>
 <context>
@@ -264,17 +264,17 @@
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="8"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Parlaklık</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
 </context>
 <context>
@@ -282,47 +282,47 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
         <source>Position on screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekrandaki pozisyon</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="34"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Sol</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="41"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="50"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="60"/>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Küçük</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="64"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="68"/>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Büyük</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="72"/>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Çok Büyük</translation>
     </message>
 </context>
 <context>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation type="unfinished">Dil:</translation>
+        <translation>Dil</translation>
     </message>
 </context>
 <context>
@@ -338,17 +338,17 @@
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="11"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağ</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="40"/>
         <source>Wired</source>
-        <translation type="unfinished"></translation>
+        <translation>Kablolu</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="80"/>
         <source>Wi-Fi</source>
-        <translation type="unfinished"></translation>
+        <translation>Kablosuz (Wi-Fi)</translation>
     </message>
 </context>
 <context>
@@ -356,47 +356,47 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="32"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Hesaplar</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağ</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Görünüm</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplan</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="74"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pil</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakkında</translation>
     </message>
 </context>
 <context>
@@ -404,52 +404,52 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik-Katıl</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Güvenlik</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinyal</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 Adresi</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6 Adresi</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC Adresi</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağ Geçidi</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu ağı unut</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -457,22 +457,22 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="175"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifre</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifreyi göster</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation type="unfinished">Bağlan</translation>
+        <translation>Bağlan</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>İptal</translation>
     </message>
 </context>
 <context>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
 </context>
 </TS>
