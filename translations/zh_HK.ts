@@ -179,7 +179,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation>係深色模式嗰陣較暗壁布</translation>
+        <translation>用深色模式嗰陣較暗壁布</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="35"/>
         <source>Brightness</source>
-        <translation>亮度</translation>
+        <translation>光度</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
@@ -424,47 +424,47 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished">自動加入網路</translation>
+        <translation>自動加入網路</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished">安全性</translation>
+        <translation>安全性</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished">信號</translation>
+        <translation>信號</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">IPv4地址</translation>
+        <translation>IPv4地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">IPv6地址</translation>
+        <translation>IPv6地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">MAC地址</translation>
+        <translation>MAC地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">路由器 (router)</translation>
+        <translation>路由器 (router)</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">域名服務 (DNS)</translation>
+        <translation>域名服務 (DNS)</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">忘記這個網路</translation>
+        <translation>忘記這個網路</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
