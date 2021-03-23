@@ -449,7 +449,7 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fechar</translation>
     </message>
 </context>
 <context>
