@@ -469,7 +469,7 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished">关闭</translation>
+        <translation>關閉</translation>
     </message>
 </context>
 <context>
