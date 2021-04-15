@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished">על אודות</translation>
+        <translation>אודות</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
@@ -59,17 +59,17 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation type="unfinished">מחובר כרגע כ-</translation>
+        <translation>מחובר כרגע בתור-</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation type="unfinished">הסתר הגדרות נוספות</translation>
+        <translation>הסתרת הגדרות נוספות</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
-        <translation type="unfinished">הצג הגדרות נוספות</translation>
+        <translation>הצגת הגדרות נוספות</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="136"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation type="unfinished">הוסף משתמש</translation>
+        <translation>הוספת משתמש</translation>
     </message>
 </context>
 <context>
@@ -97,12 +97,12 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished">לְהוֹסִיף</translation>
+        <translation>הוספה</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished">לְבַטֵל</translation>
+        <translation>ביטול</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
@@ -120,7 +120,7 @@
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
         <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
-        <translation type="unfinished">אמת סיסמה</translation>
+        <translation>אימות סיסמה</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished">תֶקֶן</translation>
+        <translation>תֶקֶן</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
@@ -143,27 +143,27 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="8"/>
         <source>Appearance</source>
-        <translation type="unfinished">מראה חיצוני</translation>
+        <translation>מראה</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="49"/>
         <source>Theme</source>
-        <translation type="unfinished">נושא</translation>
+        <translation>סגנון</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished">אוֹר</translation>
+        <translation>בהיר</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation type="unfinished">אפל</translation>
+        <translation>כהה</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation type="unfinished">עמעמו את הטפט בנושא כהה</translation>
+        <translation>עמעום הרקע בסגנון כהה</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="154"/>
         <source>Font</source>
-        <translation type="unfinished">גוֹפָן</translation>
+        <translation>גופן</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
-        <translation type="unfinished">גודל גופן</translation>
+        <translation>גודל גופן</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
-        <translation type="unfinished">קָטָן</translation>
+        <translation>קטן</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="204"/>
@@ -203,12 +203,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
-        <translation type="unfinished">גָדוֹל</translation>
+        <translation>גדול</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
-        <translation type="unfinished">עָצוּם</translation>
+        <translation>ענק</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../src/qml/BackgroundPage.qml" line="9"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">טפט</translation>
+        <translation>רקע</translation>
     </message>
 </context>
 <context>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="8"/>
         <source>Battery</source>
-        <translation type="unfinished">סוֹלְלָה</translation>
+        <translation>סוללה</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="92"/>
         <source>History</source>
-        <translation type="unfinished">הִיסטוֹרִיָה</translation>
+        <translation>היסטוריה</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="226"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation type="unfinished">הואשם לאחרונה ב</translation>
+        <translation>הוטען לאחרונה ב</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
@@ -264,17 +264,17 @@
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="8"/>
         <source>Display</source>
-        <translation type="unfinished">לְהַצִיג</translation>
+        <translation>הצגה</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished">בְּהִירוּת</translation>
+        <translation>בהירות</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
         <source>Scale</source>
-        <translation type="unfinished">סוּלָם</translation>
+        <translation>קנה מידה</translation>
     </message>
 </context>
 <context>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation type="unfinished">לַעֲגוֹן</translation>
+        <translation>עגינה</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
