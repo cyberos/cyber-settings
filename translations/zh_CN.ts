@@ -75,7 +75,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation>当前登陆</translation>
+        <translation>当前登录身份</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
-        <translation>自动登陆</translation>
+        <translation>自动登录</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation>其他用户</translation>
+        <translation>其他账户</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
-        <translation>类型</translation>
+        <translation>账户类型</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
@@ -169,17 +169,17 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation>浅色模式</translation>
+        <translation>浅色</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation>深色模式</translation>
+        <translation>深色</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation>在深色模式下调暗壁纸</translation>
+        <translation>在深色主题下调暗壁纸</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
@@ -338,7 +338,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="72"/>
         <source>Huge</source>
-        <translation>巨大</translation>
+        <translation>特大</translation>
     </message>
 </context>
 <context>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="80"/>
         <source>Wi-Fi</source>
-        <translation>无线网络</translation>
+        <translation>Wi-Fi</translation>
     </message>
 </context>
 <context>
@@ -424,47 +424,47 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished">自动加入网络</translation>
+        <translation>自动连接</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished">安全性</translation>
+        <translation>安全性</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished">信号</translation>
+        <translation>信号</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">IPv4 地址</translation>
+        <translation>IPv4 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">IPv6 地址</translation>
+        <translation>IPv6 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">MAC 地址</translation>
+        <translation>MAC 地址</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">路由器</translation>
+        <translation>网关</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">DNS</translation>
+        <translation>DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">忘记这个网络</translation>
+        <translation>忘记这个网络</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
