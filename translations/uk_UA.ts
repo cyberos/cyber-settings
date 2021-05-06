@@ -183,7 +183,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation type="unfinished">Виправлений шрифт</translation>
+        <translation>Прив&apos;язаний шрифт</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
@@ -391,7 +391,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
-        <translation type="unfinished">Акумулятор</translation>
+        <translation>Акумулятор</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
