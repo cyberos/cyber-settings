@@ -36,12 +36,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation>用家</translation>
+        <translation>用戶名</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation>電腦名稱</translation>
+        <translation>主機名稱</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation>收藏其他設定</translation>
+        <translation>隱藏其他設定</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
