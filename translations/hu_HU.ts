@@ -135,7 +135,7 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
-        <translation type="unfinished">Adminisztrátor</translation>
+        <translation>Adminisztrátor</translation>
     </message>
 </context>
 <context>
