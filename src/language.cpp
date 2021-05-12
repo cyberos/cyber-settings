@@ -6,10 +6,11 @@
 #include <unicode/locid.h>
 #include <unicode/unistr.h>
 
-static const QStringList supportList = {"en_US", "en_AU", "en_CA", "en_NZ", "en_GB",
-                                        "es_MX", "ja", "ko", "pl", "pt_BR", "ru", "de", "it", 
-                                        "zh_CN", "zh_HK"
-                                       };
+static const QStringList supportList = {"cs_CZ", "de_DE", "el_GR", "en_US", "es_MX", "hi_IN", "hu_HU", "id_ID",
+                                        "it_IT", "lt_LT", "ml_IN", "nb_NO", "pl_PL", "pt_BR", "ro_RO", "ru_RU", 
+                                        "si_LK", "th_TH", "tr_TR", "uk_UA", "yue", "zh_CN", "zh_TW",
+                                        // RTL languages
+                                        "ar_AA", "fa_IR", "he_IL" };
 
 Language::Language(QObject *parent)
     : QObject(parent)

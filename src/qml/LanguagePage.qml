@@ -25,6 +25,7 @@ ItemPage {
             clip: true
 
             topMargin: Meui.Units.largeSpacing
+            bottomMargin: Meui.Units.largeSpacing * 2
             leftMargin: Meui.Units.largeSpacing * 2
             rightMargin: Meui.Units.largeSpacing * 2
             spacing: Meui.Units.largeSpacing
@@ -68,7 +69,7 @@ ItemPage {
                 Label {
                     anchors.fill: parent
                     anchors.leftMargin: Meui.Units.largeSpacing * 2
-                    anchors.rightMargin: Meui.Units.largeSpacing
+                    anchors.rightMargin: Meui.Units.largeSpacing * 2
                     color: isSelected ? Meui.Theme.highlightedTextColor : Meui.Theme.textColor
                     Behavior on color {
                         ColorAnimation {
