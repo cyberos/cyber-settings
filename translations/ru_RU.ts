@@ -246,7 +246,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation>Последний раз заряжен</translation>
+        <translation>Последний раз заряжен до</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
