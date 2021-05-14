@@ -16,7 +16,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation>Betriebssystem-Informationen</translation>
+        <translation>Systeminformationen</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>RAM Size</source>
-        <translation>Arbeitsspeicher-Größe</translation>
+        <translation>RAM-Größe</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation>Andere Konten</translation>
+        <translation>Andere Accounts</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="8"/>
         <source>Appearance</source>
-        <translation>Aussehen</translation>
+        <translation>Darstellung</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="49"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation>Letzte Aufladung</translation>
+        <translation>Letzte Aufladung bis</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation>Dock</translation>
+        <translation>Leiste</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
@@ -371,12 +371,12 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
-        <translation>Aussehen</translation>
+        <translation>Darstellung</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation>Dock</translation>
+        <translation>Leiste</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
@@ -462,7 +462,7 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation>Passwort zeigen</translation>
+        <translation>Passwort anzeigen</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
