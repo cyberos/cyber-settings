@@ -21,7 +21,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation>オペレーティングシステム</translation>
+        <translation type="unfinished">オペレーティングシステム</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
