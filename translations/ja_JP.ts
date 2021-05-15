@@ -11,7 +11,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
         <source>CyberOS</source>
-        <translation>CyberOS</translation>
+        <translation type="unfinished">CyberOS</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
