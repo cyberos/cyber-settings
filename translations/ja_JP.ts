@@ -16,7 +16,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation>OSについて</translation>
+        <translation type="unfinished">OSについて</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
