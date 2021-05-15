@@ -366,37 +366,37 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
         <source>Network</source>
-        <translation type="unfinished">Мрежа</translation>
+        <translation>Мрежа</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
-        <translation type="unfinished">Изглед</translation>
+        <translation>Изглед</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation type="unfinished">Доцк</translation>
+        <translation>Док</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">Позадина</translation>
+        <translation>Позадина</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="74"/>
         <source>Language</source>
-        <translation type="unfinished">Језик</translation>
+        <translation>Језик</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
-        <translation type="unfinished">Батерија</translation>
+        <translation>Батерија</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
-        <translation type="unfinished">О томе</translation>
+        <translation>О томе</translation>
     </message>
 </context>
 <context>
@@ -404,52 +404,52 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished">Аутоматско придруживање</translation>
+        <translation>Аутоматско повезивање</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished">Сигурност</translation>
+        <translation>Сигурност</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished">Сигнал</translation>
+        <translation>Сигнал</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">ИПв4 адреса</translation>
+        <translation>IPv4 адреса</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">ИПв6 адреса</translation>
+        <translation>IPv6 адреса</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">МАЦ адреса</translation>
+        <translation>MAC адреса</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">пролаз</translation>
+        <translation>Гејтвеј</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">ДНС</translation>
+        <translation>DNS</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">Заборави ову мрежу</translation>
+        <translation>Заборави ову мрежу</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished">Близу</translation>
+        <translation>Затворити</translation>
     </message>
 </context>
 <context>
@@ -457,22 +457,22 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="175"/>
         <source>Password</source>
-        <translation type="unfinished">Запорка</translation>
+        <translation>Шифра</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation type="unfinished">Покажи лозинку</translation>
+        <translation>Покажи шифру</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation type="unfinished">Повежите се</translation>
+        <translation>Повежите се</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
         <source>Cancel</source>
-        <translation type="unfinished">Поништити</translation>
+        <translation>Поништити</translation>
     </message>
 </context>
 <context>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished">Подешавања</translation>
+        <translation>Подешавања</translation>
     </message>
 </context>
 </TS>
