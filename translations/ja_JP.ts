@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">このサービスについて</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ホスト名</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CyberOSチーム</translation>
     </message>
 </context>
 <context>
@@ -54,42 +54,42 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="12"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アカウント</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在、次のようにログインしています。</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">追加設定を隠す</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">追加設定の表示</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="136"/>
         <source>Additional settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">追加設定</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">自動ログイン</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他のアカウント</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユーザーの追加</translation>
     </message>
 </context>
 <context>
@@ -97,45 +97,45 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">追加</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キャンセル</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユーザー名</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">パスワード</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
         <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">パスワードの確認</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アカウントタイプ</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スタンダード</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アドミニストレーター</translation>
     </message>
 </context>
 <context>
@@ -143,47 +143,47 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="8"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外観</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="49"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テーマ</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ライト</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダーク</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダークテーマで壁紙を暗くする</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
         <source>Accent color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アクセントカラー</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="154"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フォント</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一般的なフォント</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">固定フォント</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
