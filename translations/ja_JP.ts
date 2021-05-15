@@ -26,7 +26,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
         <source>Kernel Version</source>
-        <translation>カーネルバージョン</translation>
+        <translation type="unfinished">カーネルバージョン</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
