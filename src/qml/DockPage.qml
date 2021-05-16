@@ -111,53 +111,30 @@ ItemPage {
 
             Item {
                 Layout.fillHeight: true
+                Layout.fillWidth: true
             }
             
-            Label {
-                text: qsTr("Dock Transparency")
-                color: Meui.Theme.disabledTextColor
-                bottomPadding: Meui.Units.smallSpacing
+            RowLayout {
+            	
+            	
+            	
+            	Label {
+                	text: qsTr("Dock Transparency")
+                	color: Meui.Theme.disabledTextColor
+                	bottomPadding: Meui.Units.smallSpacing
+            	}
+	
+            	Switch {
+                        	id: dockTransparencySwitch
+                        	Layout.fillHeight: true
+                        	checked: appearance.dockTransparency
+                        	leftPadding: 0
+                        	rightPadding: 0
+                        	onCheckedChanged: appearance.dockTransparency = checked
+            	}
+            
             }
-
-            TabBar {
-                id: transparencyTabBar
-                Layout.fillWidth: true
-
-                TabButton {
-                    text: qsTr("Enabled")
-                }
-
-                TabButton {
-                    text: qsTr("Disabled")
-                }
-
-                currentIndex: {
-                    var index = 0
-
-                    if (appearance.dockTransparency == true)
-                        index = 0
-                    else if (appearance.dockTransparency == false)
-                        index = 1
-
-                    return index
-                }
-
-                onCurrentIndexChanged: {
-                    var dockTransparency = true
-
-                    switch (currentIndex) {
-                    case 0:
-                        dockTransparency = true
-                        break;
-                    case 1:
-                        dockTransparency = false
-                        break;
-                    }
-					console.log(dockTransparency);
-                    appearance.setDockTransparency(dockTransparency)
-                }
-            }
-
+            
             Item {
                 Layout.fillHeight: true
             }
