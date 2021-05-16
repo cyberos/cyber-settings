@@ -111,32 +111,6 @@ ItemPage {
 
             Item {
                 Layout.fillHeight: true
-                Layout.fillWidth: true
-            }
-            
-            RowLayout {
-            	
-            	
-            	
-            	Label {
-                	text: qsTr("Dock Transparency")
-                	color: Meui.Theme.disabledTextColor
-                	bottomPadding: Meui.Units.smallSpacing
-            	}
-	
-            	Switch {
-                        	id: dockTransparencySwitch
-                        	Layout.fillHeight: true
-                        	checked: appearance.dockTransparency
-                        	leftPadding: 0
-                        	rightPadding: 0
-                        	onCheckedChanged: appearance.dockTransparency = checked
-            	}
-            
-            }
-            
-            Item {
-                Layout.fillHeight: true
             }
         }
     }
