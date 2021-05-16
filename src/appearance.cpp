@@ -36,18 +36,22 @@ Appearance::Appearance(QObject *parent)
     , m_dockIconSize(0)
     , m_dockDirection(0)
     , m_fontPointSize(11)
+    , m_dockTransparency(true)
 {
     m_dockIconSize = m_dockSettings->value("IconSize").toInt();
     m_dockDirection = m_dockSettings->value("Direction").toInt();
+    m_dockTransparency = m_dockSettings->value("DockTransparency").toBool();
 
     m_dockConfigWacher->addPath(m_dockSettings->fileName());
     connect(m_dockConfigWacher, &QFileSystemWatcher::fileChanged, this, [=] {
         m_dockSettings->sync();
         m_dockIconSize = m_dockSettings->value("IconSize").toInt();
         m_dockDirection = m_dockSettings->value("Direction").toInt();
+        m_dockTransparency = m_dockSettings->value("DockTransparency").toBool();
         m_dockConfigWacher->addPath(m_dockSettings->fileName());
         emit dockIconSizeChanged();
         emit dockDirectionChanged();
+        emit dockTransparencyChanged();
     });
 
     // Init
@@ -174,4 +178,18 @@ void Appearance::setDevicePixelRatio(double value)
     if (iface.isValid()) {
         iface.call("setDevicePixelRatio", value);
     }
+}
+
+bool Appearance::dockTransparency() const
+{
+	return m_dockSettings->value("DockTransparency").toBool();
+}
+
+void Appearance::setDockTransparency(bool enabled)
+{
+	if (m_dockTransparency == enabled)
+        return;
+
+    m_dockTransparency = enabled;
+    m_dockSettings->setValue("DockTransparency", enabled);
 }
