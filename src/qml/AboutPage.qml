@@ -79,14 +79,14 @@ ItemPage {
                 bottomPadding: Meui.Units.smallSpacing
             }
 
-            StandardItem {
-                key: "Flex Zhong"
-                value: "@ChungZH"
+			StandardItem {
+                key: "Alvaro Samudio"
+                value: "@alvarosamudio"
             }
 
             StandardItem {
-                key: "Felix Yan"
-                value: "@felixonmars"
+                key: "Flex Zhong"
+                value: "@ChungZH"
             }
 
             StandardItem {
@@ -102,11 +102,6 @@ ItemPage {
             StandardItem {
                 key: "Reven Martin"
                 value: "@rekols"
-            }
-
-            StandardItem {
-                key: "小子"
-                value: "@Z-bin"
             }
         }
     }
