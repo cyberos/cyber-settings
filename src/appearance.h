@@ -33,6 +33,7 @@ class Appearance : public QObject
     Q_PROPERTY(int fontPointSize READ fontPointSize WRITE setFontPointSize NOTIFY fontPointSizeChanged)
     Q_PROPERTY(bool dimsWallpaper READ dimsWallpaper WRITE setDimsWallpaper NOTIFY dimsWallpaperChanged)
     Q_PROPERTY(double devicePixelRatio READ devicePixelRatio WRITE setDevicePixelRatio NOTIFY devicePixelRatioChanged)
+    Q_PROPERTY(bool dockTransparency READ dockTransparency WRITE setDockTransparency NOTIFY dockTransparencyChanged)
 
 public:
     explicit Appearance(QObject *parent = nullptr);
@@ -58,6 +59,9 @@ public:
 
     double devicePixelRatio() const;
     Q_INVOKABLE void setDevicePixelRatio(double value);
+    
+    bool dockTransparency() const;
+    Q_INVOKABLE void setDockTransparency(bool enabled);
 
 signals:
     void dockIconSizeChanged();
@@ -65,6 +69,7 @@ signals:
     void fontPointSizeChanged();
     void dimsWallpaperChanged();
     void devicePixelRatioChanged();
+    void dockTransparencyChanged();
 
 private:
     QDBusInterface m_interface;
@@ -74,6 +79,7 @@ private:
     int m_dockIconSize;
     int m_dockDirection;
     int m_fontPointSize;
+    int m_dockTransparency;
 };
 
 #endif // APPEARANCE_H
