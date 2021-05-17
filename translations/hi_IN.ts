@@ -6,47 +6,47 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="8"/>
         <source>About</source>
-        <translation type="unfinished">तकरीबन</translation>
+        <translation>अबौट</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="32"/>
         <source>CyberOS</source>
-        <translation type="unfinished">साइबरओएस</translation>
+        <translation>CyberOS</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="42"/>
         <source>OS Info</source>
-        <translation type="unfinished">OS जानकारी</translation>
+        <translation>OS जानकारी</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="49"/>
         <source>Operating System</source>
-        <translation type="unfinished">ऑपरेटिंग सिस्टम</translation>
+        <translation>ऑपरेटिंग सिस्टम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="54"/>
         <source>Kernel Version</source>
-        <translation type="unfinished">कर्नेल संस्करण</translation>
+        <translation>कर्नेल वर्शन</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>RAM Size</source>
-        <translation type="unfinished">रैम का आकार</translation>
+        <translation>रैम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Username</source>
-        <translation type="unfinished">उपयोगकर्ता नाम</translation>
+        <translation>उपयोगकर्ता नाम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Hostname</source>
-        <translation type="unfinished">होस्ट का नाम</translation>
+        <translation>होस्ट नाम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="76"/>
         <source>CyberOS Team</source>
-        <translation type="unfinished">साइबर टीम</translation>
+        <translation>CyberOS Team</translation>
     </message>
 </context>
 <context>
@@ -54,42 +54,42 @@
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="12"/>
         <source>Accounts</source>
-        <translation type="unfinished">हिसाब किताब</translation>
+        <translation>एकाउंट्स</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="39"/>
         <source>Currently logged in as</source>
-        <translation type="unfinished">वर्तमान में लॉग इन किया है</translation>
+        <translation>अब लॉग इन किया है</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Hide additional settings</source>
-        <translation type="unfinished">अतिरिक्त सेटिंग्स छिपाएँ</translation>
+        <translation>अतिरिक्त सेटिंग्स छिपाएँ</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="125"/>
         <source>Show additional settings</source>
-        <translation type="unfinished">अतिरिक्त सेटिंग्स दिखाएं</translation>
+        <translation>अतिरिक्त सेटिंग्स दिखाएं</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="136"/>
         <source>Additional settings</source>
-        <translation type="unfinished">अतिरिक्त सेटिंग्स</translation>
+        <translation>अतिरिक्त सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="146"/>
         <source>Automatic login</source>
-        <translation type="unfinished">स्वचालित लॉगिन</translation>
+        <translation>स्वचालित लॉगिन</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="168"/>
         <source>Other Accounts</source>
-        <translation type="unfinished">अन्य खाते</translation>
+        <translation>अन्य एकाउंट्स</translation>
     </message>
     <message>
         <location filename="../src/qml/AccountsPage.qml" line="234"/>
         <source>Add user</source>
-        <translation type="unfinished">उपयोगकर्ता जोड़ें</translation>
+        <translation>उपयोगकर्ता जोड़ें</translation>
     </message>
 </context>
 <context>
@@ -97,45 +97,45 @@
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="48"/>
         <source>Add</source>
-        <translation type="unfinished">जोड़ना</translation>
+        <translation>जोड़ो</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="61"/>
         <source>Cancel</source>
-        <translation type="unfinished">रद्द करना</translation>
+        <translation>रद्द करो</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="74"/>
         <location filename="../src/qml/AddUserDialog.qml" line="79"/>
         <source>User name</source>
-        <translation type="unfinished">उपयोगकर्ता नाम</translation>
+        <translation>उपयोगकर्ता नाम</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="85"/>
         <location filename="../src/qml/AddUserDialog.qml" line="90"/>
         <source>Password</source>
-        <translation type="unfinished">कुंजिका</translation>
+        <translation>पासवर्ड</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="97"/>
         <location filename="../src/qml/AddUserDialog.qml" line="102"/>
         <source>Verify password</source>
-        <translation type="unfinished">पासवर्ड को सत्यापित करें</translation>
+        <translation>पासवर्ड को सत्यापित करो</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="109"/>
         <source>Account type</source>
-        <translation type="unfinished">खाते का प्रकार</translation>
+        <translation>अकाउंट का प्रकार</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Standard</source>
-        <translation type="unfinished">मानक</translation>
+        <translation>साधारण</translation>
     </message>
     <message>
         <location filename="../src/qml/AddUserDialog.qml" line="114"/>
         <source>Administrator</source>
-        <translation type="unfinished">प्रशासक</translation>
+        <translation>प्रशासक</translation>
     </message>
 </context>
 <context>
@@ -143,72 +143,72 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="8"/>
         <source>Appearance</source>
-        <translation type="unfinished">दिखावट</translation>
+        <translation>दिखावट</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="49"/>
         <source>Theme</source>
-        <translation type="unfinished">विषय</translation>
+        <translation>थीम</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="60"/>
         <source>Light</source>
-        <translation type="unfinished">रोशनी</translation>
+        <translation>लाइट</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="67"/>
         <source>Dark</source>
-        <translation type="unfinished">अंधेरा</translation>
+        <translation>डार्क</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="82"/>
         <source>Dim the wallpaper in dark theme</source>
-        <translation type="unfinished">अंधेरे विषय में वॉलपेपर मंद</translation>
+        <translation>डार्क थीम में वॉलपेपर मंद करो</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="101"/>
         <source>Accent color</source>
-        <translation type="unfinished">स्वरोंका रंग</translation>
+        <translation>थीम रंग</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="154"/>
         <source>Font</source>
-        <translation type="unfinished">फ़ॉन्ट</translation>
+        <translation>फ़ॉन्ट</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation type="unfinished">सामान्य फ़ॉन्ट</translation>
+        <translation>सामान्य फ़ॉन्ट</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation type="unfinished">निश्चित फ़ॉन्ट</translation>
+        <translation>निश्चित फ़ॉन्ट</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
         <source>Font Size</source>
-        <translation type="unfinished">फ़ॉन्ट आकार</translation>
+        <translation>फ़ॉन्ट आकार</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="200"/>
         <source>Small</source>
-        <translation type="unfinished">छोटा</translation>
+        <translation>छोटा</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="204"/>
         <source>Medium</source>
-        <translation type="unfinished">मध्यम</translation>
+        <translation>मध्यम</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="208"/>
         <source>Large</source>
-        <translation type="unfinished">विशाल</translation>
+        <translation>विशाल</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="212"/>
         <source>Huge</source>
-        <translation type="unfinished">विशाल</translation>
+        <translation>अति विशाल</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../src/qml/BackgroundPage.qml" line="9"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">वॉलपेपर</translation>
+        <translation>वॉलपेपर</translation>
     </message>
 </context>
 <context>
@@ -224,39 +224,39 @@
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="8"/>
         <source>Battery</source>
-        <translation type="unfinished">बैटरी</translation>
+        <translation>बैटरी</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="92"/>
         <source>History</source>
-        <translation type="unfinished">इतिहास</translation>
+        <translation>हिस्ट्री</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="226"/>
         <location filename="../src/qml/BatteryPage.qml" line="228"/>
         <source>Yesterday</source>
-        <translation type="unfinished">बिता कल</translation>
+        <translation>कल</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="234"/>
         <location filename="../src/qml/BatteryPage.qml" line="236"/>
         <source>Today</source>
-        <translation type="unfinished">आज</translation>
+        <translation>आज</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="250"/>
         <source>Last Charged to</source>
-        <translation type="unfinished">अंतिम चार्ज किया गया</translation>
+        <translation>अंतिम चार्ज किया गया</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="256"/>
         <source>Maximum Capacity</source>
-        <translation type="unfinished">अधिकतम योग्यता</translation>
+        <translation>अधिकतम कैपेसिटी</translation>
     </message>
     <message>
         <location filename="../src/qml/BatteryPage.qml" line="268"/>
         <source>No battery found</source>
-        <translation type="unfinished">कोई बैटरी नहीं मिली</translation>
+        <translation>कोई बैटरी नहीं मिली</translation>
     </message>
 </context>
 <context>
@@ -264,17 +264,17 @@
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="8"/>
         <source>Display</source>
-        <translation type="unfinished">प्रदर्शन</translation>
+        <translation>डिस्प्ले</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished">चमक</translation>
+        <translation>चमक</translation>
     </message>
     <message>
         <location filename="../src/qml/DisplayPage.qml" line="82"/>
         <source>Scale</source>
-        <translation type="unfinished">स्केल</translation>
+        <translation>स्केल</translation>
     </message>
 </context>
 <context>
@@ -282,47 +282,47 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
-        <translation type="unfinished">गोदी</translation>
+        <translation>डॉक</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
         <source>Position on screen</source>
-        <translation type="unfinished">स्क्रीन पर स्थिति</translation>
+        <translation>स्क्रीन पर स्थिति</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="34"/>
         <source>Left</source>
-        <translation type="unfinished">बाएं</translation>
+        <translation>बाएं</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="41"/>
         <source>Bottom</source>
-        <translation type="unfinished">तल</translation>
+        <translation>तल</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="50"/>
         <source>Size</source>
-        <translation type="unfinished">आकार</translation>
+        <translation>आकार</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="60"/>
         <source>Small</source>
-        <translation type="unfinished">छोटा</translation>
+        <translation>छोटा</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="64"/>
         <source>Medium</source>
-        <translation type="unfinished">मध्यम</translation>
+        <translation>मध्यम</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="68"/>
         <source>Large</source>
-        <translation type="unfinished">विशाल</translation>
+        <translation>विशाल</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="72"/>
         <source>Huge</source>
-        <translation type="unfinished">विशाल</translation>
+        <translation>अति विशाल</translation>
     </message>
 </context>
 <context>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation type="unfinished">भाषा: हिन्दी</translation>
+        <translation>भाषा</translation>
     </message>
 </context>
 <context>
@@ -338,17 +338,17 @@
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="11"/>
         <source>Network</source>
-        <translation type="unfinished">नेटवर्क</translation>
+        <translation>नेटवर्क</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="40"/>
         <source>Wired</source>
-        <translation type="unfinished">वायर्ड</translation>
+        <translation>वायर्ड</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="80"/>
         <source>Wi-Fi</source>
-        <translation type="unfinished">वाई - फाई</translation>
+        <translation>वाई - फाई</translation>
     </message>
 </context>
 <context>
@@ -356,47 +356,47 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="32"/>
         <source>Accounts</source>
-        <translation type="unfinished">हिसाब किताब</translation>
+        <translation>एकाउंट्स</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
-        <translation type="unfinished">प्रदर्शन</translation>
+        <translation>डिस्प्ले</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
         <source>Network</source>
-        <translation type="unfinished">नेटवर्क</translation>
+        <translation>नेटवर्क</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
-        <translation type="unfinished">दिखावट</translation>
+        <translation>दिखावट</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation type="unfinished">गोदी</translation>
+        <translation>डॉक</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">वॉलपेपर</translation>
+        <translation>वॉलपेपर</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="74"/>
         <source>Language</source>
-        <translation type="unfinished">भाषा: हिन्दी</translation>
+        <translation>भाषा</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
-        <translation type="unfinished">बैटरी</translation>
+        <translation>बैटरी</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
-        <translation type="unfinished">तकरीबन</translation>
+        <translation>अबौट</translation>
     </message>
 </context>
 <context>
@@ -404,52 +404,52 @@
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="44"/>
         <source>Auto-Join</source>
-        <translation type="unfinished">ऑटो में शामिल हों</translation>
+        <translation>स्वचालित रूप से कनेक्ट करें</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="59"/>
         <source>Security</source>
-        <translation type="unfinished">सुरक्षा</translation>
+        <translation>सुरक्षा</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="70"/>
         <source>Signal</source>
-        <translation type="unfinished">संकेत</translation>
+        <translation>सिग्नल</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="81"/>
         <source>IPv4 Address</source>
-        <translation type="unfinished">IPv4 पता</translation>
+        <translation>IPv4 एड्रेस</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="93"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished">IPv6 पता</translation>
+        <translation>IPv6 एड्रेस</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="105"/>
         <source>MAC Address</source>
-        <translation type="unfinished">मैक पता</translation>
+        <translation>मैक एड्रेस</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="117"/>
         <source>Gateway</source>
-        <translation type="unfinished">द्वार</translation>
+        <translation>गेटवे</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="129"/>
         <source>DNS</source>
-        <translation type="unfinished">डीएनएस</translation>
+        <translation>डी.एन.एस</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="144"/>
         <source>Forget this network</source>
-        <translation type="unfinished">इस नेटवर्क को भूल जाएं</translation>
+        <translation>इस नेटवर्क को भूल जाएं</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessDetailsDialog.qml" line="151"/>
         <source>Close</source>
-        <translation type="unfinished">बंद करे</translation>
+        <translation>बंद करो</translation>
     </message>
 </context>
 <context>
@@ -457,22 +457,22 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="175"/>
         <source>Password</source>
-        <translation type="unfinished">कुंजिका</translation>
+        <translation>पासवर्ड</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation type="unfinished">शो पासवर्ड</translation>
+        <translation>पासवर्ड दिखाओ</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation type="unfinished">जुडिये</translation>
+        <translation>जुडिये</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
         <source>Cancel</source>
-        <translation type="unfinished">रद्द करना</translation>
+        <translation>रद्द करो</translation>
     </message>
 </context>
 <context>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../src/qml/main.qml" line="10"/>
         <source>Settings</source>
-        <translation type="unfinished">समायोजन</translation>
+        <translation>समायोजन</translation>
     </message>
 </context>
 </TS>
