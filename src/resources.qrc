@@ -14,6 +14,11 @@
         <file>qml/Scrollable.qml</file>
         <file>qml/BatteryPage.qml</file>
         <file>qml/BatteryItem.qml</file>
+        <file>qml/RotationButton.qml</file>
+        <file>images/rotnormal.svg</file>
+        <file>images/rot270.svg</file>
+        <file>images/rot180.svg</file>
+        <file>images/rot90.svg</file>
         <file>images/sensors-voltage-symbolic.svg</file>
         <file>qml/StandardItem.qml</file>
         <file>qml/BackgroundPage.qml</file>
