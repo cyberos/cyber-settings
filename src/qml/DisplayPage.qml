@@ -221,7 +221,6 @@ ItemPage {
                 id: screenPageIndicator
                 Layout.alignment: Qt.AlignHCenter
                 count: _screenView.count
-                visible: _screenView.count > 0
                 currentIndex: _screenView.currentIndex
                 onCurrentIndexChanged: _screenView.currentIndex = currentIndex
                 interactive: true
