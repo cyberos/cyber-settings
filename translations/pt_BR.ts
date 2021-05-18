@@ -178,12 +178,12 @@
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="166"/>
         <source>General Font</source>
-        <translation>Fonte Geral</translation>
+        <translation type="unfinished">Fonte Geral</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="179"/>
         <source>Fixed Font</source>
-        <translation>Fonte Fixada</translation>
+        <translation type="unfinished">Fonte Fixada</translation>
     </message>
     <message>
         <location filename="../src/qml/AppearancePage.qml" line="192"/>
@@ -322,7 +322,7 @@
     <message>
         <location filename="../src/qml/DockPage.qml" line="72"/>
         <source>Huge</source>
-        <translation>Gigante</translation>
+        <translation type="unfinished">Gigante</translation>
     </message>
 </context>
 <context>
@@ -330,7 +330,7 @@
     <message>
         <location filename="../src/qml/LanguagePage.qml" line="8"/>
         <source>Language</source>
-        <translation>Linguagem</translation>
+        <translation type="unfinished">Linguagem</translation>
     </message>
 </context>
 <context>
@@ -338,17 +338,17 @@
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="11"/>
         <source>Network</source>
-        <translation>Rede</translation>
+        <translation type="unfinished">Rede</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="40"/>
         <source>Wired</source>
-        <translation>A cabo</translation>
+        <translation type="unfinished">A cabo</translation>
     </message>
     <message>
         <location filename="../src/qml/NetworkPage.qml" line="80"/>
         <source>Wi-Fi</source>
-        <translation>Wi-Fi</translation>
+        <translation type="unfinished">Wi-Fi</translation>
     </message>
 </context>
 <context>
@@ -356,27 +356,27 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="32"/>
         <source>Accounts</source>
-        <translation>Contas</translation>
+        <translation type="unfinished">Contas</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="39"/>
         <source>Display</source>
-        <translation>Tela</translation>
+        <translation type="unfinished">Tela</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="46"/>
         <source>Network</source>
-        <translation>Rede</translation>
+        <translation type="unfinished">Rede</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="53"/>
         <source>Appearance</source>
-        <translation>Aparência</translation>
+        <translation type="unfinished">Aparência</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="67"/>
         <source>Dock</source>
-        <translation>Barra de tarefas</translation>
+        <translation type="unfinished">Barra de tarefas</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="60"/>
@@ -391,12 +391,12 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="81"/>
         <source>Battery</source>
-        <translation>Bateria</translation>
+        <translation type="unfinished">Bateria</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="88"/>
         <source>About</source>
-        <translation>Sobre</translation>
+        <translation type="unfinished">Sobre</translation>
     </message>
 </context>
 <context>
@@ -496,22 +496,22 @@
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="175"/>
         <source>Password</source>
-        <translation>Senha</translation>
+        <translation type="unfinished">Senha</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="194"/>
         <source>Show password</source>
-        <translation>Mostrar senha</translation>
+        <translation type="unfinished">Mostrar senha</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="203"/>
         <source>Connect</source>
-        <translation>Conectar</translation>
+        <translation type="unfinished">Conectar</translation>
     </message>
     <message>
         <location filename="../src/qml/WirelessItem.qml" line="211"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation type="unfinished">Cancelar</translation>
     </message>
 </context>
 <context>
