@@ -284,7 +284,7 @@
         <location filename="../src/qml/DockPage.qml" line="8"/>
         <source>Dock</source>
         <translatorcomment>There are no direct translate</translatorcomment>
-        <translation></translation>
+        <translation>Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/DockPage.qml" line="24"/>
