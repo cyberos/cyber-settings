@@ -25,6 +25,8 @@
 #include <QDBusServiceWatcher>
 #include <QDBusPendingCall>
 
+#include <cstdlib>
+
 Appearance::Appearance(QObject *parent)
     : QObject(parent)
     , m_interface("org.cyber.Settings",
@@ -192,4 +194,5 @@ void Appearance::setDockTransparency(bool enabled)
 
     m_dockTransparency = enabled;
     m_dockSettings->setValue("DockTransparency", enabled);
+    system("killall cyber-dock; cyber-dock &");
 }
