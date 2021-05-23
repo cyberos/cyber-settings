@@ -207,7 +207,5 @@ void Appearance::setDockTransparency(bool enabled)
 
     m_dockTransparency = enabled;
     m_dockSettings->setValue("DockTransparency", enabled);
-    // Sorry, can't find a way to terminate with QProcess.
-    system("killall cyber-dock");
     restartDock();
 }
