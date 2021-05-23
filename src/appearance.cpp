@@ -24,7 +24,7 @@
 #include <QDBusReply>
 #include <QDBusServiceWatcher>
 #include <QDBusPendingCall>
-
+#include <QProcess>
 #include <cstdlib>
 
 Appearance::Appearance(QObject *parent)
@@ -187,6 +187,13 @@ bool Appearance::dockTransparency() const
 	return m_dockSettings->value("DockTransparency").toBool();
 }
 
+void Appearance::startDock()
+{
+    QProcess* p = new QProcess;
+    p->setProgram("cyber-dock");
+    p->start();
+}
+
 void Appearance::setDockTransparency(bool enabled)
 {
 	if (m_dockTransparency == enabled)
@@ -194,5 +201,7 @@ void Appearance::setDockTransparency(bool enabled)
 
     m_dockTransparency = enabled;
     m_dockSettings->setValue("DockTransparency", enabled);
-    system("killall cyber-dock; cyber-dock &");
+    // Sorry, can't find a way to terminate with QProcess.
+    system("killall cyber-dock");
+    startDock();
 }
