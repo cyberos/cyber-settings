@@ -63,6 +63,8 @@ public:
     bool dockTransparency() const;
     Q_INVOKABLE void setDockTransparency(bool enabled);
 
+    Q_INVOKABLE void restartDock();
+
 signals:
     void dockIconSizeChanged();
     void dockDirectionChanged();
